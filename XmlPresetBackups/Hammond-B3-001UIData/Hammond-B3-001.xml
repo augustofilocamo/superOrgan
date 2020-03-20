@@ -20,8 +20,8 @@
             <Control type="ScriptSlider" id="Knob9" value="0"/>
             <Control type="ScriptButton" id="click-2nd" value="0"/>
             <Control type="ScriptButton" id="click-2nd1" value="1"/>
-            <Control type="ScriptSlider" id="leslieSpeedKnb" value="0"/>
-            <Control type="ScriptButton" id="leslieOnOffBtn" value="0"/>
+            <Control type="ScriptSlider" id="leslieSpeedKnb" value="1"/>
+            <Control type="ScriptButton" id="leslieOnOffBtn" value="1"/>
           </Content>
           <UIData Source="Hammond-B3-001UIData"/>
         </Processor>
@@ -383,7 +383,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="ScriptFX" ID="LeslieDSP" Bypassed="1">
+        <Processor Type="ScriptFX" ID="LeslieDSP" Bypassed="0">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
           <Content/>
@@ -429,7 +429,7 @@
                             </Properties>
                             <Parameters>
                               <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                         StepSize="1" SkewFactor="1" ID="Gate" Value="0"/>
+                                         StepSize="1" SkewFactor="1" ID="Gate" Value="1"/>
                               <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="2000"
                                          StepSize="0.1" SkewFactor="1" ID="Ramp Time" Value="3223"/>
                             </Parameters>
@@ -455,7 +455,7 @@
                                                 Enabled="1" Inverted="0" MinValue="568" MaxValue="66" LowerLimit="0"
                                                 UpperLimit="2000" StepSize="0.1" SkewFactor="0.30103" Expression=""/>
                               <ModulationTarget NodeId="gain" ParameterId="Gain" OpType="SetValue" Enabled="1"
-                                                Inverted="0" MinValue="-18" MaxValue="-32" LowerLimit="-100"
+                                                Inverted="1" MinValue="-18" MaxValue="-32" LowerLimit="-100"
                                                 UpperLimit="0" StepSize="0.1" SkewFactor="1" Expression=""/>
                             </ModulationTargets>
                             <Parameters/>
@@ -507,7 +507,7 @@
                             </Properties>
                             <Parameters>
                               <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                         StepSize="1" SkewFactor="1" ID="Gate" Value="0"/>
+                                         StepSize="1" SkewFactor="1" ID="Gate" Value="1"/>
                               <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="2000"
                                          StepSize="0.1" SkewFactor="1" ID="Ramp Time" Value="2714.8"/>
                             </Parameters>
@@ -533,7 +533,7 @@
                                                 Enabled="1" Inverted="0" MinValue="414" MaxValue="56" LowerLimit="0"
                                                 UpperLimit="1000" StepSize="0.1" SkewFactor="0.30103" Expression=""/>
                               <ModulationTarget NodeId="gain1" ParameterId="Gain" OpType="SetValue" Enabled="1"
-                                                Inverted="0" MinValue="-18" MaxValue="-24" LowerLimit="-100"
+                                                Inverted="1" MinValue="-18" MaxValue="-24" LowerLimit="-100"
                                                 UpperLimit="0" StepSize="0.1" SkewFactor="2" Expression=""/>
                               <ModulationTarget NodeId="fix_delay4" ParameterId="DelayTime" OpType="SetValue"
                                                 Enabled="1" Inverted="0" MinValue="414" MaxValue="56" LowerLimit="0"
@@ -585,7 +585,7 @@
                                           <Parameter Inverted="0" MinValue="0" MaxValue="3" LowerLimit="0" UpperLimit="3"
                                                      StepSize="1" SkewFactor="1" ID="Mode" Value="0"/>
                                           <Parameter Inverted="0" MinValue="0.1" MaxValue="10" LowerLimit="0.1" UpperLimit="10"
-                                                     StepSize="0.01" SkewFactor="0.5" ID="Frequency" Value="0.700615"/>
+                                                     StepSize="0.01" SkewFactor="0.5" ID="Frequency" Value="2.83"/>
                                           <Parameter Inverted="0" MinValue="1" MaxValue="16" LowerLimit="1" UpperLimit="16"
                                                      StepSize="1" SkewFactor="1" ID="Freq Ratio" Value="2"/>
                                         </Parameters>
@@ -634,7 +634,7 @@
                                         <ModulationTargets/>
                                         <Parameters>
                                           <Parameter Inverted="0" MinValue="0" MaxValue="2000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.1" SkewFactor="0.30103" ID="DelayTime" Value="66.6775"/>
+                                                     StepSize="0.1" SkewFactor="0.30103" ID="DelayTime" Value="568"/>
                                           <Parameter Inverted="0" MinValue="0" MaxValue="1024" LowerLimit="0" UpperLimit="1024"
                                                      StepSize="1" SkewFactor="1" ID="FadeTime" Value="71"/>
                                         </Parameters>
@@ -710,7 +710,7 @@
                                           <Parameter Inverted="0" MinValue="0" MaxValue="3" LowerLimit="0" UpperLimit="3"
                                                      StepSize="1" SkewFactor="1" ID="Mode" Value="0"/>
                                           <Parameter Inverted="0" MinValue="0.1" MaxValue="10" LowerLimit="0.1" UpperLimit="10"
-                                                     StepSize="0.01" SkewFactor="0.5" ID="Frequency" Value="0.839617"/>
+                                                     StepSize="0.01" SkewFactor="0.5" ID="Frequency" Value="3.33"/>
                                           <Parameter Inverted="0" MinValue="1" MaxValue="16" LowerLimit="1" UpperLimit="16"
                                                      StepSize="1" SkewFactor="1" ID="Freq Ratio" Value="2"/>
                                         </Parameters>
@@ -794,7 +794,7 @@
                                         <ModulationTargets/>
                                         <Parameters>
                                           <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.1" SkewFactor="0.30103" ID="DelayTime" Value="56.0349"/>
+                                                     StepSize="0.1" SkewFactor="0.30103" ID="DelayTime" Value="56"/>
                                           <Parameter Inverted="0" MinValue="0" MaxValue="1024" LowerLimit="0" UpperLimit="1024"
                                                      StepSize="1" SkewFactor="1" ID="FadeTime" Value="133"/>
                                         </Parameters>
@@ -1411,7 +1411,7 @@
                                                     <ModulationTargets/>
                                                     <Parameters>
                                                       <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
-                                                                 StepSize="0" SkewFactor="1" ID="Delay" Value="2.31958"/>
+                                                                 StepSize="0" SkewFactor="1" ID="Delay" Value="2.58161"/>
                                                     </Parameters>
                                                     <Properties/>
                                                   </Node>
@@ -1425,7 +1425,7 @@
                                                     </Properties>
                                                     <Parameters>
                                                       <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
-                                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-3.58875"/>
+                                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-3.66559"/>
                                                       <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
                                                                  StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="20"/>
                                                     </Parameters>
@@ -1443,7 +1443,7 @@
                                                     <ModulationTargets/>
                                                     <Parameters>
                                                       <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
-                                                                 StepSize="0" SkewFactor="1" ID="Delay" Value="2.40234"/>
+                                                                 StepSize="0" SkewFactor="1" ID="Delay" Value="2.65617"/>
                                                     </Parameters>
                                                     <Properties/>
                                                   </Node>
@@ -1703,7 +1703,7 @@
                 </Nodes>
                 <Parameters>
                   <Parameter ID="Speed" MinValue="0" MaxValue="1" StepSize="1" SkewFactor="1"
-                             Value="0">
+                             Value="1">
                     <Connections>
                       <Connection NodeId="ramp_envelope" ParameterId="Gate" Converter="Identity"
                                   OpType="SetValue" Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0"
@@ -4129,7 +4129,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainprepro4" Bypassed="0" Gain="-0.599999"
+                <Processor Type="SimpleGain" ID="SimpleGainprepro4" Bypassed="0" Gain="-0.599998"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -4800,7 +4800,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="61" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="32" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>

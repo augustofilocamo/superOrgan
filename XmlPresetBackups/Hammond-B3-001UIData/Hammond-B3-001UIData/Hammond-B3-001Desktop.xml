@@ -43,7 +43,7 @@
              parameterId="Enabled"/>
   <Component type="ScriptSlider" id="leslieSpeedKnb" x="12" y="287" text="Speed"
              width="110" height="49" processorId="LeslieDSP" parameterId="Speed"
-             stepSize="1"/>
+             stepSize="1.0"/>
   <Component type="ScriptButton" id="leslieOnOffBtn" x="29" y="261" width="89"
              height="28" text="Leslie" processorId="LeslieDSP" parameterId="Enabled"/>
 </ContentProperties>
