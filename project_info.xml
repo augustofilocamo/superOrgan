@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ProjectSettings>
-  <Name value="Hammond-B3"/>
+  <Name value="Hammond-B3-002"/>
   <Version value="1.0.0"/>
   <Description value=""/>
   <BundleIdentifier value="com.myCompany.product"/>
-  <PluginCode value="Hmnb"/>
+  <PluginCode value="Hmnd"/>
   <EmbedAudioFiles value="Yes"/>
   <EmbedImageFiles value="Yes"/>
   <SupportFullDynamicsHLAC value="No"/>

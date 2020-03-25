@@ -45,8 +45,8 @@
              parameterId="Enabled"/>
   <Component type="ScriptButton" id="Button1" x="143" y="393" processorId="LeslieDSP"
              parameterId="Enabled"/>
-  <Component type="ScriptSlider" id="Knob1" x="143" y="438" processorId="LeslieDSP"
-             parameterId="Speed"/>
+  <Component type="ScriptSlider" id="leslieSpeed" x="143" y="438" processorId="LeslieDSP"
+             parameterId="Speed" stepSize="1.0"/>
   <Component type="ScriptSlider" id="leakageGain" x="409" y="438" processorId="Simple Gain1"
              parameterId="Gain" mode="Decibel" min="-100" max="10" stepSize="0.1"
              suffix=" dB" middlePosition="-18"/>

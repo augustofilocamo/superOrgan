@@ -11,8 +11,8 @@
           <Content>
             <Control type="ScriptSlider" id="KnobDrawbar1" value="0"/>
             <Control type="ScriptSlider" id="KnobDrawbar2" value="0"/>
-            <Control type="ScriptSlider" id="KnobDrawbar3" value="-41.7"/>
-            <Control type="ScriptSlider" id="KnobDrawbar4" value="0"/>
+            <Control type="ScriptSlider" id="KnobDrawbar3" value="0"/>
+            <Control type="ScriptSlider" id="KnobDrawbar4" value="-100"/>
             <Control type="ScriptSlider" id="KnobDrawbar5" value="-100"/>
             <Control type="ScriptSlider" id="KnobDrawbar6" value="-100"/>
             <Control type="ScriptSlider" id="KnobDrawbar7" value="-100"/>
@@ -22,8 +22,8 @@
             <Control type="ScriptButton" id="Click3rd" value="0"/>
             <Control type="ScriptButton" id="KeyClick" value="1"/>
             <Control type="ScriptButton" id="Button1" value="0"/>
-            <Control type="ScriptSlider" id="Knob1" value="0"/>
-            <Control type="ScriptSlider" id="leakageGain" value="0"/>
+            <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
+            <Control type="ScriptSlider" id="leakageGain" value="-8.8"/>
           </Content>
           <UIData Source="Hammond-B3-002UIData"/>
         </Processor>
@@ -1072,7 +1072,7 @@
                                                     <ModulationTargets/>
                                                     <Parameters>
                                                       <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
-                                                                 StepSize="0" SkewFactor="1" ID="Delay" Value="2.54555"/>
+                                                                 StepSize="0" SkewFactor="1" ID="Delay" Value="2.50596"/>
                                                     </Parameters>
                                                     <Properties/>
                                                   </Node>
@@ -1086,7 +1086,7 @@
                                                     </Properties>
                                                     <Parameters>
                                                       <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
-                                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-4.05418"/>
+                                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-3.66892"/>
                                                       <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
                                                                  StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="20"/>
                                                     </Parameters>
@@ -1104,7 +1104,7 @@
                                                     <ModulationTargets/>
                                                     <Parameters>
                                                       <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
-                                                                 StepSize="0" SkewFactor="1" ID="Delay" Value="2.7344"/>
+                                                                 StepSize="0" SkewFactor="1" ID="Delay" Value="2.41807"/>
                                                     </Parameters>
                                                     <Properties/>
                                                   </Node>
@@ -4814,8 +4814,8 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="0" Delay="0"
-                       Width="100" Balance="0" InvertPolarity="0">
+            <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="-8.8"
+                       Delay="0" Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
                   <ChildProcessors/>
@@ -10387,7 +10387,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain3" Bypassed="0" Gain="-41.7"
+                <Processor Type="SimpleGain" ID="SimpleGainMain3" Bypassed="0" Gain="0"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10478,7 +10478,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain4" Bypassed="0" Gain="0"
+                <Processor Type="SimpleGain" ID="SimpleGainMain4" Bypassed="0" Gain="-100"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10959,8 +10959,8 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="Noise" ID="release-noise1" Bypassed="0" Gain="1" Balance="0"
-               VoiceLimit="256" KillFadeTime="20" IconColour="0">
+    <Processor Type="Noise" ID="release-noise1" Bypassed="0" Gain="0.457088"
+               Balance="0" VoiceLimit="256" KillFadeTime="20" IconColour="0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -10969,7 +10969,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="30" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="17" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
@@ -11051,7 +11051,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.177828" Balance="0"
+    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.549541" Balance="0.46"
                VoiceLimit="256" KillFadeTime="20" IconColour="0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -11125,8 +11125,8 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="click-2nd1" Bypassed="0" Gain="0.260016"
-               Balance="0" VoiceLimit="256" KillFadeTime="20" IconColour="0"
+    <Processor Type="SineSynth" ID="click-2nd1" Bypassed="0" Gain="0.0732824"
+               Balance="-0.53" VoiceLimit="256" KillFadeTime="20" IconColour="0"
                OctaveTranspose="1" SemiTones="0" UseFreqRatio="0" CoarseFreqRatio="1"
                FineFreqRatio="0" SaturationAmount="0">
       <ChildProcessors>
@@ -11137,7 +11137,7 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="AHDSR Envelope3" Bypassed="0" Monophonic="0"
                        Retrigger="1" Intensity="1" AttackCurve="0" DecayCurve="0.3"
-                       Attack="0" AttackLevel="0" Hold="0" Decay="900" Sustain="-100"
+                       Attack="0" AttackLevel="0" Hold="0" Decay="735" Sustain="-100"
                        Release="20" EcoMode="1">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1">
@@ -11190,8 +11190,8 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="click-3rd1" Bypassed="1" Gain="0.301995"
-               Balance="0" VoiceLimit="256" KillFadeTime="20" IconColour="0"
+    <Processor Type="SineSynth" ID="click-3rd1" Bypassed="1" Gain="0.0785236"
+               Balance="-0.57" VoiceLimit="256" KillFadeTime="20" IconColour="0"
                OctaveTranspose="1" SemiTones="7" UseFreqRatio="0" CoarseFreqRatio="1"
                FineFreqRatio="0" SaturationAmount="0">
       <ChildProcessors>
@@ -11202,7 +11202,7 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="AHDSR Envelope4" Bypassed="0" Monophonic="0"
                        Retrigger="1" Intensity="1" AttackCurve="0" DecayCurve="0.22"
-                       Attack="0" AttackLevel="0" Hold="0" Decay="900" Sustain="-100"
+                       Attack="0" AttackLevel="0" Hold="0" Decay="735" Sustain="-100"
                        Release="20" EcoMode="1">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1">
