@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ProjectSettings>
-  <Name value="Hammond-B3-002"/>
+  <Name value="Hammond-B3-006"/>
   <Version value="1.0.0"/>
   <Description value=""/>
   <BundleIdentifier value="com.myCompany.product"/>
-  <PluginCode value="Hmnd"/>
+  <PluginCode value="Hmng"/>
   <EmbedAudioFiles value="Yes"/>
   <EmbedImageFiles value="Yes"/>
   <SupportFullDynamicsHLAC value="No"/>
@@ -22,4 +22,5 @@
   <SupportMonoFX value="No"/>
   <VST3Support value="No"/>
   <UseRawFrontend value="No"/>
+  <EnableMidiInputFX value="No"/>
 </ProjectSettings>
