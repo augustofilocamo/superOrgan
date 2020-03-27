@@ -66,14 +66,6 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="Convolution" ID="Convolution Reverb1" Bypassed="0" DryGain="-22.2"
-                   WetGain="-3.5" Latency="0" ImpulseLength="1" ProcessInput="1"
-                   UseBackgroundThread="0" Predelay="0" HiCut="20000" Damping="0"
-                   FFTType="0" FileName="/Users/filo/Filo/VST Project/HISE Setup - installers/Cabinnets Irs/AC30 normal SNB/AC30 normal BX44 stalevel close_dc.wav"
-                   min="0" max="30654" loopStart="0" loopEnd="30654">
-          <ChildProcessors/>
-          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
-        </Processor>
         <Processor Type="ShapeFX" ID="Shape FX1" Bypassed="0" Curve="" BiasLeft="0"
                    BiasRight="0" HighPass="20" LowPass="20000" Mode="3" Oversampling="1"
                    Gain="3.4" Reduce="0" Autogain="1" LimitInput="1" Drive="0" Mix="1"
@@ -9789,7 +9781,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="44" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="10" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
