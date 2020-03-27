@@ -1,4 +1,5 @@
-Engine.createDspNetwork("dsp1");function prepareToPlay(sampleRate, blockSize)
+Engine.createDspNetwork("DSP");
+function prepareToPlay(sampleRate, blockSize)
 {
 	
 }

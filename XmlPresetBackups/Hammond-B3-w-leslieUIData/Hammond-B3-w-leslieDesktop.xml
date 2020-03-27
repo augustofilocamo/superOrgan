@@ -43,11 +43,11 @@
              parameterId="Enabled" width="128" height="28"/>
   <Component type="ScriptButton" id="KeyClick" x="143" y="294" processorId="click-noise1"
              parameterId="Enabled"/>
-  <Component type="ScriptButton" id="leslieOnOff" x="143" y="393" processorId="DSP1"
+  <Component type="ScriptButton" id="leslieOnOff" x="143" y="393" processorId="Script FX1"
              parameterId="Enabled"/>
   <Component type="ScriptSlider" id="leakageGain" x="349" y="389" processorId="Simple Gain1"
              parameterId="Gain" mode="Decibel" min="-100" max="10" stepSize="0.1"
              suffix=" dB" middlePosition="-18"/>
-  <Component type="ScriptSlider" id="leslieSpeed" x="141" y="438" processorId="DSP1"
-             parameterId="Freq" max="0.666"/>
+  <Component type="ScriptSlider" id="leslieSpeed" x="141" y="442" processorId="Script FX1"
+             parameterId="Speed" stepSize="1"/>
 </ContentProperties>
