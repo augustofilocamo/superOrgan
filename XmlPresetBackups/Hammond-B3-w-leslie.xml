@@ -44,28 +44,6 @@
     </Processor>
     <Processor Type="EffectChain" ID="FX" Bypassed="0">
       <ChildProcessors>
-        <Processor Type="PhaseFX" ID="Phase FX1" Bypassed="1" Frequency1="6721"
-                   Frequency2="2496" Feedback="0.25" Mix="1">
-          <ChildProcessors>
-            <Processor Type="ModulatorChain" ID="Phase Modulation" Bypassed="0" Intensity="1">
-              <ChildProcessors>
-                <Processor Type="LFO" ID="LFO Modulator1" Bypassed="0" Intensity="1" Frequency="6"
-                           FadeIn="1000" WaveformType="1" Legato="1" TempoSync="0" SmoothingTime="293.67"
-                           LoopEnabled="1" PhaseOffset="0" CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
-                  <ChildProcessors>
-                    <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1">
-                      <ChildProcessors/>
-                    </Processor>
-                    <Processor Type="ModulatorChain" ID="LFO Frequency Mod" Bypassed="0" Intensity="1">
-                      <ChildProcessors/>
-                    </Processor>
-                  </ChildProcessors>
-                </Processor>
-              </ChildProcessors>
-            </Processor>
-          </ChildProcessors>
-          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
-        </Processor>
         <Processor Type="ShapeFX" ID="Shape FX1" Bypassed="0" Curve="" BiasLeft="0"
                    BiasRight="0" HighPass="20" LowPass="20000" Mode="3" Oversampling="1"
                    Gain="3.4" Reduce="0" Autogain="1" LimitInput="1" Drive="0" Mix="1"
@@ -9781,7 +9759,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="10" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="6" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
