@@ -4,7 +4,8 @@
   <Component type="ScriptSlider" id="KnobDrawbar1" x="352" y="186" style="Vertical"
              middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
              processorId="SimpleGainMain1" parameterId="Gain" mode="Decibel"
-             width="36" height="149" itemColour="4023239065" bgColour="654311423"/>
+             width="36" height="149" itemColour="4023239065" bgColour="654311423"
+             dragDirection="Vertical"/>
   <Component type="ScriptSlider" id="KnobDrawbar2" x="458" y="186" style="Vertical"
              middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
              processorId="SimpleGainMain2" parameterId="Gain" mode="Decibel"

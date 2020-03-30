@@ -24,7 +24,7 @@
             <Control type="ScriptSlider" id="leakageGain" value="-7.3"/>
             <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
             <Control type="ScriptSlider" id="reverbKnob" value="0"/>
-            <Control type="ScriptButton" id="chorusBtn" value="0"/>
+            <Control type="ScriptButton" id="chorusBtn" value="1"/>
           </Content>
           <UIData Source="Hammond-B3-w-leslieUIData"/>
         </Processor>
@@ -52,7 +52,7 @@
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="ScriptFX" ID="Chorus" Bypassed="1">
+        <Processor Type="ScriptFX" ID="Chorus" Bypassed="0">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
           <Content/>
@@ -80,7 +80,7 @@
                                 <ModulationTargets/>
                                 <Parameters>
                                   <Parameter Inverted="1" MinValue="7.1" MaxValue="9.5" LowerLimit="7" UpperLimit="10"
-                                             StepSize=".1" SkewFactor="1" ID="Delay" Value="7.98646"/>
+                                             StepSize=".1" SkewFactor="1" ID="Delay" Value="7.77795"/>
                                 </Parameters>
                                 <Properties/>
                               </Node>
@@ -91,7 +91,7 @@
                                 <ModulationTargets/>
                                 <Parameters>
                                   <Parameter Inverted="1" MinValue="0.524009" MaxValue="8" LowerLimit="0"
-                                             UpperLimit="10" StepSize="0" SkewFactor="1" ID="Delay" Value="5.02708"/>
+                                             UpperLimit="10" StepSize="0" SkewFactor="1" ID="Delay" Value="5.44411"/>
                                 </Parameters>
                               </Node>
                             </Nodes>
@@ -10645,7 +10645,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="24" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="58" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
