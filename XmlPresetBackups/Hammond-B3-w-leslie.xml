@@ -14,14 +14,14 @@
             <Control type="ScriptSlider" id="KnobDrawbar3" value="-5.9"/>
             <Control type="ScriptSlider" id="KnobDrawbar4" value="-3.9"/>
             <Control type="ScriptSlider" id="KnobDrawbar5" value="-25.9"/>
-            <Control type="ScriptSlider" id="KnobDrawbar6" value="-23.8"/>
-            <Control type="ScriptSlider" id="KnobDrawbar7" value="-15.4"/>
-            <Control type="ScriptSlider" id="KnobDrawbar8" value="-18.2"/>
+            <Control type="ScriptSlider" id="KnobDrawbar6" value="-40.7"/>
+            <Control type="ScriptSlider" id="KnobDrawbar7" value="-37.7"/>
+            <Control type="ScriptSlider" id="KnobDrawbar8" value="-58.2"/>
             <Control type="ScriptSlider" id="KnobDrawbar9" value="-28"/>
             <Control type="ScriptButton" id="Click2nd" value="1"/>
             <Control type="ScriptButton" id="Click3rd" value="1"/>
             <Control type="ScriptButton" id="KeyClick" value="1"/>
-            <Control type="ScriptSlider" id="leakageGain" value="-0.499999"/>
+            <Control type="ScriptSlider" id="leakageGain" value="0.800002"/>
             <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
           </Content>
           <UIData Source="Hammond-B3-w-leslieUIData"/>
@@ -211,768 +211,782 @@
                     NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
                     ShowParameters="1">
                 <Nodes>
-                  <Node ID="fix32_block" FactoryPath="container.fix32_block" NumChannels="2"
+                  <Node ID="wrapfix16_block1" FactoryPath="container.oversample4x" NumChannels="2"
                         LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
                         Bypassed="0">
                     <Nodes>
-                      <Node ID="split" FactoryPath="container.split" NumChannels="2" LockNumChannels="0"
-                            NodeColour="0" Comment="" CommentWidth="300" ShowParameters="1">
+                      <Node ID="fix16_block" FactoryPath="container.fix16_block" NumChannels="2"
+                            LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
+                            Bypassed="0">
                         <Nodes>
-                          <Node ID="chain" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
-                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                          <Node ID="split" FactoryPath="container.split" NumChannels="2" LockNumChannels="0"
+                                NodeColour="0" Comment="" CommentWidth="300" ShowParameters="1">
                             <Nodes>
-                              <Node ID="clear" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="add" FactoryPath="math.add" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="1"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="ramp_envelope" FactoryPath="core.ramp_envelope" NumChannels="2"
-                                    LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
-                                    BypassRampTimeMs="20">
-                                <ModulationTargets/>
-                                <Properties>
-                                  <Property ID="UseMidi" Value="1" Public="0"/>
-                                </Properties>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="1" SkewFactor="1" ID="Gate" Value="0"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="2000"
-                                             StepSize="0.1" SkewFactor="1" ID="Ramp Time" Value="3412.6"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="peak" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
+                              <Node ID="chain" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
                                     NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                <ModulationTargets>
-                                  <ModulationTarget NodeId="oscillator" ParameterId="Frequency" OpType="SetValue"
-                                                    Enabled="1" Inverted="0" MinValue="0.7" MaxValue="5.7" LowerLimit="0.1"
-                                                    UpperLimit="10" StepSize="0.1" SkewFactor="0.229905" Expression=""/>
-                                  <ModulationTarget NodeId="mul" ParameterId="Value" OpType="SetValue" Enabled="1"
-                                                    Inverted="1" MinValue="0.13" MaxValue="0.09" LowerLimit="0" UpperLimit="1"
-                                                    StepSize="0.01" SkewFactor="1" Expression=""/>
-                                  <ModulationTarget NodeId="fix_delay" ParameterId="DelayTime" OpType="SetValue"
-                                                    Enabled="1" Inverted="0" MinValue="283" MaxValue="66" LowerLimit="0"
-                                                    UpperLimit="1000" StepSize="0.1" SkewFactor="0.30103" Expression=""/>
-                                </ModulationTargets>
-                                <Parameters/>
-                                <Properties/>
-                              </Node>
-                              <Node ID="clear1" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
-                                </Parameters>
-                              </Node>
-                            </Nodes>
-                            <Parameters/>
-                          </Node>
-                          <Node ID="chain4" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
-                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                            <Nodes>
-                              <Node ID="clear2" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="add1" FactoryPath="math.add" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="1"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="ramp_envelope1" FactoryPath="core.ramp_envelope" NumChannels="2"
-                                    LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
-                                    BypassRampTimeMs="20">
-                                <ModulationTargets/>
-                                <Properties>
-                                  <Property ID="UseMidi" Value="1" Public="0"/>
-                                </Properties>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="1" SkewFactor="1" ID="Gate" Value="0"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="2000"
-                                             StepSize="0.1" SkewFactor="1" ID="Ramp Time" Value="3042.7"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="peak1" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Bypassed="0">
-                                <ModulationTargets>
-                                  <ModulationTarget NodeId="oscillator3" ParameterId="Frequency" OpType="SetValue"
-                                                    Enabled="1" Inverted="0" MinValue="0.8" MaxValue="6.7" LowerLimit="0.1"
-                                                    UpperLimit="10" StepSize="0.1" SkewFactor="0.229905" Expression=""/>
-                                  <ModulationTarget NodeId="mul1" ParameterId="Value" OpType="SetValue" Enabled="1"
-                                                    Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                                    StepSize="0.01" SkewFactor="1" Expression=""/>
-                                  <ModulationTarget NodeId="mul1" ParameterId="Value" OpType="SetValue" Enabled="1"
-                                                    Inverted="1" MinValue="0.13" MaxValue="0.05" LowerLimit="0" UpperLimit="1"
-                                                    StepSize="0.01" SkewFactor="0.3" Expression=""/>
-                                  <ModulationTarget NodeId="fix_delay1" ParameterId="DelayTime" OpType="SetValue"
-                                                    Enabled="1" Inverted="0" MinValue="207" MaxValue="75" LowerLimit="0"
-                                                    UpperLimit="1000" StepSize="0.1" SkewFactor="0.30103" Expression=""/>
-                                  <ModulationTarget NodeId="fix_delay3" ParameterId="DelayTime" OpType="SetValue"
-                                                    Enabled="1" Inverted="0" MinValue="301" MaxValue="75" LowerLimit="0"
-                                                    UpperLimit="1000" StepSize="0.0001" SkewFactor="0.30103" Expression=""/>
-                                  <ModulationTarget NodeId="fix_delay2" ParameterId="DelayTime" OpType="SetValue"
-                                                    Enabled="1" Inverted="0" MinValue="207" MaxValue="75" LowerLimit="0"
-                                                    UpperLimit="1000" StepSize="0.1" SkewFactor="0.30103" Expression=""/>
-                                </ModulationTargets>
-                                <Parameters/>
-                                <Properties/>
-                              </Node>
-                              <Node ID="clear3" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
-                                </Parameters>
-                              </Node>
-                            </Nodes>
-                            <Parameters/>
-                          </Node>
-                          <Node ID="chain1" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
-                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                            <Nodes>
-                              <Node ID="clear6" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="modchain" FactoryPath="container.modchain" NumChannels="2"
-                                    LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300">
                                 <Nodes>
-                                  <Node ID="oscillator" FactoryPath="core.oscillator" NumChannels="2"
+                                  <Node ID="clear" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Folded="1">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
+                                    </Parameters>
+                                  </Node>
+                                  <Node ID="add" FactoryPath="math.add" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Folded="1">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="1"/>
+                                    </Parameters>
+                                  </Node>
+                                  <Node ID="ramp_envelope" FactoryPath="core.ramp_envelope" NumChannels="2"
                                         LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
                                         BypassRampTimeMs="20">
                                     <ModulationTargets/>
                                     <Properties>
-                                      <Property ID="UseMidi" Value="0" Public="0"/>
+                                      <Property ID="UseMidi" Value="1" Public="0"/>
                                     </Properties>
                                     <Parameters>
-                                      <Parameter Inverted="0" MinValue="0" MaxValue="4" LowerLimit="0" UpperLimit="4"
-                                                 StepSize="1" SkewFactor="1" ID="Mode" Value="0"/>
-                                      <Parameter Inverted="0" MinValue="0.1" MaxValue="10" LowerLimit="20" UpperLimit="20000"
-                                                 StepSize="0.01" SkewFactor="0.229905" ID="Frequency" Value="1.2"
-                                                 ModulationTarget="1"/>
-                                      <Parameter Inverted="0" MinValue="1" MaxValue="16" LowerLimit="1" UpperLimit="16"
-                                                 StepSize="1" SkewFactor="1" ID="Freq Ratio" Value="1"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="1" SkewFactor="1" ID="Gate" Value="0"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="2000"
+                                                 StepSize="0.1" SkewFactor="1" ID="Ramp Time" Value="3412.6"/>
                                     </Parameters>
                                   </Node>
-                                  <Node ID="mul" FactoryPath="math.mul" NumChannels="2" LockNumChannels="0"
+                                  <Node ID="peak" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
                                         NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                    <ModulationTargets>
+                                      <ModulationTarget NodeId="mul" ParameterId="Value" OpType="SetValue" Enabled="1"
+                                                        Inverted="1" MinValue="0.13" MaxValue="0.09" LowerLimit="0" UpperLimit="1"
+                                                        StepSize="0.01" SkewFactor="1" Expression=""/>
+                                      <ModulationTarget NodeId="fix_delay" ParameterId="DelayTime" OpType="SetValue"
+                                                        Enabled="1" Inverted="0" MinValue="283" MaxValue="66" LowerLimit="0"
+                                                        UpperLimit="1000" StepSize="0.0001" SkewFactor="0.30103" Expression=""/>
+                                      <ModulationTarget NodeId="oscillator" ParameterId="Frequency" OpType="SetValue"
+                                                        Enabled="1" Inverted="0" MinValue="0.66" MaxValue="5.66" LowerLimit="0.1"
+                                                        UpperLimit="10" StepSize="0.01" SkewFactor="0.229905" Expression=""/>
+                                    </ModulationTargets>
+                                    <Parameters/>
+                                    <Properties/>
+                                  </Node>
+                                  <Node ID="clear1" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Folded="1">
                                     <ModulationTargets/>
                                     <Parameters>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="0.2" ModulationTarget="1"/>
+                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
+                                    </Parameters>
+                                  </Node>
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="chain4" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
+                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                <Nodes>
+                                  <Node ID="clear2" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Folded="1">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
+                                    </Parameters>
+                                  </Node>
+                                  <Node ID="add1" FactoryPath="math.add" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Folded="1">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="1"/>
+                                    </Parameters>
+                                  </Node>
+                                  <Node ID="ramp_envelope1" FactoryPath="core.ramp_envelope" NumChannels="2"
+                                        LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
+                                        BypassRampTimeMs="20">
+                                    <ModulationTargets/>
+                                    <Properties>
+                                      <Property ID="UseMidi" Value="1" Public="0"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="1" SkewFactor="1" ID="Gate" Value="0"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="2000"
+                                                 StepSize="0.1" SkewFactor="1" ID="Ramp Time" Value="1491.7"/>
+                                    </Parameters>
+                                  </Node>
+                                  <Node ID="peak1" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Bypassed="0">
+                                    <ModulationTargets>
+                                      <ModulationTarget NodeId="oscillator3" ParameterId="Frequency" OpType="SetValue"
+                                                        Enabled="1" Inverted="0" MinValue="0.83" MaxValue="6.66" LowerLimit="0.1"
+                                                        UpperLimit="10" StepSize="0.001" SkewFactor="0.229905" Expression=""/>
+                                      <ModulationTarget NodeId="mul1" ParameterId="Value" OpType="SetValue" Enabled="1"
+                                                        Inverted="1" MinValue="0.13" MaxValue="0.09" LowerLimit="0" UpperLimit="1"
+                                                        StepSize="0.001" SkewFactor="1" Expression=""/>
+                                      <ModulationTarget NodeId="fix_delay1" ParameterId="DelayTime" OpType="SetValue"
+                                                        Enabled="1" Inverted="0" MinValue="207" MaxValue="75" LowerLimit="0"
+                                                        UpperLimit="1000" StepSize="0.0001" SkewFactor="0.30103" Expression=""/>
+                                      <ModulationTarget NodeId="fix_delay3" ParameterId="DelayTime" OpType="SetValue"
+                                                        Enabled="1" Inverted="0" MinValue="301" MaxValue="75" LowerLimit="0"
+                                                        UpperLimit="1000" StepSize="0.0001" SkewFactor="0.30103" Expression=""/>
+                                      <ModulationTarget NodeId="fix_delay2" ParameterId="DelayTime" OpType="SetValue"
+                                                        Enabled="1" Inverted="0" MinValue="207" MaxValue="75" LowerLimit="0"
+                                                        UpperLimit="1000" StepSize="0.0001" SkewFactor="0.30103" Expression=""/>
+                                    </ModulationTargets>
+                                    <Parameters/>
+                                    <Properties/>
+                                  </Node>
+                                  <Node ID="clear3" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Folded="1">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
+                                    </Parameters>
+                                  </Node>
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="chain1" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
+                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                <Nodes>
+                                  <Node ID="clear6" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Folded="1">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
+                                    </Parameters>
+                                  </Node>
+                                  <Node ID="modchain" FactoryPath="container.modchain" NumChannels="2"
+                                        LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300">
+                                    <Nodes>
+                                      <Node ID="oscillator" FactoryPath="core.oscillator" NumChannels="2"
+                                            LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
+                                            BypassRampTimeMs="20">
+                                        <ModulationTargets/>
+                                        <Properties>
+                                          <Property ID="UseMidi" Value="0" Public="0"/>
+                                        </Properties>
+                                        <Parameters>
+                                          <Parameter Inverted="0" MinValue="0" MaxValue="4" LowerLimit="0" UpperLimit="4"
+                                                     StepSize="1" SkewFactor="1" ID="Mode" Value="0"/>
+                                          <Parameter Inverted="0" MinValue="0.1" MaxValue="10" LowerLimit="20" UpperLimit="20000"
+                                                     StepSize="0.01" SkewFactor="0.229905" ID="Frequency" Value="1.2"
+                                                     ModulationTarget="1"/>
+                                          <Parameter Inverted="0" MinValue="1" MaxValue="16" LowerLimit="1" UpperLimit="16"
+                                                     StepSize="1" SkewFactor="1" ID="Freq Ratio" Value="1"/>
+                                        </Parameters>
+                                      </Node>
+                                      <Node ID="mul" FactoryPath="math.mul" NumChannels="2" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                        <ModulationTargets/>
+                                        <Parameters>
+                                          <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                     StepSize="0.01" SkewFactor="1" ID="Value" Value="0.2" ModulationTarget="1"/>
+                                        </Parameters>
+                                        <Properties/>
+                                      </Node>
+                                      <Node ID="sig2mod" FactoryPath="math.sig2mod" NumChannels="2" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                            Folded="1" Bypassed="0">
+                                        <ModulationTargets/>
+                                        <Parameters>
+                                          <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                     StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
+                                        </Parameters>
+                                      </Node>
+                                      <Node ID="send" FactoryPath="routing.send" NumChannels="2" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                            Folded="1">
+                                        <ModulationTargets/>
+                                        <Properties>
+                                          <Property ID="Connection" Value="receive" Public="0"/>
+                                        </Properties>
+                                        <Parameters/>
+                                      </Node>
+                                    </Nodes>
+                                    <Parameters/>
+                                  </Node>
+                                  <Node ID="receive" FactoryPath="routing.receive" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Bypassed="0" Folded="1">
+                                    <ModulationTargets/>
+                                    <Properties>
+                                      <Property ID="AddToSignal" Value="1" Public="0"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Feedback" Value="1"/>
+                                    </Parameters>
+                                  </Node>
+                                  <Node ID="peak2" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Bypassed="0">
+                                    <ModulationTargets>
+                                      <ModulationTarget NodeId="delay_l1" ParameterId="Delay" OpType="SetValue" Enabled="1"
+                                                        Inverted="0" MinValue="0" MaxValue="7" LowerLimit="0" UpperLimit="10"
+                                                        StepSize="0.0001" SkewFactor="1" Expression=""/>
+                                      <ModulationTarget NodeId="delay_l" ParameterId="Delay" OpType="SetValue" Enabled="1"
+                                                        Inverted="1" MinValue="10" MaxValue="0" LowerLimit="0" UpperLimit="10"
+                                                        StepSize="0.0001" SkewFactor="1" Expression=""/>
+                                    </ModulationTargets>
+                                    <Parameters/>
+                                    <Properties/>
+                                  </Node>
+                                  <Node ID="fix_delay" FactoryPath="core.fix_delay" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                 StepSize="0.0001" SkewFactor="0.30103" ID="DelayTime" Value="123.2"
+                                                 ModulationTarget="1"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1024" LowerLimit="0" UpperLimit="1024"
+                                                 StepSize="1" SkewFactor="1" ID="FadeTime" Value="599"/>
                                     </Parameters>
                                     <Properties/>
                                   </Node>
-                                  <Node ID="sig2mod" FactoryPath="math.sig2mod" NumChannels="2" LockNumChannels="0"
+                                  <Node ID="envelope_follower6" FactoryPath="dynamics.envelope_follower"
+                                        NumChannels="2" LockNumChannels="0" NodeColour="0" Comment=""
+                                        CommentWidth="300" BypassRampTimeMs="20" Bypassed="0">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                 StepSize="0.1" SkewFactor="0.231378" ID="Attack" Value="27.1"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                 StepSize="0.1" SkewFactor="0.231378" ID="Release" Value="31.2"/>
+                                    </Parameters>
+                                    <Properties/>
+                                  </Node>
+                                  <Node ID="mul4" FactoryPath="math.mul" NumChannels="2" LockNumChannels="0"
                                         NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                        Folded="1" Bypassed="0">
+                                        Bypassed="0">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="8.25"/>
+                                    </Parameters>
+                                    <Properties/>
+                                  </Node>
+                                  <Node ID="peak3" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Bypassed="0">
+                                    <ModulationTargets>
+                                      <ModulationTarget NodeId="gain3" ParameterId="Gain" OpType="SetValue" Enabled="1"
+                                                        Inverted="0" MinValue="-100" MaxValue="10" LowerLimit="-100"
+                                                        UpperLimit="10" StepSize="0.1" SkewFactor="5.42227" Expression=""/>
+                                    </ModulationTargets>
+                                    <Parameters/>
+                                    <Properties/>
+                                  </Node>
+                                  <Node ID="clear4" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Folded="1">
                                     <ModulationTargets/>
                                     <Parameters>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
                                                  StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
                                     </Parameters>
                                   </Node>
-                                  <Node ID="send" FactoryPath="routing.send" NumChannels="2" LockNumChannels="0"
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="chain5" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
+                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                <Nodes>
+                                  <Node ID="clear7" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Folded="1">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
+                                    </Parameters>
+                                  </Node>
+                                  <Node ID="modchain1" FactoryPath="container.modchain" NumChannels="2"
+                                        LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300">
+                                    <Nodes>
+                                      <Node ID="oscillator3" FactoryPath="core.oscillator" NumChannels="2"
+                                            LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
+                                            BypassRampTimeMs="20">
+                                        <ModulationTargets/>
+                                        <Properties>
+                                          <Property ID="UseMidi" Value="0" Public="0"/>
+                                        </Properties>
+                                        <Parameters>
+                                          <Parameter Inverted="0" MinValue="0" MaxValue="4" LowerLimit="0" UpperLimit="4"
+                                                     StepSize="1" SkewFactor="1" ID="Mode" Value="0"/>
+                                          <Parameter Inverted="0" MinValue="0.1" MaxValue="10" LowerLimit="20" UpperLimit="20000"
+                                                     StepSize="0.01" SkewFactor="0.229905" ID="Frequency" Value="2.7"
+                                                     ModulationTarget="1"/>
+                                          <Parameter Inverted="0" MinValue="1" MaxValue="16" LowerLimit="1" UpperLimit="16"
+                                                     StepSize="1" SkewFactor="1" ID="Freq Ratio" Value="1"/>
+                                        </Parameters>
+                                      </Node>
+                                      <Node ID="mul1" FactoryPath="math.mul" NumChannels="2" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                        <ModulationTargets/>
+                                        <Parameters>
+                                          <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                     StepSize="0.01" SkewFactor="1" ID="Value" Value="0.13"/>
+                                        </Parameters>
+                                      </Node>
+                                      <Node ID="sig2mod2" FactoryPath="math.sig2mod" NumChannels="2" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                            Folded="1" Bypassed="0">
+                                        <ModulationTargets/>
+                                        <Parameters>
+                                          <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                     StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
+                                        </Parameters>
+                                      </Node>
+                                      <Node ID="send1" FactoryPath="routing.send" NumChannels="2" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                            Folded="1">
+                                        <ModulationTargets/>
+                                        <Properties>
+                                          <Property ID="Connection" Value="receive2" Public="0"/>
+                                        </Properties>
+                                        <Parameters/>
+                                      </Node>
+                                    </Nodes>
+                                    <Parameters/>
+                                  </Node>
+                                  <Node ID="receive2" FactoryPath="routing.receive" NumChannels="2" LockNumChannels="0"
                                         NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
                                         Folded="1">
                                     <ModulationTargets/>
                                     <Properties>
-                                      <Property ID="Connection" Value="receive" Public="0"/>
+                                      <Property ID="AddToSignal" Value="1" Public="0"/>
                                     </Properties>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Feedback" Value="1"/>
+                                    </Parameters>
+                                  </Node>
+                                  <Node ID="split1" FactoryPath="container.split" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300">
+                                    <Nodes>
+                                      <Node ID="chain6" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                        <Nodes>
+                                          <Node ID="peak4" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
+                                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                                Bypassed="0">
+                                            <ModulationTargets>
+                                              <ModulationTarget NodeId="delay_l2" ParameterId="Delay" OpType="SetValue" Enabled="1"
+                                                                Inverted="0" MinValue="0" MaxValue="9" LowerLimit="0" UpperLimit="10"
+                                                                StepSize="0.0001" SkewFactor="1" Expression=""/>
+                                            </ModulationTargets>
+                                            <Parameters/>
+                                            <Properties/>
+                                          </Node>
+                                          <Node ID="fix_delay1" FactoryPath="core.fix_delay" NumChannels="2"
+                                                LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
+                                                BypassRampTimeMs="20">
+                                            <ModulationTargets/>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                         StepSize="0.0001" SkewFactor="0.30103" ID="DelayTime" Value="123.2"
+                                                         ModulationTarget="1"/>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1024" LowerLimit="0" UpperLimit="1024"
+                                                         StepSize="1" SkewFactor="1" ID="FadeTime" Value="596"/>
+                                            </Parameters>
+                                            <Properties/>
+                                          </Node>
+                                          <Node ID="envelope_follower5" FactoryPath="dynamics.envelope_follower"
+                                                NumChannels="2" LockNumChannels="0" NodeColour="0" Comment=""
+                                                CommentWidth="300" BypassRampTimeMs="20" Bypassed="0">
+                                            <ModulationTargets/>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                         StepSize="0.1" SkewFactor="0.231378" ID="Attack" Value="58.6"/>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                         StepSize="0.1" SkewFactor="0.231378" ID="Release" Value="71.8"/>
+                                            </Parameters>
+                                            <Properties/>
+                                          </Node>
+                                          <Node ID="mul3" FactoryPath="math.mul" NumChannels="2" LockNumChannels="0"
+                                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                                Bypassed="0">
+                                            <ModulationTargets/>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="1"
+                                                         StepSize="0.01" SkewFactor="1" ID="Value" Value="8.17"/>
+                                            </Parameters>
+                                            <Properties/>
+                                          </Node>
+                                          <Node ID="peak5" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
+                                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                                Bypassed="0">
+                                            <ModulationTargets>
+                                              <ModulationTarget NodeId="gain4" ParameterId="Gain" OpType="SetValue" Enabled="1"
+                                                                Inverted="1" MinValue="15" MaxValue="-85" LowerLimit="-100" UpperLimit="10"
+                                                                StepSize="0.1" SkewFactor="5.42227" Expression=""/>
+                                            </ModulationTargets>
+                                            <Parameters/>
+                                            <Properties/>
+                                          </Node>
+                                        </Nodes>
+                                        <Parameters/>
+                                      </Node>
+                                      <Node ID="chain8" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                        <Nodes>
+                                          <Node ID="fix_delay3" FactoryPath="core.fix_delay" NumChannels="2"
+                                                LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
+                                                BypassRampTimeMs="20" Bypassed="0">
+                                            <ModulationTargets/>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                         StepSize="0.0001" SkewFactor="0.30103" ID="DelayTime" Value="100"
+                                                         ModulationTarget="1"/>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1024" LowerLimit="0" UpperLimit="1024"
+                                                         StepSize="1" SkewFactor="1" ID="FadeTime" Value="532"/>
+                                            </Parameters>
+                                            <Properties/>
+                                          </Node>
+                                          <Node ID="envelope_follower" FactoryPath="dynamics.envelope_follower"
+                                                NumChannels="2" LockNumChannels="0" NodeColour="0" Comment=""
+                                                CommentWidth="300" BypassRampTimeMs="20" Bypassed="0">
+                                            <ModulationTargets/>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                         StepSize="0.1" SkewFactor="0.231378" ID="Attack" Value="51.4"/>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                         StepSize="0.1" SkewFactor="0.231378" ID="Release" Value="61"/>
+                                            </Parameters>
+                                            <Properties/>
+                                          </Node>
+                                          <Node ID="mul2" FactoryPath="math.mul" NumChannels="2" LockNumChannels="0"
+                                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                                Bypassed="0">
+                                            <ModulationTargets/>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="1"
+                                                         StepSize="0.01" SkewFactor="1" ID="Value" Value="8.01"/>
+                                            </Parameters>
+                                            <Properties/>
+                                          </Node>
+                                          <Node ID="peak6" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
+                                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                                Bypassed="0">
+                                            <ModulationTargets>
+                                              <ModulationTarget NodeId="delay_l3" ParameterId="Delay" OpType="SetValue" Enabled="1"
+                                                                Inverted="0" MinValue="1" MaxValue="8" LowerLimit="0" UpperLimit="10"
+                                                                StepSize="0.0001" SkewFactor="1" Expression=""/>
+                                            </ModulationTargets>
+                                            <Parameters/>
+                                            <Properties/>
+                                          </Node>
+                                          <Node ID="fix_delay2" FactoryPath="core.fix_delay" NumChannels="2"
+                                                LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
+                                                BypassRampTimeMs="20">
+                                            <ModulationTargets/>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                         StepSize="0.0001" SkewFactor="0.30103" ID="DelayTime" Value="123.2"
+                                                         ModulationTarget="1"/>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1024" LowerLimit="0" UpperLimit="1024"
+                                                         StepSize="1" SkewFactor="1" ID="FadeTime" Value="534"/>
+                                            </Parameters>
+                                            <Properties/>
+                                          </Node>
+                                          <Node ID="envelope_follower4" FactoryPath="dynamics.envelope_follower"
+                                                NumChannels="2" LockNumChannels="0" NodeColour="0" Comment=""
+                                                CommentWidth="300" BypassRampTimeMs="20" Bypassed="0">
+                                            <ModulationTargets/>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                         StepSize="0.1" SkewFactor="0.231378" ID="Attack" Value="21.6"/>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                         StepSize="0.1" SkewFactor="0.231378" ID="Release" Value="21.5"/>
+                                            </Parameters>
+                                            <Properties/>
+                                          </Node>
+                                          <Node ID="peak7" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
+                                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                                Bypassed="0">
+                                            <ModulationTargets>
+                                              <ModulationTarget NodeId="gain5" ParameterId="Gain" OpType="SetValue" Enabled="1"
+                                                                Inverted="1" MinValue="15" MaxValue="-85" LowerLimit="-100" UpperLimit="10"
+                                                                StepSize="0.1" SkewFactor="5.42227" Expression=""/>
+                                            </ModulationTargets>
+                                            <Parameters/>
+                                            <Properties/>
+                                          </Node>
+                                        </Nodes>
+                                        <Parameters/>
+                                      </Node>
+                                    </Nodes>
                                     <Parameters/>
+                                    <Properties/>
+                                  </Node>
+                                  <Node ID="clear5" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Folded="1">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
+                                    </Parameters>
                                   </Node>
                                 </Nodes>
                                 <Parameters/>
                               </Node>
-                              <Node ID="receive" FactoryPath="routing.receive" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Bypassed="0" Folded="1">
-                                <ModulationTargets/>
-                                <Properties>
-                                  <Property ID="AddToSignal" Value="1" Public="0"/>
-                                </Properties>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Feedback" Value="1"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="peak2" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
+                              <Node ID="chain2" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
                                     NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                <ModulationTargets>
-                                  <ModulationTarget NodeId="delay_l" ParameterId="Delay" OpType="SetValue" Enabled="1"
-                                                    Inverted="0" MinValue="0" MaxValue="7" LowerLimit="0" UpperLimit="10"
-                                                    StepSize="0.0001" SkewFactor="1" Expression=""/>
-                                  <ModulationTarget NodeId="delay_l1" ParameterId="Delay" OpType="SetValue" Enabled="1"
-                                                    Inverted="1" MinValue="10" MaxValue="0" LowerLimit="0" UpperLimit="10"
-                                                    StepSize="0.0001" SkewFactor="1" Expression=""/>
-                                </ModulationTargets>
-                                <Parameters/>
-                                <Properties/>
-                              </Node>
-                              <Node ID="fix_delay" FactoryPath="core.fix_delay" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                             StepSize="0.0001" SkewFactor="0.30103" ID="DelayTime" Value="123.2"
-                                             ModulationTarget="1"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1024" LowerLimit="0" UpperLimit="1024"
-                                             StepSize="1" SkewFactor="1" ID="FadeTime" Value="599"/>
-                                </Parameters>
-                                <Properties/>
-                              </Node>
-                              <Node ID="envelope_follower6" FactoryPath="dynamics.envelope_follower"
-                                    NumChannels="2" LockNumChannels="0" NodeColour="0" Comment=""
-                                    CommentWidth="300" BypassRampTimeMs="20" Bypassed="0">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                             StepSize="0.1" SkewFactor="0.231378" ID="Attack" Value="27.1"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                             StepSize="0.1" SkewFactor="0.231378" ID="Release" Value="31.2"/>
-                                </Parameters>
-                                <Properties/>
-                              </Node>
-                              <Node ID="mul4" FactoryPath="math.mul" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="6.92"/>
-                                </Parameters>
-                                <Properties/>
-                              </Node>
-                              <Node ID="peak3" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                <ModulationTargets>
-                                  <ModulationTarget NodeId="gain3" ParameterId="Gain" OpType="SetValue" Enabled="1"
-                                                    Inverted="1" MinValue="10" MaxValue="-70" LowerLimit="-100" UpperLimit="0"
-                                                    StepSize="0.1" SkewFactor="5.42227" Expression=""/>
-                                </ModulationTargets>
-                                <Parameters/>
-                                <Properties/>
-                              </Node>
-                              <Node ID="clear4" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
-                                </Parameters>
-                              </Node>
-                            </Nodes>
-                            <Parameters/>
-                          </Node>
-                          <Node ID="chain5" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
-                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                            <Nodes>
-                              <Node ID="clear7" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="modchain1" FactoryPath="container.modchain" NumChannels="2"
-                                    LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300">
                                 <Nodes>
-                                  <Node ID="oscillator3" FactoryPath="core.oscillator" NumChannels="2"
+                                  <Node ID="linkwitzriley" FactoryPath="filters.linkwitzriley" NumChannels="2"
                                         LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
                                         BypassRampTimeMs="20">
                                     <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="20" MaxValue="20000" LowerLimit="20" UpperLimit="20000"
+                                                 StepSize="0.1" SkewFactor="0.229905" ID="Frequency" Value="800.011"/>
+                                      <Parameter Inverted="0" MinValue="0.3" MaxValue="9.9" LowerLimit="0.3" UpperLimit="9.9"
+                                                 StepSize="0.1" SkewFactor="0.264718" ID="Q" Value="1"/>
+                                      <Parameter Inverted="0" MinValue="-18" MaxValue="18" LowerLimit="-18" UpperLimit="18"
+                                                 StepSize="0.1" SkewFactor="1" ID="Gain" Value="0"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="0.30103" ID="Smoothing" Value="0.01"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="2" LowerLimit="0" UpperLimit="2"
+                                                 StepSize="1" SkewFactor="1" ID="Mode" Value="0"/>
+                                    </Parameters>
+                                  </Node>
+                                  <Node ID="multi" FactoryPath="container.multi" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300">
+                                    <Nodes>
+                                      <Node ID="delay_l" FactoryPath="stk.delay_l" NumChannels="1" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                            Bypassed="0">
+                                        <ModulationTargets/>
+                                        <Parameters>
+                                          <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
+                                                     StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
+                                        </Parameters>
+                                      </Node>
+                                      <Node ID="delay_l1" FactoryPath="stk.delay_l" NumChannels="1" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                            Bypassed="0">
+                                        <ModulationTargets/>
+                                        <Parameters>
+                                          <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
+                                                     StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
+                                        </Parameters>
+                                      </Node>
+                                    </Nodes>
+                                    <Parameters/>
+                                    <Properties/>
+                                  </Node>
+                                  <Node ID="gain3" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Bypassed="0">
+                                    <ModulationTargets/>
                                     <Properties>
-                                      <Property ID="UseMidi" Value="0" Public="0"/>
+                                      <Property ID="ResetValue" Value="0" Public="0"/>
+                                      <Property ID="UseResetValue" Value="0" Public="0"/>
                                     </Properties>
                                     <Parameters>
-                                      <Parameter Inverted="0" MinValue="0" MaxValue="4" LowerLimit="0" UpperLimit="4"
-                                                 StepSize="1" SkewFactor="1" ID="Mode" Value="0"/>
-                                      <Parameter Inverted="0" MinValue="0.1" MaxValue="10" LowerLimit="20" UpperLimit="20000"
-                                                 StepSize="0.01" SkewFactor="0.229905" ID="Frequency" Value="2.7"
-                                                 ModulationTarget="1"/>
-                                      <Parameter Inverted="0" MinValue="1" MaxValue="16" LowerLimit="1" UpperLimit="16"
-                                                 StepSize="1" SkewFactor="1" ID="Freq Ratio" Value="1"/>
+                                      <Parameter Inverted="0" MinValue="-100" MaxValue="10" LowerLimit="-100"
+                                                 UpperLimit="0" StepSize="0.1" SkewFactor="5.42227" ID="Gain"
+                                                 Value="0" ModulationTarget="1"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                 StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="2"/>
                                     </Parameters>
                                   </Node>
-                                  <Node ID="mul1" FactoryPath="math.mul" NumChannels="2" LockNumChannels="0"
+                                  <Node ID="gain6" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
                                         NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
                                     <ModulationTargets/>
+                                    <Properties>
+                                      <Property ID="ResetValue" Value="0" Public="0"/>
+                                      <Property ID="UseResetValue" Value="0" Public="0"/>
+                                    </Properties>
                                     <Parameters>
-                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="0.25" ModulationTarget="1"/>
+                                      <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
+                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-100"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
+                                                 StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
                                     </Parameters>
                                   </Node>
-                                  <Node ID="sig2mod2" FactoryPath="math.sig2mod" NumChannels="2" LockNumChannels="0"
+                                  <Node ID="clear8" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
                                         NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                        Folded="1" Bypassed="0">
+                                        Folded="1" Bypassed="1">
                                     <ModulationTargets/>
                                     <Parameters>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
                                                  StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
                                     </Parameters>
                                   </Node>
-                                  <Node ID="send1" FactoryPath="routing.send" NumChannels="2" LockNumChannels="0"
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="chain3" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
+                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                <Nodes>
+                                  <Node ID="linkwitzriley1" FactoryPath="filters.linkwitzriley" NumChannels="2"
+                                        LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
+                                        BypassRampTimeMs="20">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="20" MaxValue="20000" LowerLimit="20" UpperLimit="20000"
+                                                 StepSize="0.1" SkewFactor="0.229905" ID="Frequency" Value="800.011"/>
+                                      <Parameter Inverted="0" MinValue="0.3" MaxValue="9.9" LowerLimit="0.3" UpperLimit="9.9"
+                                                 StepSize="0.1" SkewFactor="0.264718" ID="Q" Value="1"/>
+                                      <Parameter Inverted="0" MinValue="-18" MaxValue="18" LowerLimit="-18" UpperLimit="18"
+                                                 StepSize="0.1" SkewFactor="1" ID="Gain" Value="0"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="0.30103" ID="Smoothing" Value="0.01"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="2" LowerLimit="0" UpperLimit="2"
+                                                 StepSize="1" SkewFactor="1" ID="Mode" Value="1"/>
+                                    </Parameters>
+                                  </Node>
+                                  <Node ID="multi1" FactoryPath="container.multi" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300">
+                                    <Nodes>
+                                      <Node ID="chain9" FactoryPath="container.chain" NumChannels="1" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                        <Nodes>
+                                          <Node ID="delay_l2" FactoryPath="stk.delay_l" NumChannels="2" LockNumChannels="0"
+                                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                                Bypassed="0">
+                                            <ModulationTargets/>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
+                                                         StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
+                                            </Parameters>
+                                          </Node>
+                                          <Node ID="gain4" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
+                                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                                Bypassed="0">
+                                            <ModulationTargets/>
+                                            <Properties>
+                                              <Property ID="ResetValue" Value="0" Public="0"/>
+                                              <Property ID="UseResetValue" Value="0" Public="0"/>
+                                            </Properties>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="-100" MaxValue="10" LowerLimit="-100"
+                                                         UpperLimit="0" StepSize="0.1" SkewFactor="5.42227" ID="Gain"
+                                                         Value="0" ModulationTarget="1"/>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                         StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="2.2"/>
+                                            </Parameters>
+                                          </Node>
+                                        </Nodes>
+                                        <Parameters/>
+                                      </Node>
+                                      <Node ID="chain10" FactoryPath="container.chain" NumChannels="1" LockNumChannels="0"
+                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                        <Nodes>
+                                          <Node ID="delay_l3" FactoryPath="stk.delay_l" NumChannels="2" LockNumChannels="0"
+                                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                                Bypassed="0">
+                                            <ModulationTargets/>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
+                                                         StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
+                                            </Parameters>
+                                          </Node>
+                                          <Node ID="gain5" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
+                                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                                Bypassed="0">
+                                            <ModulationTargets/>
+                                            <Properties>
+                                              <Property ID="ResetValue" Value="0" Public="0"/>
+                                              <Property ID="UseResetValue" Value="0" Public="0"/>
+                                            </Properties>
+                                            <Parameters>
+                                              <Parameter Inverted="0" MinValue="-100" MaxValue="10" LowerLimit="-100"
+                                                         UpperLimit="0" StepSize="0.1" SkewFactor="5.42227" ID="Gain"
+                                                         Value="0" ModulationTarget="1"/>
+                                              <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                         StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="3.3"/>
+                                            </Parameters>
+                                          </Node>
+                                        </Nodes>
+                                        <Parameters/>
+                                      </Node>
+                                    </Nodes>
+                                    <Parameters/>
+                                  </Node>
+                                  <Node ID="gain7" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
                                         NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                        Folded="1">
+                                        Bypassed="0">
                                     <ModulationTargets/>
                                     <Properties>
-                                      <Property ID="Connection" Value="receive2" Public="0"/>
+                                      <Property ID="ResetValue" Value="0" Public="0"/>
+                                      <Property ID="UseResetValue" Value="0" Public="0"/>
                                     </Properties>
-                                    <Parameters/>
-                                  </Node>
-                                </Nodes>
-                                <Parameters/>
-                              </Node>
-                              <Node ID="receive2" FactoryPath="routing.receive" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1">
-                                <ModulationTargets/>
-                                <Properties>
-                                  <Property ID="AddToSignal" Value="1" Public="0"/>
-                                </Properties>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Feedback" Value="1"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="split1" FactoryPath="container.split" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300">
-                                <Nodes>
-                                  <Node ID="chain6" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
-                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                    <Nodes>
-                                      <Node ID="peak4" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
-                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                        <ModulationTargets>
-                                          <ModulationTarget NodeId="delay_l2" ParameterId="Delay" OpType="SetValue" Enabled="1"
-                                                            Inverted="0" MinValue="0" MaxValue="9" LowerLimit="0" UpperLimit="10"
-                                                            StepSize="0.0001" SkewFactor="1" Expression=""/>
-                                        </ModulationTargets>
-                                        <Parameters/>
-                                        <Properties/>
-                                      </Node>
-                                      <Node ID="fix_delay1" FactoryPath="core.fix_delay" NumChannels="2"
-                                            LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
-                                            BypassRampTimeMs="20">
-                                        <ModulationTargets/>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.0001" SkewFactor="0.30103" ID="DelayTime" Value="123.2"
-                                                     ModulationTarget="1"/>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1024" LowerLimit="0" UpperLimit="1024"
-                                                     StepSize="1" SkewFactor="1" ID="FadeTime" Value="596"/>
-                                        </Parameters>
-                                        <Properties/>
-                                      </Node>
-                                      <Node ID="envelope_follower5" FactoryPath="dynamics.envelope_follower"
-                                            NumChannels="2" LockNumChannels="0" NodeColour="0" Comment=""
-                                            CommentWidth="300" BypassRampTimeMs="20" Bypassed="0">
-                                        <ModulationTargets/>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.1" SkewFactor="0.231378" ID="Attack" Value="58.6"/>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.1" SkewFactor="0.231378" ID="Release" Value="71.8"/>
-                                        </Parameters>
-                                        <Properties/>
-                                      </Node>
-                                      <Node ID="mul3" FactoryPath="math.mul" NumChannels="2" LockNumChannels="0"
-                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                        <ModulationTargets/>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="1"
-                                                     StepSize="0.01" SkewFactor="1" ID="Value" Value="7.85"/>
-                                        </Parameters>
-                                        <Properties/>
-                                      </Node>
-                                      <Node ID="peak5" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
-                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                        <ModulationTargets>
-                                          <ModulationTarget NodeId="gain4" ParameterId="Gain" OpType="SetValue" Enabled="1"
-                                                            Inverted="1" MinValue="15" MaxValue="-85" LowerLimit="-100" UpperLimit="0"
-                                                            StepSize="0.1" SkewFactor="5.42227" Expression=""/>
-                                        </ModulationTargets>
-                                        <Parameters/>
-                                        <Properties/>
-                                      </Node>
-                                    </Nodes>
-                                    <Parameters/>
-                                  </Node>
-                                  <Node ID="chain8" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
-                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                    <Nodes>
-                                      <Node ID="fix_delay3" FactoryPath="core.fix_delay" NumChannels="2"
-                                            LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
-                                            BypassRampTimeMs="20" Bypassed="0">
-                                        <ModulationTargets/>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.0001" SkewFactor="0.30103" ID="DelayTime" Value="100"
-                                                     ModulationTarget="1"/>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1024" LowerLimit="0" UpperLimit="1024"
-                                                     StepSize="1" SkewFactor="1" ID="FadeTime" Value="532"/>
-                                        </Parameters>
-                                        <Properties/>
-                                      </Node>
-                                      <Node ID="envelope_follower" FactoryPath="dynamics.envelope_follower"
-                                            NumChannels="2" LockNumChannels="0" NodeColour="0" Comment=""
-                                            CommentWidth="300" BypassRampTimeMs="20" Bypassed="0">
-                                        <ModulationTargets/>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.1" SkewFactor="0.231378" ID="Attack" Value="51.4"/>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.1" SkewFactor="0.231378" ID="Release" Value="61"/>
-                                        </Parameters>
-                                        <Properties/>
-                                      </Node>
-                                      <Node ID="mul2" FactoryPath="math.mul" NumChannels="2" LockNumChannels="0"
-                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                            Bypassed="0">
-                                        <ModulationTargets/>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="1"
-                                                     StepSize="0.01" SkewFactor="1" ID="Value" Value="8.08"/>
-                                        </Parameters>
-                                        <Properties/>
-                                      </Node>
-                                      <Node ID="peak6" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
-                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                        <ModulationTargets>
-                                          <ModulationTarget NodeId="delay_l3" ParameterId="Delay" OpType="SetValue" Enabled="1"
-                                                            Inverted="0" MinValue="1" MaxValue="8" LowerLimit="0" UpperLimit="10"
-                                                            StepSize="0.0001" SkewFactor="1" Expression=""/>
-                                        </ModulationTargets>
-                                        <Parameters/>
-                                        <Properties/>
-                                      </Node>
-                                      <Node ID="fix_delay2" FactoryPath="core.fix_delay" NumChannels="2"
-                                            LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
-                                            BypassRampTimeMs="20">
-                                        <ModulationTargets/>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.0001" SkewFactor="0.30103" ID="DelayTime" Value="123.2"
-                                                     ModulationTarget="1"/>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1024" LowerLimit="0" UpperLimit="1024"
-                                                     StepSize="1" SkewFactor="1" ID="FadeTime" Value="534"/>
-                                        </Parameters>
-                                        <Properties/>
-                                      </Node>
-                                      <Node ID="envelope_follower4" FactoryPath="dynamics.envelope_follower"
-                                            NumChannels="2" LockNumChannels="0" NodeColour="0" Comment=""
-                                            CommentWidth="300" BypassRampTimeMs="20" Bypassed="0">
-                                        <ModulationTargets/>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.1" SkewFactor="0.231378" ID="Attack" Value="42.8"/>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.1" SkewFactor="0.231378" ID="Release" Value="47.8"/>
-                                        </Parameters>
-                                        <Properties/>
-                                      </Node>
-                                      <Node ID="peak7" FactoryPath="core.peak" NumChannels="2" LockNumChannels="0"
-                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                        <ModulationTargets>
-                                          <ModulationTarget NodeId="gain5" ParameterId="Gain" OpType="SetValue" Enabled="1"
-                                                            Inverted="1" MinValue="15" MaxValue="-85" LowerLimit="-100" UpperLimit="0"
-                                                            StepSize="0.1" SkewFactor="5.42227" Expression=""/>
-                                        </ModulationTargets>
-                                        <Parameters/>
-                                        <Properties/>
-                                      </Node>
-                                    </Nodes>
-                                    <Parameters/>
-                                  </Node>
-                                </Nodes>
-                                <Parameters/>
-                                <Properties/>
-                              </Node>
-                              <Node ID="clear5" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
-                                </Parameters>
-                              </Node>
-                            </Nodes>
-                            <Parameters/>
-                          </Node>
-                          <Node ID="chain2" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
-                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                            <Nodes>
-                              <Node ID="linkwitzriley" FactoryPath="filters.linkwitzriley" NumChannels="2"
-                                    LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
-                                    BypassRampTimeMs="20">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="20" MaxValue="20000" LowerLimit="20" UpperLimit="20000"
-                                             StepSize="0.1" SkewFactor="0.229905" ID="Frequency" Value="800.011"/>
-                                  <Parameter Inverted="0" MinValue="0.3" MaxValue="9.9" LowerLimit="0.3" UpperLimit="9.9"
-                                             StepSize="0.1" SkewFactor="0.264718" ID="Q" Value="1"/>
-                                  <Parameter Inverted="0" MinValue="-18" MaxValue="18" LowerLimit="-18" UpperLimit="18"
-                                             StepSize="0.1" SkewFactor="1" ID="Gain" Value="0"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="0.30103" ID="Smoothing" Value="0.01"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="2" LowerLimit="0" UpperLimit="2"
-                                             StepSize="1" SkewFactor="1" ID="Mode" Value="0"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="multi" FactoryPath="container.multi" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300">
-                                <Nodes>
-                                  <Node ID="delay_l" FactoryPath="stk.delay_l" NumChannels="1" LockNumChannels="0"
-                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                        Bypassed="0">
-                                    <ModulationTargets/>
                                     <Parameters>
-                                      <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
-                                                 StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
+                                      <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
+                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-100"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
+                                                 StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
                                     </Parameters>
                                   </Node>
-                                  <Node ID="delay_l1" FactoryPath="stk.delay_l" NumChannels="1" LockNumChannels="0"
+                                  <Node ID="clear9" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
                                         NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                        Bypassed="0">
+                                        Folded="1" Bypassed="1">
                                     <ModulationTargets/>
                                     <Parameters>
-                                      <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
-                                                 StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
                                     </Parameters>
                                   </Node>
                                 </Nodes>
                                 <Parameters/>
                               </Node>
-                              <Node ID="gain3" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
+                              <Node ID="chain7" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
                                     NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
                                     Bypassed="0">
-                                <ModulationTargets/>
-                                <Properties>
-                                  <Property ID="ResetValue" Value="0" Public="0"/>
-                                  <Property ID="UseResetValue" Value="0" Public="0"/>
-                                </Properties>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="-100" MaxValue="10" LowerLimit="-100"
-                                             UpperLimit="0" StepSize="0.1" SkewFactor="5.42227" ID="Gain"
-                                             Value="0" ModulationTarget="1"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                             StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="20"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="gain6" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                <ModulationTargets/>
-                                <Properties>
-                                  <Property ID="ResetValue" Value="0" Public="0"/>
-                                  <Property ID="UseResetValue" Value="0" Public="0"/>
-                                </Properties>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
-                                             StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-100"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
-                                             StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="clear8" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1" Bypassed="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
-                                </Parameters>
-                              </Node>
-                            </Nodes>
-                            <Parameters/>
-                          </Node>
-                          <Node ID="chain3" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
-                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                            <Nodes>
-                              <Node ID="linkwitzriley1" FactoryPath="filters.linkwitzriley" NumChannels="2"
-                                    LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
-                                    BypassRampTimeMs="20">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="20" MaxValue="20000" LowerLimit="20" UpperLimit="20000"
-                                             StepSize="0.1" SkewFactor="0.229905" ID="Frequency" Value="800.011"/>
-                                  <Parameter Inverted="0" MinValue="0.3" MaxValue="9.9" LowerLimit="0.3" UpperLimit="9.9"
-                                             StepSize="0.1" SkewFactor="0.264718" ID="Q" Value="1"/>
-                                  <Parameter Inverted="0" MinValue="-18" MaxValue="18" LowerLimit="-18" UpperLimit="18"
-                                             StepSize="0.1" SkewFactor="1" ID="Gain" Value="0"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="0.30103" ID="Smoothing" Value="0.01"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="2" LowerLimit="0" UpperLimit="2"
-                                             StepSize="1" SkewFactor="1" ID="Mode" Value="1"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="multi1" FactoryPath="container.multi" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300">
                                 <Nodes>
-                                  <Node ID="chain9" FactoryPath="container.chain" NumChannels="1" LockNumChannels="0"
-                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                    <Nodes>
-                                      <Node ID="delay_l2" FactoryPath="stk.delay_l" NumChannels="2" LockNumChannels="0"
-                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                            Bypassed="0">
-                                        <ModulationTargets/>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
-                                                     StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
-                                        </Parameters>
-                                      </Node>
-                                      <Node ID="gain4" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
-                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                            Bypassed="0">
-                                        <ModulationTargets/>
-                                        <Properties>
-                                          <Property ID="ResetValue" Value="0" Public="0"/>
-                                          <Property ID="UseResetValue" Value="0" Public="0"/>
-                                        </Properties>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="-100" MaxValue="10" LowerLimit="-100"
-                                                     UpperLimit="0" StepSize="0.1" SkewFactor="5.42227" ID="Gain"
-                                                     Value="0" ModulationTarget="1"/>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="20"/>
-                                        </Parameters>
-                                      </Node>
-                                    </Nodes>
-                                    <Parameters/>
-                                  </Node>
-                                  <Node ID="chain10" FactoryPath="container.chain" NumChannels="1" LockNumChannels="0"
-                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
-                                    <Nodes>
-                                      <Node ID="delay_l3" FactoryPath="stk.delay_l" NumChannels="2" LockNumChannels="0"
-                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                            Bypassed="0">
-                                        <ModulationTargets/>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
-                                                     StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
-                                        </Parameters>
-                                      </Node>
-                                      <Node ID="gain5" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
-                                            NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                            Bypassed="0">
-                                        <ModulationTargets/>
-                                        <Properties>
-                                          <Property ID="ResetValue" Value="0" Public="0"/>
-                                          <Property ID="UseResetValue" Value="0" Public="0"/>
-                                        </Properties>
-                                        <Parameters>
-                                          <Parameter Inverted="0" MinValue="-100" MaxValue="10" LowerLimit="-100"
-                                                     UpperLimit="0" StepSize="0.1" SkewFactor="5.42227" ID="Gain"
-                                                     Value="0" ModulationTarget="1"/>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                     StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="20"/>
-                                        </Parameters>
-                                      </Node>
-                                    </Nodes>
-                                    <Parameters/>
+                                  <Node ID="gain1" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Bypassed="0">
+                                    <ModulationTargets/>
+                                    <Properties>
+                                      <Property ID="ResetValue" Value="0" Public="0"/>
+                                      <Property ID="UseResetValue" Value="0" Public="0"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
+                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="0"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
+                                                 StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
+                                    </Parameters>
                                   </Node>
                                 </Nodes>
                                 <Parameters/>
                               </Node>
-                              <Node ID="gain7" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Bypassed="0">
-                                <ModulationTargets/>
-                                <Properties>
-                                  <Property ID="ResetValue" Value="0" Public="0"/>
-                                  <Property ID="UseResetValue" Value="0" Public="0"/>
-                                </Properties>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
-                                             StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-100"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
-                                             StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
-                                </Parameters>
-                              </Node>
-                              <Node ID="clear9" FactoryPath="math.clear" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Folded="1" Bypassed="1">
-                                <ModulationTargets/>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                             StepSize="0.01" SkewFactor="1" ID="Value" Value="0"/>
-                                </Parameters>
-                              </Node>
                             </Nodes>
-                            <Parameters/>
-                          </Node>
-                          <Node ID="chain7" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
-                                NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                Bypassed="0">
-                            <Nodes>
-                              <Node ID="gain1" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
-                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                    Bypassed="0">
-                                <ModulationTargets/>
-                                <Properties>
-                                  <Property ID="ResetValue" Value="0" Public="0"/>
-                                  <Property ID="UseResetValue" Value="0" Public="0"/>
-                                </Properties>
-                                <Parameters>
-                                  <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
-                                             StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="0"/>
-                                  <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
-                                             StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
-                                </Parameters>
-                              </Node>
-                            </Nodes>
-                            <Parameters/>
+                            <Parameters>
+                              <Parameter ID="Crossover" MinValue="0" MaxValue="1" StepSize="0.0001" SkewFactor="1"
+                                         Value="0.7768">
+                                <Connections>
+                                  <Connection NodeId="linkwitzriley" ParameterId="Frequency" Converter="Identity"
+                                              OpType="SetValue" Inverted="0" MinValue="200" MaxValue="2000"
+                                              LowerLimit="20" UpperLimit="20000" StepSize="0.1" SkewFactor="0.229905"
+                                              Expression=""/>
+                                  <Connection NodeId="linkwitzriley1" ParameterId="Frequency" Converter="Identity"
+                                              OpType="SetValue" Inverted="0" MinValue="200" MaxValue="2000"
+                                              LowerLimit="20" UpperLimit="20000" StepSize="0.1" SkewFactor="0.229905"
+                                              Expression=""/>
+                                </Connections>
+                              </Parameter>
+                            </Parameters>
+                            <Properties/>
                           </Node>
                         </Nodes>
-                        <Parameters>
-                          <Parameter ID="Crossover" MinValue="0" MaxValue="1" StepSize="0.0001" SkewFactor="1"
-                                     Value="0.7768">
-                            <Connections>
-                              <Connection NodeId="linkwitzriley" ParameterId="Frequency" Converter="Identity"
-                                          OpType="SetValue" Inverted="0" MinValue="200" MaxValue="2000"
-                                          LowerLimit="20" UpperLimit="20000" StepSize="0.1" SkewFactor="0.229905"
-                                          Expression=""/>
-                              <Connection NodeId="linkwitzriley1" ParameterId="Frequency" Converter="Identity"
-                                          OpType="SetValue" Inverted="0" MinValue="200" MaxValue="2000"
-                                          LowerLimit="20" UpperLimit="20000" StepSize="0.1" SkewFactor="0.229905"
-                                          Expression=""/>
-                            </Connections>
-                          </Parameter>
-                        </Parameters>
+                        <Parameters/>
                         <Properties/>
                       </Node>
                     </Nodes>
@@ -4433,7 +4447,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="-0.499999"
+            <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="0.800002"
                        Delay="0" Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10279,7 +10293,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain6" Bypassed="0" Gain="-23.8"
+                <Processor Type="SimpleGain" ID="SimpleGainMain6" Bypassed="0" Gain="-40.7"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10370,7 +10384,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain7" Bypassed="0" Gain="-15.4"
+                <Processor Type="SimpleGain" ID="SimpleGainMain7" Bypassed="0" Gain="-37.7"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10461,7 +10475,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain8" Bypassed="0" Gain="-18.2"
+                <Processor Type="SimpleGain" ID="SimpleGainMain8" Bypassed="0" Gain="-58.2"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10588,7 +10602,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="34" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="35" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
