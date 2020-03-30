@@ -43,9 +43,14 @@
              parameterId="Enabled" width="128" height="28"/>
   <Component type="ScriptButton" id="KeyClick" x="143" y="294" processorId="click-noise1"
              parameterId="Enabled"/>
-  <Component type="ScriptSlider" id="leakageGain" x="349" y="389" processorId="Simple Gain1"
+  <Component type="ScriptSlider" id="leakageGain" x="688" y="365" processorId="Simple Gain1"
              parameterId="Gain" mode="Decibel" min="-100" max="10" stepSize="0.1"
              suffix=" dB" middlePosition="-18"/>
-  <Component type="ScriptSlider" id="leslieSpeed" x="141" y="442" stepSize="1"
+  <Component type="ScriptSlider" id="leslieSpeed" x="138" y="451" stepSize="1"
              max="2"/>
+  <Component type="ScriptSlider" id="reverbKnob" x="142" y="386" processorId="Reverb"
+             parameterId="WetLevel" mode="NormalizedPercentage" suffix="%"
+             middlePosition="0.1" max="0.4"/>
+  <Component type="ScriptButton" id="chorusBtn" x="143" y="339" processorId="Chorus"
+             parameterId="Enabled"/>
 </ContentProperties>

@@ -3,7 +3,7 @@ Content.makeFrontInterface(1100, 700);
 
 
 // Leslie
-const var ScriptFX1 = Synth.getEffect("Script FX1");
+const var ScriptFX1 = Synth.getEffect("Leslie");
 
 
 inline function onleslieSpeedControl(component, value)
