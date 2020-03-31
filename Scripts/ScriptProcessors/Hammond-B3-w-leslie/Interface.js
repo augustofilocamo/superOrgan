@@ -167,8 +167,8 @@ Content.getComponent("KnobDrawbar9").setControlCallback(onKnobDrawbar9Control);
 
 
 const var percHarmKnob = Content.getComponent("percHarmKnob");
-const var click2nd = Synth.getChildSynth("click2nd");
-const var click3rd = Synth.getChildSynth("click3rd");
+const var perc2nd = Synth.getChildSynth("perc2nd");
+const var perc3rd = Synth.getChildSynth("perc3rd");
 
 
 inline function onpercHarmKnobControl(component, value)
@@ -177,18 +177,18 @@ inline function onpercHarmKnobControl(component, value)
     switch (value){
         
         case 0:
-            click2nd.setAttribute(click2nd.Gain, 0);
-            click3rd.setAttribute(click3rd.Gain, 0.07);
+            perc2nd.setAttribute(perc2nd.Gain, 0);
+            perc3rd.setAttribute(perc3rd.Gain, 0.07);
             break;
             
         case 1:
-            click2nd.setAttribute(click2nd.Gain, 0);
-            click3rd.setAttribute(click3rd.Gain, 0);
+            perc2nd.setAttribute(perc2nd.Gain, 0);
+            perc3rd.setAttribute(perc3rd.Gain, 0);
             break;
             
         case 2:
-            click2nd.setAttribute(click2nd.Gain, 0.07);
-            click3rd.setAttribute(click3rd.Gain, 0);
+            perc2nd.setAttribute(perc2nd.Gain, 0.07);
+            perc3rd.setAttribute(perc3rd.Gain, 0);
             break;
     }
 };

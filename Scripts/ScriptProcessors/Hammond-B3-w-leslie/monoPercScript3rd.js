@@ -1,14 +1,14 @@
 Console.clear();
 
-reg lastTime;
+reg lastTime2;
 function onNoteOn()
 {
     if (Synth.isLegatoInterval()){
     
-       if (Engine.getUptime() - lastTime > 0.025){
+       if (Engine.getUptime() - lastTime2 > 0.5){
         
             Message.ignoreEvent(true);
-            lastTime = Engine.getUptime();
+            lastTime2 = Engine.getUptime();
        }
     }
 }
