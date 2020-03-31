@@ -16,43 +16,6 @@
                processorId="mainGain" parameterId="Gain" mode="Decibel" min="-100"
                max="0" stepSize="0.1" suffix=" dB" middlePosition="-18"/>
   </Component>
-  <Component type="ScriptSlider" id="KnobDrawbar1" x="323" y="510" style="Vertical"
-             middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
-             processorId="SimpleGainMain1" parameterId="Gain" mode="Decibel"
-             width="36" height="149" itemColour="4023239065" bgColour="654311423"
-             dragDirection="Vertical"/>
-  <Component type="ScriptSlider" id="KnobDrawbar2" x="429" y="510" style="Vertical"
-             middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
-             processorId="SimpleGainMain2" parameterId="Gain" mode="Decibel"
-             width="36" height="149" itemColour="4023239065" bgColour="654311423"/>
-  <Component type="ScriptSlider" id="KnobDrawbar3" x="376" y="510" style="Vertical"
-             middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
-             processorId="SimpleGainMain3" parameterId="Gain" mode="Decibel"
-             width="36" height="149" itemColour="4023239065" bgColour="654311423"/>
-  <Component type="ScriptSlider" id="KnobDrawbar4" x="483" y="510" style="Vertical"
-             middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
-             processorId="SimpleGainMain4" parameterId="Gain" mode="Decibel"
-             width="36" height="149" itemColour="4023239065" bgColour="654311423"/>
-  <Component type="ScriptSlider" id="KnobDrawbar5" x="536" y="510" style="Vertical"
-             middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
-             processorId="SimpleGainMain5" parameterId="Gain" mode="Decibel"
-             width="36" height="149" itemColour="4023239065" bgColour="654311423"/>
-  <Component type="ScriptSlider" id="KnobDrawbar6" x="589" y="510" style="Vertical"
-             middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
-             processorId="SimpleGainMain6" parameterId="Gain" mode="Decibel"
-             width="36" height="149" itemColour="4023239065" bgColour="654311423"/>
-  <Component type="ScriptSlider" id="KnobDrawbar7" x="643" y="510" style="Vertical"
-             middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
-             processorId="SimpleGainMain7" parameterId="Gain" mode="Decibel"
-             width="36" height="149" itemColour="4023239065" bgColour="654311423"/>
-  <Component type="ScriptSlider" id="KnobDrawbar8" x="696" y="510" style="Vertical"
-             middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
-             processorId="SimpleGainMain8" parameterId="Gain" mode="Decibel"
-             width="36" height="149" itemColour="4023239065" bgColour="654311423"/>
-  <Component type="ScriptSlider" id="KnobDrawbar9" x="750" y="510" style="Vertical"
-             middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
-             processorId="SimpleGainMain9" parameterId="Gain" mode="Decibel"
-             width="36" height="149" itemColour="4023239065" bgColour="654311423"/>
   <Component type="ScriptButton" id="KeyClick" x="169" y="537" processorId="click-noise1"
              parameterId="Enabled"/>
   <Component type="ScriptSlider" id="leakageGain" x="659" y="689" processorId="Simple Gain1"
@@ -96,5 +59,32 @@
              itemColour="4028242458" itemColour2="4028242458" borderSize="1"
              borderRadius="2" visible="0"/>
   <Component type="ScriptSlider" id="percHarmKnob" x="163" y="580" middlePosition="1"
-             stepSize="1.0" max="2"/>
+             stepSize="1" max="2"/>
+  <Component type="ScriptSlider" id="KnobDrawbar1" x="325" y="513" style="Vertical"
+             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
+  <Component type="ScriptSlider" id="KnobDrawbar2" x="430" y="513" style="Vertical"
+             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
+  <Component type="ScriptSlider" id="KnobDrawbar3" x="378" y="513" style="Vertical"
+             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
+  <Component type="ScriptSlider" id="KnobDrawbar4" x="484" y="513" style="Vertical"
+             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
+  <Component type="ScriptSlider" id="KnobDrawbar5" x="535" y="513" style="Vertical"
+             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
+  <Component type="ScriptSlider" id="KnobDrawbar6" x="584" y="513" style="Vertical"
+             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
+  <Component type="ScriptSlider" id="KnobDrawbar7" x="632" y="513" style="Vertical"
+             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
+  <Component type="ScriptSlider" id="KnobDrawbar8" x="678" y="513" style="Vertical"
+             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
+  <Component type="ScriptSlider" id="KnobDrawbar9" x="726" y="513" style="Vertical"
+             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
 </ContentProperties>
