@@ -1,4 +1,5 @@
-Engine.createDspNetwork("dsp1");function prepareToPlay(sampleRate, blockSize)
+Engine.createDspNetwork("chorusDSP");
+function prepareToPlay(sampleRate, blockSize)
 {
 	
 }
