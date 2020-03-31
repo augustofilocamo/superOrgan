@@ -53,16 +53,12 @@
              middlePosition="-18" stepSize="0.1" min="-100" max="0" suffix=" dB"
              processorId="SimpleGainMain9" parameterId="Gain" mode="Decibel"
              width="36" height="149" itemColour="4023239065" bgColour="654311423"/>
-  <Component type="ScriptButton" id="Click2nd" x="171" y="625" processorId="click-2nd1"
-             parameterId="Enabled"/>
-  <Component type="ScriptButton" id="Click3rd" x="167" y="582" processorId="click-3rd1"
-             parameterId="Enabled" width="128" height="28"/>
   <Component type="ScriptButton" id="KeyClick" x="169" y="537" processorId="click-noise1"
              parameterId="Enabled"/>
   <Component type="ScriptSlider" id="leakageGain" x="659" y="689" processorId="Simple Gain1"
              parameterId="Gain" mode="Decibel" min="-100" max="10" stepSize="0.1"
              suffix=" dB" middlePosition="-18"/>
-  <Component type="ScriptSlider" id="leslieSpeed" x="72" y="683" stepSize="1"
+  <Component type="ScriptSlider" id="leslieSpeed" x="189" y="697" stepSize="1"
              max="2"/>
   <Component type="ScriptSlider" id="reverbKnob" x="834" y="549" processorId="Reverb"
              parameterId="WetLevel" mode="NormalizedPercentage" suffix="%"
@@ -99,4 +95,6 @@
   <Component type="ScriptPanel" id="morePanel" x="0" y="47" width="1024" height="443"
              itemColour="4028242458" itemColour2="4028242458" borderSize="1"
              borderRadius="2" visible="0"/>
+  <Component type="ScriptSlider" id="percHarmKnob" x="163" y="580" middlePosition="1"
+             stepSize="1.0" max="2"/>
 </ContentProperties>

@@ -22,13 +22,12 @@
             <Control type="ScriptSlider" id="KnobDrawbar7" value="-37.7"/>
             <Control type="ScriptSlider" id="KnobDrawbar8" value="-58.2"/>
             <Control type="ScriptSlider" id="KnobDrawbar9" value="-45.5"/>
-            <Control type="ScriptButton" id="Click2nd" value="1"/>
-            <Control type="ScriptButton" id="Click3rd" value="0"/>
             <Control type="ScriptButton" id="KeyClick" value="1"/>
             <Control type="ScriptSlider" id="leakageGain" value="1.49012e-06"/>
             <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
             <Control type="ScriptSlider" id="reverbKnob" value="0"/>
             <Control type="ScriptButton" id="chorusBtn" value="1"/>
+            <Control type="ScriptSlider" id="percHarmKnob" value="0"/>
           </Content>
           <UIData Source="Hammond-B3-w-leslieUIData"/>
         </Processor>
@@ -10666,7 +10665,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="41" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="21" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
@@ -10822,13 +10821,21 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="click-2nd1" Bypassed="0" Gain="0.0732824"
-               Balance="-0.53" VoiceLimit="256" KillFadeTime="20" IconColour="0"
-               OctaveTranspose="1" SemiTones="0" UseFreqRatio="0" CoarseFreqRatio="1"
-               FineFreqRatio="0" SaturationAmount="0">
+    <Processor Type="SineSynth" ID="click2nd" Bypassed="0" Gain="0" Balance="-0.53"
+               VoiceLimit="256" KillFadeTime="20" IconColour="0" OctaveTranspose="1"
+               SemiTones="0" UseFreqRatio="0" CoarseFreqRatio="1" FineFreqRatio="0"
+               SaturationAmount="0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
-          <ChildProcessors/>
+          <ChildProcessors>
+            <Processor Type="ScriptProcessor" ID="monoPercScript" Bypassed="0">
+              <ChildProcessors/>
+              <Content/>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1">
           <ChildProcessors>
@@ -10887,13 +10894,21 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="click-3rd1" Bypassed="1" Gain="0.0785236"
-               Balance="-0.57" VoiceLimit="256" KillFadeTime="20" IconColour="0"
-               OctaveTranspose="1" SemiTones="7" UseFreqRatio="0" CoarseFreqRatio="1"
-               FineFreqRatio="0" SaturationAmount="0">
+    <Processor Type="SineSynth" ID="click3rd" Bypassed="0" Gain="0.07" Balance="-0.57"
+               VoiceLimit="2" KillFadeTime="20" IconColour="0" OctaveTranspose="1"
+               SemiTones="7" UseFreqRatio="0" CoarseFreqRatio="1" FineFreqRatio="0"
+               SaturationAmount="0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
-          <ChildProcessors/>
+          <ChildProcessors>
+            <Processor Type="ScriptProcessor" ID="monoPercScript2" Bypassed="0">
+              <ChildProcessors/>
+              <Content/>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1">
           <ChildProcessors>

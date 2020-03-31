@@ -1,5 +1,36 @@
 Content.makeFrontInterface(1024, 768);
 
+const var percHarmKnob = Content.getComponent("percHarmKnob");
+const var click2nd = Synth.getChildSynth("click2nd");
+const var click3rd = Synth.getChildSynth("click3rd");
+
+
+inline function onpercHarmKnobControl(component, value)
+{
+
+    switch (value){
+        
+        case 0:
+            click2nd.setAttribute(click2nd.Gain, 0);
+            click3rd.setAttribute(click3rd.Gain, 0.07);
+            break;
+            
+        case 1:
+            click2nd.setAttribute(click2nd.Gain, 0);
+            click3rd.setAttribute(click3rd.Gain, 0);
+            break;
+            
+        case 2:
+            click2nd.setAttribute(click2nd.Gain, 0.07);
+            click3rd.setAttribute(click3rd.Gain, 0);
+            break;
+    }
+};
+
+Content.getComponent("percHarmKnob").setControlCallback(onpercHarmKnobControl);
+
+
+
 
 
 // Leslie
