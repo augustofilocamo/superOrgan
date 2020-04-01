@@ -94,7 +94,71 @@
   </Component>
   <Component type="ScriptPanel" id="morePanel" x="0" y="47" width="1024" height="443"
              itemColour="4028242458" itemColour2="4028242458" borderSize="1"
-             borderRadius="2" visible="0"/>
+             borderRadius="2" visible="0">
+    <Component type="ScriptLabel" id="Label6" x="0" y="32" parentComponent="morePanel"
+               text="#STAYHOME, MAKE MUSIC." textColour="4289109909" fontName="Abel"
+               fontSize="80" width="1024" height="84" editable="0"/>
+    <Component type="ScriptLabel" id="Label7" x="100" y="128" parentComponent="morePanel"
+               text="COLLAB3 IS A FREE VINTAGE TONEWHEEL EMULATION TO HELP MUSICIANS AND CREATIVES AROUND THE WORLD STAY HOME DURING THE COVID-19 PANDEMIC WORLDWIDE QUARANTINE"
+               width="824" height="121" textColour="4289109909" fontName="Abel"
+               fontSize="30" editable="0"/>
+    <Component type="ScriptLabel" id="Label8" x="400" y="282" parentComponent="morePanel"
+               text="PROUDLY CREATED BY" textColour="4289109909" fontName="Abel"
+               fontSize="30" width="224" editable="0"/>
+    <Component type="ScriptLabel" id="Label9" x="0" y="337" parentComponent="morePanel"
+               text="SAMPLESON" textColour="4289109909" fontName="Abel" fontSize="30"
+               width="224" editable="0"/>
+    <Component type="ScriptLabel" id="Label10" x="206" y="337" parentComponent="morePanel"
+               text="STUDIO427 AUDIO" textColour="4289109909" fontName="Abel"
+               fontSize="30" width="224" editable="0"/>
+    <Component type="ScriptLabel" id="Label11" x="413" y="337" parentComponent="morePanel"
+               text="LALALAND AUDIO" textColour="4289109909" fontName="Abel"
+               fontSize="30" width="224" editable="0"/>
+    <Component type="ScriptLabel" id="Label12" x="620" y="337" parentComponent="morePanel"
+               text="LIBRE WAVE" textColour="4289109909" fontName="Abel" fontSize="30"
+               width="224" editable="0"/>
+    <Component type="ScriptLabel" id="FiloWebsiteLbl" x="0" y="378" parentComponent="morePanel"
+               text="VISIT WEBSITE" textColour="4289109909" fontName="Abel"
+               editable="0" width="224" fontSize="22">
+      <Component type="ScriptPanel" id="FiloWebsiteBtn" x="0" y="0" parentComponent="FiloWebsiteLbl"
+                 width="224" height="28" bgColour="0" itemColour="0" itemColour2="0"
+                 textColour="0" borderSize="0" borderRadius="0" allowCallbacks="Clicks Only"/>
+    </Component>
+    <Component type="ScriptLabel" id="Studio427audioWebsiteLbl" x="206" y="378"
+               parentComponent="morePanel" text="VISIT WEBSITE" textColour="4289109909"
+               fontName="Abel" editable="0" width="224" fontSize="22">
+      <Component type="ScriptPanel" id="Studio427audioWebsiteBtn" x="0" y="0"
+                 parentComponent="Studio427audioWebsiteLbl" width="224" height="28"
+                 bgColour="0" itemColour="0" itemColour2="0" textColour="0" borderSize="0"
+                 borderRadius="0" allowCallbacks="Clicks Only"/>
+    </Component>
+    <Component type="ScriptLabel" id="LalalandaudioWebsiteLbl" x="413" y="378"
+               parentComponent="morePanel" text="VISIT WEBSITE" textColour="4289109909"
+               fontName="Abel" editable="0" width="224" fontSize="22">
+      <Component type="ScriptPanel" id="LalalandaudioWebsiteBtn" x="0" y="0" parentComponent="LalalandaudioWebsiteLbl"
+                 width="224" height="28" bgColour="0" itemColour="0" itemColour2="0"
+                 textColour="0" borderSize="0" borderRadius="0" allowCallbacks="Clicks Only"/>
+    </Component>
+    <Component type="ScriptLabel" id="LibrewaveWebsiteLbl" x="620" y="378" parentComponent="morePanel"
+               text="VISIT WEBSITE" textColour="4289109909" fontName="Abel"
+               editable="0" width="224" fontSize="22">
+      <Component type="ScriptPanel" id="LibrewaveWebsiteBtn" x="0" y="0" parentComponent="LibrewaveWebsiteLbl"
+                 width="224" height="28" bgColour="0" itemColour="0" itemColour2="0"
+                 textColour="0" borderSize="0" borderRadius="0" allowCallbacks="Clicks Only"/>
+    </Component>
+    <Component type="ScriptLabel" id="Label13" x="852" y="294" parentComponent="morePanel"
+               editable="0" fontName="Abel" textColour="4289109909" fontSize="20"
+               text="FABRICATION DATE:" width="150"/>
+    <Component type="ScriptLabel" id="Label14" x="852" y="356" parentComponent="morePanel"
+               editable="0" fontName="Abel" textColour="4289109909" fontSize="20"
+               text="HAPPILY MADE WITH" width="150" height="28"/>
+    <Component type="ScriptImage" id="Image1" x="900" y="383" parentComponent="morePanel"
+               fileName="{PROJECT_FOLDER}hiselogo.png">
+      <Component type="ScriptPanel" id="hiseWebsiteBtn" x="0" y="0" parentComponent="Image1"
+                 width="50" allowCallbacks="Clicks Only" bgColour="0" itemColour="0"
+                 itemColour2="0" textColour="0" borderSize="0" borderRadius="0"/>
+    </Component>
+  </Component>
   <Component type="ScriptSlider" id="percHarmKnob" x="163" y="580" middlePosition="1"
              stepSize="1" max="2"/>
   <Component type="ScriptSlider" id="KnobDrawbar1" x="325" y="513" style="Vertical"
