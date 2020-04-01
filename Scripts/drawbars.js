@@ -22,11 +22,22 @@ const var drawbars = [Content.getComponent("KnobDrawbar1"),
                       Content.getComponent("KnobDrawbar9")];
 
 
+// Hidden dummy knob for linear => dB conversion
+const var drawbarConvertKnb = Content.getComponent("drawbarConvertKnb");
+
+
 inline function onKnobDrawbarControl(component, value)
 {
     var idx = drawbars.indexOf(component);
-    var val = -100 * value / 8;
     
-	SimpleGainMain[idx].setAttribute(SimpleGainMain[idx].Gain, val);
+    drawbarConvertKnb.setValueNormalized((8 - value) / 8);
+    
+	SimpleGainMain[idx].setAttribute(SimpleGainMain[idx].Gain, drawbarConvertKnb.getValue());
 };
 for (d in drawbars) d.setControlCallback(onKnobDrawbarControl);
+
+
+
+
+
+

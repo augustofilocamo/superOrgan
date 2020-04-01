@@ -163,31 +163,33 @@
   </Component>
   <Component type="ScriptSlider" id="percHarmKnob" x="163" y="580" middlePosition="1"
              stepSize="1" max="2"/>
-  <Component type="ScriptSlider" id="KnobDrawbar1" x="325" y="513" width="40"
+  <Component type="ScriptSlider" id="KnobDrawbar1" x="324" y="513" width="40"
              height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
-             max="8" stepSize="1.0"/>
-  <Component type="ScriptSlider" id="KnobDrawbar2" x="430" y="513" width="40"
+             middlePosition="4" max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar2" x="429" y="513" width="40"
              height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
-             max="8" stepSize="1.0"/>
-  <Component type="ScriptSlider" id="KnobDrawbar3" x="378" y="513" width="40"
+             middlePosition="4" max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar3" x="377" y="513" width="40"
              height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
-             max="8" stepSize="1.0"/>
-  <Component type="ScriptSlider" id="KnobDrawbar4" x="484" y="513" width="40"
+             middlePosition="4" max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar4" x="483" y="513" width="40"
              height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
-             max="8" stepSize="1.0"/>
-  <Component type="ScriptSlider" id="KnobDrawbar5" x="535" y="513" width="40"
+             middlePosition="4" max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar5" x="534" y="513" width="40"
              height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
-             max="8" stepSize="1.0"/>
-  <Component type="ScriptSlider" id="KnobDrawbar6" x="584" y="513" width="40"
+             middlePosition="4" max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar6" x="583" y="513" width="40"
              height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
-             max="8" stepSize="1.0"/>
-  <Component type="ScriptSlider" id="KnobDrawbar7" x="632" y="513" width="40"
+             middlePosition="4" max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar7" x="631" y="513" width="40"
              height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
-             max="8" stepSize="1.0"/>
-  <Component type="ScriptSlider" id="KnobDrawbar8" x="678" y="513" width="40"
+             middlePosition="4" max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar8" x="677" y="513" width="40"
              height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
-             max="8" stepSize="1.0"/>
-  <Component type="ScriptSlider" id="KnobDrawbar9" x="726" y="513" width="40"
+             middlePosition="4" max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar9" x="725" y="513" width="40"
              height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
-             max="8" stepSize="1.0"/>
+             middlePosition="4" max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="drawbarConvertKnb" x="425" y="603" saveInPreset="0"
+             max="0" middlePosition="-12" mode="Decibel" min="-100"/>
 </ContentProperties>
