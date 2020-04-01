@@ -94,7 +94,7 @@
   </Component>
   <Component type="ScriptPanel" id="morePanel" x="0" y="47" width="1024" height="443"
              itemColour="4028242458" itemColour2="4028242458" borderSize="1"
-             borderRadius="2" visible="0">
+             borderRadius="2">
     <Component type="ScriptLabel" id="Label6" x="0" y="32" parentComponent="morePanel"
                text="#STAYHOME, MAKE MUSIC." textColour="4289109909" fontName="Abel"
                fontSize="80" width="1024" height="84" editable="0"/>
@@ -146,18 +146,20 @@
                  width="224" height="28" bgColour="0" itemColour="0" itemColour2="0"
                  textColour="0" borderSize="0" borderRadius="0" allowCallbacks="Clicks Only"/>
     </Component>
-    <Component type="ScriptLabel" id="Label13" x="852" y="294" parentComponent="morePanel"
+    <Component type="ScriptLabel" id="Label13" x="852" y="274" parentComponent="morePanel"
                editable="0" fontName="Abel" textColour="4289109909" fontSize="20"
                text="FABRICATION DATE:" width="150"/>
-    <Component type="ScriptLabel" id="Label14" x="852" y="356" parentComponent="morePanel"
+    <Component type="ScriptLabel" id="Label14" x="852" y="346" parentComponent="morePanel"
                editable="0" fontName="Abel" textColour="4289109909" fontSize="20"
                text="HAPPILY MADE WITH" width="150" height="28"/>
-    <Component type="ScriptImage" id="Image1" x="900" y="383" parentComponent="morePanel"
+    <Component type="ScriptImage" id="Image1" x="900" y="373" parentComponent="morePanel"
                fileName="{PROJECT_FOLDER}hiselogo.png">
       <Component type="ScriptPanel" id="hiseWebsiteBtn" x="0" y="0" parentComponent="Image1"
                  width="50" allowCallbacks="Clicks Only" bgColour="0" itemColour="0"
                  itemColour2="0" textColour="0" borderSize="0" borderRadius="0"/>
     </Component>
+    <Component type="ScriptImage" id="Image2" x="841" y="301" parentComponent="morePanel"
+               fileName="{PROJECT_FOLDER}fabricationDate.png" width="170" height="36"/>
   </Component>
   <Component type="ScriptSlider" id="percHarmKnob" x="163" y="580" middlePosition="1"
              stepSize="1" max="2"/>

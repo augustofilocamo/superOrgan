@@ -11,7 +11,7 @@
           <Content>
             <Control type="ScriptButton" id="settingsButton" value="0"/>
             <Control type="ScriptButton" id="presetsButton" value="0"/>
-            <Control type="ScriptButton" id="moreButton" value="0"/>
+            <Control type="ScriptButton" id="moreButton" value="1"/>
             <Control type="ScriptSlider" id="MainGainKnob" value="0"/>
             <Control type="ScriptButton" id="KeyClick" value="1"/>
             <Control type="ScriptSlider" id="leakageGain" value="0.500001"/>
