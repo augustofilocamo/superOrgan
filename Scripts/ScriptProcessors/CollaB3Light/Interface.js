@@ -11,13 +11,6 @@ standaloneSettingPnl.showControl( ! Engine.isPlugin());
 instrumentSettingPnl.showControl(Engine.isPlugin());
 
 
-//! Covid Info Link Btn
-const var covidInfoLink = Content.getComponent("covidInfoLink");
-
-covidInfoLink.setMouseCallback(function(event)
-{
-	if (event.clicked) Engine.openWebsite("https://www.who.int/health-topics/coronavirus");
-});
 
 
 

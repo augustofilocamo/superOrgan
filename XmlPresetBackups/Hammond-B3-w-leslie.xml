@@ -15,7 +15,7 @@
             <Control type="ScriptSlider" id="MainGainKnob" value="0"/>
             <Control type="ScriptButton" id="KeyClick" value="1"/>
             <Control type="ScriptSlider" id="leakageGain" value="1.49012e-06"/>
-            <Control type="ScriptSlider" id="leslieSpeed" value="1"/>
+            <Control type="ScriptSlider" id="leslieSpeed" value="2"/>
             <Control type="ScriptSlider" id="reverbKnob" value="0"/>
             <Control type="ScriptButton" id="chorusBtn" value="1"/>
             <Control type="ScriptSlider" id="percHarmKnob" value="2"/>
@@ -301,7 +301,7 @@
                                     </Properties>
                                     <Parameters>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                                 StepSize="1" SkewFactor="1" ID="Gate" Value="0"/>
+                                                 StepSize="1" SkewFactor="1" ID="Gate" Value="1"/>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="2000"
                                                  StepSize="0.1" SkewFactor="1" ID="Ramp Time" Value="2752.3"/>
                                     </Parameters>
@@ -368,7 +368,7 @@
                                     </Properties>
                                     <Parameters>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                                 StepSize="1" SkewFactor="1" ID="Gate" Value="0"/>
+                                                 StepSize="1" SkewFactor="1" ID="Gate" Value="1"/>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="2000"
                                                  StepSize="0.1" SkewFactor="1" ID="Ramp Time" Value="1170.6"/>
                                     </Parameters>
@@ -598,7 +598,7 @@
                                         <ModulationTargets/>
                                         <Parameters>
                                           <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
-                                                     StepSize="0.01" SkewFactor="1" ID="Value" Value="0.13"/>
+                                                     StepSize="0.01" SkewFactor="1" ID="Value" Value="0.09"/>
                                         </Parameters>
                                         <Properties/>
                                       </Node>
@@ -1078,7 +1078,7 @@
                 </Nodes>
                 <Parameters>
                   <Parameter ID="Speed" MinValue="0" MaxValue="1" StepSize="1" SkewFactor="1"
-                             Value="0">
+                             Value="1">
                     <Connections>
                       <Connection NodeId="ramp_envelope" ParameterId="Gate" Converter="Identity"
                                   OpType="SetValue" Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0"
@@ -10707,7 +10707,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="29" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="30" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
