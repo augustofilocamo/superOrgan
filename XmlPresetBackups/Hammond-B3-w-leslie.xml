@@ -11,7 +11,7 @@
           <Content>
             <Control type="ScriptButton" id="settingsButton" value="0"/>
             <Control type="ScriptButton" id="presetsButton" value="0"/>
-            <Control type="ScriptButton" id="moreButton" value="1"/>
+            <Control type="ScriptButton" id="moreButton" value="0"/>
             <Control type="ScriptSlider" id="MainGainKnob" value="0"/>
             <Control type="ScriptButton" id="KeyClick" value="1"/>
             <Control type="ScriptSlider" id="leakageGain" value="0.500001"/>
@@ -22,10 +22,10 @@
             <Control type="ScriptSlider" id="KnobDrawbar1" value="0"/>
             <Control type="ScriptSlider" id="KnobDrawbar2" value="0"/>
             <Control type="ScriptSlider" id="KnobDrawbar3" value="0"/>
-            <Control type="ScriptSlider" id="KnobDrawbar4" value="0.31"/>
-            <Control type="ScriptSlider" id="KnobDrawbar5" value="0.85"/>
-            <Control type="ScriptSlider" id="KnobDrawbar6" value="1"/>
-            <Control type="ScriptSlider" id="KnobDrawbar7" value="1"/>
+            <Control type="ScriptSlider" id="KnobDrawbar4" value="0.22"/>
+            <Control type="ScriptSlider" id="KnobDrawbar5" value="0"/>
+            <Control type="ScriptSlider" id="KnobDrawbar6" value="0.21"/>
+            <Control type="ScriptSlider" id="KnobDrawbar7" value="0"/>
             <Control type="ScriptSlider" id="KnobDrawbar8" value="1"/>
             <Control type="ScriptSlider" id="KnobDrawbar9" value="1"/>
           </Content>
@@ -10216,7 +10216,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain4" Bypassed="0" Gain="-31"
+                <Processor Type="SimpleGain" ID="SimpleGainMain4" Bypassed="0" Gain="-2.75"
                            Delay="4" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10307,7 +10307,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain5" Bypassed="0" Gain="-85"
+                <Processor Type="SimpleGain" ID="SimpleGainMain5" Bypassed="0" Gain="0"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10398,7 +10398,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain6" Bypassed="0" Gain="-100"
+                <Processor Type="SimpleGain" ID="SimpleGainMain6" Bypassed="0" Gain="-2.625"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10489,7 +10489,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain7" Bypassed="0" Gain="-100"
+                <Processor Type="SimpleGain" ID="SimpleGainMain7" Bypassed="0" Gain="0"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10580,7 +10580,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain8" Bypassed="0" Gain="-100"
+                <Processor Type="SimpleGain" ID="SimpleGainMain8" Bypassed="0" Gain="-12.5"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10671,7 +10671,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain9" Bypassed="0" Gain="-100"
+                <Processor Type="SimpleGain" ID="SimpleGainMain9" Bypassed="0" Gain="-12.5"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10707,7 +10707,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="43" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="38" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>

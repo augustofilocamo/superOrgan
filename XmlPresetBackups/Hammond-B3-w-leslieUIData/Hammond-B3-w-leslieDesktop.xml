@@ -94,7 +94,7 @@
   </Component>
   <Component type="ScriptPanel" id="morePanel" x="0" y="47" width="1024" height="443"
              itemColour="4028242458" itemColour2="4028242458" borderSize="1"
-             borderRadius="2">
+             borderRadius="2" visible="0">
     <Component type="ScriptLabel" id="Label6" x="0" y="32" parentComponent="morePanel"
                text="#STAYHOME, MAKE MUSIC." textColour="4289109909" fontName="Abel"
                fontSize="80" width="1024" height="84" editable="0"/>
@@ -163,31 +163,31 @@
   </Component>
   <Component type="ScriptSlider" id="percHarmKnob" x="163" y="580" middlePosition="1"
              stepSize="1" max="2"/>
-  <Component type="ScriptSlider" id="KnobDrawbar1" x="325" y="513" style="Vertical"
-             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
-             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
-  <Component type="ScriptSlider" id="KnobDrawbar2" x="430" y="513" style="Vertical"
-             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
-             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
-  <Component type="ScriptSlider" id="KnobDrawbar3" x="378" y="513" style="Vertical"
-             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
-             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
-  <Component type="ScriptSlider" id="KnobDrawbar4" x="484" y="513" style="Vertical"
-             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
-             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
-  <Component type="ScriptSlider" id="KnobDrawbar5" x="535" y="513" style="Vertical"
-             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
-             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
-  <Component type="ScriptSlider" id="KnobDrawbar6" x="584" y="513" style="Vertical"
-             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
-             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
-  <Component type="ScriptSlider" id="KnobDrawbar7" x="632" y="513" style="Vertical"
-             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
-             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
-  <Component type="ScriptSlider" id="KnobDrawbar8" x="678" y="513" style="Vertical"
-             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
-             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
-  <Component type="ScriptSlider" id="KnobDrawbar9" x="726" y="513" style="Vertical"
-             middlePosition="0.5" suffix="%" mode="NormalizedPercentage" width="40"
-             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"/>
+  <Component type="ScriptSlider" id="KnobDrawbar1" x="325" y="513" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
+             max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar2" x="430" y="513" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
+             max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar3" x="378" y="513" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
+             max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar4" x="484" y="513" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
+             max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar5" x="535" y="513" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
+             max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar6" x="584" y="513" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
+             max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar7" x="632" y="513" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
+             max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar8" x="678" y="513" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
+             max="8" stepSize="1.0"/>
+  <Component type="ScriptSlider" id="KnobDrawbar9" x="726" y="513" width="40"
+             height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
+             max="8" stepSize="1.0"/>
 </ContentProperties>

@@ -9,7 +9,7 @@ Engine.loadFontAs("{PROJECT_FOLDER}Fonts/Abel-Regular.ttf", "Abel");
 include("pluginVSstandalone.js");
 include("websiteBtns.js");
 include("menuPanels.js");
-include("drawbarInverters.js");
+include("drawbars.js");
 include("percussionSwitch.js");
 include("rotarySpeakerKnob.js");
 
