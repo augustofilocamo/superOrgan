@@ -21,29 +21,14 @@ const var drawbars = [Content.getComponent("KnobDrawbar1"),
                       Content.getComponent("KnobDrawbar8"),
                       Content.getComponent("KnobDrawbar9")];
 
-
-// Hidden dummy knob for linear => dB conversion
-const var drawbarConvertKnb = Content.getComponent("drawbarConvertKnb");
-
-/*
-inline function onKnobDrawbarControl(component, value)
-{
-    var idx = drawbars.indexOf(component);
-    
-    drawbarConvertKnb.setValueNormalized((8 - value) / 8);
-    
-	SimpleGainMain[idx].setAttribute(SimpleGainMain[idx].Gain, drawbarConvertKnb.getValue());
-};
-for (d in drawbars) d.setControlCallback(onKnobDrawbarControl);
-*/
-
+                      
+// Gain lookup table
 const var drawbarGains = [0, -3, -6, -9, -12, -15, -18, -21, -100];
 
 inline function onKnobDrawbarControl(component, value)
 {
     var idx  = drawbars.indexOf(component);
     var gain = drawbarGains[value];
-    Console.print(gain);
     
 	SimpleGainMain[idx].setAttribute(SimpleGainMain[idx].Gain, gain);
 };

@@ -190,6 +190,4 @@
   <Component type="ScriptSlider" id="KnobDrawbar9" x="725" y="513" width="40"
              height="141" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1"/>
-  <Component type="ScriptSlider" id="drawbarConvertKnb" x="425" y="603" saveInPreset="0"
-             max="0" middlePosition="-12" mode="Decibel" min="-100"/>
 </ContentProperties>
