@@ -28,9 +28,8 @@ const var drawbarGains = [0, -3, -6, -9, -12, -15, -18, -21, -100];
 inline function onKnobDrawbarControl(component, value)
 {
     var idx  = drawbars.indexOf(component);
-    var gain = drawbarGains[value];
     
-	SimpleGainMain[idx].setAttribute(SimpleGainMain[idx].Gain, gain);
+	SimpleGainMain[idx].setAttribute(SimpleGainMain[idx].Gain, drawbarGains[value]);
 };
 for (d in drawbars) d.setControlCallback(onKnobDrawbarControl);
 
