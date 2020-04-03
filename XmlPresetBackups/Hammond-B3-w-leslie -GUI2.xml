@@ -14,7 +14,7 @@
             <Control type="ScriptButton" id="moreButton" value="0"/>
             <Control type="ScriptSlider" id="MainGainKnob" value="1.49012e-06"/>
             <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
-            <Control type="ScriptButton" id="percHarmBtn" value="0"/>
+            <Control type="ScriptButton" id="percHarmBtn" value="1"/>
             <Control type="ScriptSlider" id="leakageGain" value="1.2"/>
             <Control type="ScriptSlider" id="leslieSpeed" value="1"/>
             <Control type="ScriptSlider" id="reverbKnob" value="0.26"/>
@@ -10669,7 +10669,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="Noise" ID="release-noise1" Bypassed="0" Gain="0.162181"
+    <Processor Type="Noise" ID="release-noise1" Bypassed="0" Gain="0.065313"
                Balance="0.31" VoiceLimit="256" KillFadeTime="20" IconColour="0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -10679,7 +10679,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="8" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="18" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
@@ -10712,24 +10712,6 @@
                        UseTable="1" Inverted="0" DecibelMode="0" VelocityTableData="24...............vO...f+....9CnYNgO">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope1" Bypassed="0" Monophonic="0"
-                       Retrigger="1" Intensity="1" Attack="5" Release="10" LinearMode="1">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
-                           Intensity="1">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
-            </Processor>
-            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope2" Bypassed="0" Monophonic="0"
-                       Retrigger="1" Intensity="1" Attack="5" Release="10" LinearMode="1">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
-                           Intensity="1">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
-            </Processor>
           </ChildProcessors>
         </Processor>
         <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="1" Intensity="0">
@@ -10761,7 +10743,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.389045" Balance="0.46"
+    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.109648" Balance="0.46"
                VoiceLimit="256" KillFadeTime="20" IconColour="0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -10794,15 +10776,6 @@
             <Processor Type="Velocity" ID="Velocity Modulator2" Bypassed="0" Intensity="1"
                        UseTable="1" Inverted="0" DecibelMode="0" VelocityTableData="24...............vO...f+....9CnYNgO">
               <ChildProcessors/>
-            </Processor>
-            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope3" Bypassed="0" Monophonic="0"
-                       Retrigger="1" Intensity="1" Attack="5" Release="10" LinearMode="1">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
-                           Intensity="1">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
             </Processor>
           </ChildProcessors>
         </Processor>
@@ -10875,36 +10848,9 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope7" Bypassed="0" Monophonic="0"
-                       Retrigger="1" Intensity="1" Attack="5" Release="10" LinearMode="1">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
-                           Intensity="1">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
-            </Processor>
             <Processor Type="Velocity" ID="Velocity Modulator5" Bypassed="0" Intensity="1"
                        UseTable="0" Inverted="0" DecibelMode="0">
               <ChildProcessors/>
-            </Processor>
-            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope8" Bypassed="0" Monophonic="0"
-                       Retrigger="1" Intensity="1" Attack="5" Release="10" LinearMode="1">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
-                           Intensity="1">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
-            </Processor>
-            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope9" Bypassed="0" Monophonic="0"
-                       Retrigger="1" Intensity="1" Attack="5" Release="10" LinearMode="1">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
-                           Intensity="1">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
             </Processor>
           </ChildProcessors>
         </Processor>
@@ -10913,7 +10859,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="perc2ndGain" Bypassed="0" Gain="-100" Delay="0"
+            <Processor Type="SimpleGain" ID="perc2ndGain" Bypassed="0" Gain="-23" Delay="0"
                        Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10976,45 +10922,9 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope10" Bypassed="0" Monophonic="0"
-                       Retrigger="1" Intensity="1" Attack="5" Release="10" LinearMode="1">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
-                           Intensity="1">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
-            </Processor>
             <Processor Type="Velocity" ID="Velocity Modulator6" Bypassed="0" Intensity="1"
                        UseTable="0" Inverted="0" DecibelMode="0">
               <ChildProcessors/>
-            </Processor>
-            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope11" Bypassed="0" Monophonic="0"
-                       Retrigger="1" Intensity="1" Attack="5" Release="10" LinearMode="1">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
-                           Intensity="1">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
-            </Processor>
-            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope12" Bypassed="0" Monophonic="0"
-                       Retrigger="1" Intensity="1" Attack="5" Release="10" LinearMode="1">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
-                           Intensity="1">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
-            </Processor>
-            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope13" Bypassed="0" Monophonic="0"
-                       Retrigger="1" Intensity="1" Attack="5" Release="10" LinearMode="1">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
-                           Intensity="1">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
             </Processor>
           </ChildProcessors>
         </Processor>
@@ -11023,7 +10933,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="perc3rdGain" Bypassed="0" Gain="-23" Delay="0"
+            <Processor Type="SimpleGain" ID="perc3rdGain" Bypassed="0" Gain="-100" Delay="0"
                        Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
