@@ -94,9 +94,10 @@
              parameterId="Gain" mode="Decibel" min="-100" max="12" stepSize="0.1"
              suffix=" dB" middlePosition="-18" filmstripImage="{PROJECT_FOLDER}mainKnob.png"
              numStrips="128" scaleFactor="0.5" width="104" height="89"/>
-  <Component type="ScriptButton" id="KeyClick" x="742" y="594" processorId="click-noise1"
-             parameterId="Enabled" filmstripImage="{PROJECT_FOLDER}percSwitch.png"
+  <Component type="ScriptButton" id="percOnOffBtn" x="742" y="594" filmstripImage="{PROJECT_FOLDER}percSwitch.png"
              scaleFactor="0.5" width="63" height="113"/>
+  <Component type="ScriptButton" id="percHarmBtn" x="799" y="594" filmstripImage="{PROJECT_FOLDER}harmSwitch.png"
+             width="65" height="119" scaleFactor="0.5"/>
   <Component type="ScriptSlider" id="leakageGain" x="148" y="605" processorId="Simple Gain1"
              parameterId="Gain" mode="Decibel" min="-100" max="10" stepSize="0.1"
              suffix=" dB" middlePosition="-18" filmstripImage="{PROJECT_FOLDER}mainKnob.png"
@@ -244,9 +245,6 @@
     <Component type="ScriptImage" id="Image2" x="841" y="301" parentComponent="morePanel"
                fileName="{PROJECT_FOLDER}fabricationDate.png" width="170" height="36"/>
   </Component>
-  <Component type="ScriptSlider" id="percHarmKnob" x="799" y="594" middlePosition="1"
-             stepSize="1" max="2" filmstripImage="{PROJECT_FOLDER}harmSwitch.png"
-             scaleFactor="0.5" width="65" height="119" numStrips="2"/>
   <Component type="ScriptSlider" id="KnobDrawbar1" x="285" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarMaroonFinal.png"

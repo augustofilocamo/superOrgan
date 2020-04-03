@@ -1,30 +1,39 @@
 
 //! ================================================================= Perc Switch
 
-const var percHarmKnob = Content.getComponent("percHarmKnob");
+const var percOnOffBtn = Content.getComponent("percOnOffBtn");
+const var percHarmBtn  = Content.getComponent("percHarmBtn");
+
 const var perc2nd = Synth.getChildSynth("perc2nd");
 const var perc3rd = Synth.getChildSynth("perc3rd");
 
+const var perc2ndGain = Synth.getEffect("perc2ndGain");
+const var perc3rdGain = Synth.getEffect("perc3rdGain");
 
-inline function onpercHarmKnobControl(component, value)
+
+
+inline function onpercOnOffBtnControl(component, value)
 {
-    switch (value){
-        
-        case 0:
-            perc2nd.setAttribute(perc2nd.Gain, 0);
-            perc3rd.setAttribute(perc3rd.Gain, 0.07);
-            break;
-            
-        case 1:
-            perc2nd.setAttribute(perc2nd.Gain, 0);
-            perc3rd.setAttribute(perc3rd.Gain, 0);
-            break;
-            
-        case 2:
-            perc2nd.setAttribute(perc2nd.Gain, 0.07);
-            perc3rd.setAttribute(perc3rd.Gain, 0);
-            break;
-    }
+	perc2nd.setBypassed(value);
+	perc3rd.setBypassed(value);
 };
-percHarmKnob.setControlCallback(onpercHarmKnobControl);
+percOnOffBtn.setControlCallback(onpercOnOffBtnControl);
+
+
+
+inline function onpercHarmBtnControl(component, value)
+{
+	if (value){
+	    
+	    perc2ndGain.setAttribute(perc2ndGain.Gain, -23.0);
+        perc3rdGain.setAttribute(perc3rdGain.Gain, -100);
+	    
+	} else {
+	
+	    perc2ndGain.setAttribute(perc2ndGain.Gain, -100);
+        perc3rdGain.setAttribute(perc3rdGain.Gain, -23.0);
+	}
+};
+percHarmBtn.setControlCallback(onpercHarmBtnControl);
+
 
