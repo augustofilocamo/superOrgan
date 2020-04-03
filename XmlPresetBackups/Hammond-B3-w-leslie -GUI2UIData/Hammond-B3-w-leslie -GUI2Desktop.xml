@@ -91,7 +91,7 @@
                parentComponent="fontpanel"/>
   </Component>
   <Component type="ScriptSlider" id="MainGainKnob" x="882" y="608" processorId="mainGain"
-             parameterId="Gain" mode="Decibel" min="-100" max="0" stepSize="0.1"
+             parameterId="Gain" mode="Decibel" min="-100" max="12" stepSize="0.1"
              suffix=" dB" middlePosition="-18" filmstripImage="{PROJECT_FOLDER}mainKnob.png"
              numStrips="128" scaleFactor="0.5" width="104" height="89"/>
   <Component type="ScriptButton" id="KeyClick" x="742" y="594" processorId="click-noise1"
