@@ -8,13 +8,13 @@
                borderRadius="0" allowCallbacks="Clicks Only" width="152" height="34"/>
     <Component type="ScriptButton" id="settingsButton" x="899" y="6" parentComponent="backgroundImage"
                filmstripImage="{PROJECT_FOLDER}settings-03.png" scaleFactor="0.2"
-               width="98" height="32"/>
+               width="98" height="32" saveInPreset="0"/>
     <Component type="ScriptButton" id="presetsButton" x="731" y="5" parentComponent="backgroundImage"
                filmstripImage="{PROJECT_FOLDER}save-02.png" scaleFactor="0.2"
-               width="120" height="32"/>
+               width="120" height="32" saveInPreset="0"/>
     <Component type="ScriptButton" id="moreButton" x="571" y="14" parentComponent="backgroundImage"
                filmstripImage="{PROJECT_FOLDER}more-03.png" scaleFactor="0.2"
-               width="97" height="23"/>
+               width="97" height="23" saveInPreset="0"/>
     <Component type="ScriptImage" id="covidImage" x="370" y="10" parentComponent="backgroundImage"
                fileName="{PROJECT_FOLDER}COVID-INFO.png" width="128" height="22"/>
   </Component>
