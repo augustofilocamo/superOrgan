@@ -283,7 +283,7 @@
   <Component type="ScriptSlider" id="KnobDrawbar9" x="662" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" numStrips="9" scaleFactor="0.5"
-             filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png" dragDirection="Horizontal"/>
+             filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png"/>
   <Component type="ScriptImage" id="lowerWoodShadow" x="183" y="524" width="670"
              height="22.5" fileName="{PROJECT_FOLDER}topFrameShadow.png" enabled="0"/>
   <Component type="ScriptImage" id="lowerWoodFrame" x="0" y="499" width="1024"
