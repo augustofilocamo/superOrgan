@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ProjectSettings>
-  <Name value="CollaB3 Light"/>
+  <Name value="CollaB3"/>
   <Version value="1.0.0"/>
   <Description value=""/>
   <BundleIdentifier value="com.myCompany.product"/>
-  <PluginCode value="Hmnh"/>
+  <PluginCode value="Hmnj"/>
   <EmbedAudioFiles value="Yes"/>
   <EmbedImageFiles value="Yes"/>
   <SupportFullDynamicsHLAC value="No"/>
