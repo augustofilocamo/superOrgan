@@ -4,8 +4,8 @@
 const var percOnOffBtn = Content.getComponent("percOnOffBtn");
 const var percHarmBtn  = Content.getComponent("percHarmBtn");
 
-const var perc2nd = Synth.getChildSynth("perc2nd");
-const var perc3rd = Synth.getChildSynth("perc3rd");
+const var MidiMuter1 = Synth.getMidiProcessor("MidiMuter1");
+const var MidiMuter2 = Synth.getMidiProcessor("MidiMuter2");
 
 const var perc2ndGain = Synth.getEffect("perc2ndGain");
 const var perc3rdGain = Synth.getEffect("perc3rdGain");
@@ -14,8 +14,8 @@ const var perc3rdGain = Synth.getEffect("perc3rdGain");
 
 inline function onpercOnOffBtnControl(component, value)
 {
-	perc2nd.setBypassed(value);
-	perc3rd.setBypassed(value);
+	MidiMuter1.setBypassed( ! value);
+	MidiMuter2.setBypassed( ! value);
 };
 percOnOffBtn.setControlCallback(onpercOnOffBtnControl);
 

@@ -14,7 +14,7 @@
             <Control type="ScriptButton" id="moreButton" value="0"/>
             <Control type="ScriptSlider" id="MainGainKnob" value="1.49012e-06"/>
             <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
-            <Control type="ScriptButton" id="percHarmBtn" value="0"/>
+            <Control type="ScriptButton" id="percHarmBtn" value="1"/>
             <Control type="ScriptSlider" id="leakageGain" value="3.57628e-07"/>
             <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
             <Control type="ScriptSlider" id="reverbKnob" value="0"/>
@@ -10771,7 +10771,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="20" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="21" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
@@ -10914,6 +10914,13 @@
                 <ContentProperties DeviceType="Desktop"/>
               </UIData>
             </Processor>
+            <Processor Type="MidiMuter" ID="MidiMuter1" Bypassed="1">
+              <ChildProcessors/>
+              <Content>
+                <Control type="ScriptButton" id="ignoreButton" value="1"/>
+                <Control type="ScriptButton" id="fixStuckNotes" value="1"/>
+              </Content>
+            </Processor>
           </ChildProcessors>
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1">
@@ -10951,7 +10958,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="perc2ndGain" Bypassed="0" Gain="-100" Delay="0"
+            <Processor Type="SimpleGain" ID="perc2ndGain" Bypassed="0" Gain="-23" Delay="0"
                        Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10987,6 +10994,13 @@
               <UIData>
                 <ContentProperties DeviceType="Desktop"/>
               </UIData>
+            </Processor>
+            <Processor Type="MidiMuter" ID="MidiMuter2" Bypassed="1">
+              <ChildProcessors/>
+              <Content>
+                <Control type="ScriptButton" id="ignoreButton" value="1"/>
+                <Control type="ScriptButton" id="fixStuckNotes" value="1"/>
+              </Content>
             </Processor>
           </ChildProcessors>
         </Processor>
@@ -11025,7 +11039,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="perc3rdGain" Bypassed="0" Gain="-23" Delay="0"
+            <Processor Type="SimpleGain" ID="perc3rdGain" Bypassed="0" Gain="-100" Delay="0"
                        Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
