@@ -103,7 +103,8 @@
              numStrips="128" scaleFactor="0.5" width="104" height="89"/>
   <Component type="ScriptSlider" id="leslieSpeed" x="107" y="712" stepSize="1"
              max="2" filmstripImage="{PROJECT_FOLDER}rotarySwitch.png" numStrips="3"
-             scaleFactor="0.5" width="171" height="56" mouseSensitivity="0.3"/>
+             scaleFactor="0.5" width="171" height="56" mouseSensitivity="0.3"
+             dragDirection="Horizontal"/>
   <Component type="ScriptImage" id="reverbKnobShadow" x="939" y="712" width="31.5"
              height="41.5" fileName="{PROJECT_FOLDER}smallKnobShadow.png"
              enabled="0"/>
