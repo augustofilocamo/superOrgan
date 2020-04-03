@@ -112,7 +112,7 @@
              middlePosition="0.1" max="0.4" filmstripImage="{PROJECT_FOLDER}smallKnob.png"
              numStrips="128" scaleFactor="0.5" width="33" height="41"/>
   <Component type="ScriptButton" id="chorusBtn" x="890" y="709" processorId="Chorus"
-             parameterId="Enabled" scaleFactor="0.5" width="36" height="56"
+             parameterId="Bypass" scaleFactor="0.5" width="36" height="56"
              filmstripImage="{PROJECT_FOLDER}chorusSwitchFIX 2.png"/>
   <Component type="ScriptPanel" id="presetsPanel" x="0" y="47" width="1024"
              height="443" itemColour="4028242458" itemColour2="4028242458"
