@@ -11,10 +11,10 @@
           <Content>
             <Control type="ScriptSlider" id="MainGainKnob" value="1.49012e-06"/>
             <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
-            <Control type="ScriptButton" id="percHarmBtn" value="0"/>
+            <Control type="ScriptButton" id="percHarmBtn" value="1"/>
             <Control type="ScriptSlider" id="leakageGain" value="3.57628e-07"/>
             <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
-            <Control type="ScriptSlider" id="reverbKnob" value="0.19"/>
+            <Control type="ScriptSlider" id="reverbKnob" value="0.02"/>
             <Control type="ScriptButton" id="chorusBtn" value="0"/>
             <Control type="ScriptSlider" id="KnobDrawbar1" value="0"/>
             <Control type="ScriptSlider" id="KnobDrawbar2" value="1"/>
@@ -1173,7 +1173,7 @@
           </UIData>
         </Processor>
         <Processor Type="SimpleReverb" ID="Reverb" Bypassed="0" RoomSize="0.54"
-                   Damping="0.94" WetLevel="0.19" DryLevel="0.81" Width="0.61" FreezeMode="0.1">
+                   Damping="0.94" WetLevel="0.02" DryLevel="0.98" Width="0.61" FreezeMode="0.1">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
@@ -10768,7 +10768,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="7" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="56" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
@@ -10832,7 +10832,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.0623735"
+    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.0489779"
                Balance="0.2" VoiceLimit="256" KillFadeTime="20" IconColour="0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -10873,8 +10873,8 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyphonicFilter" ID="Filter2" Bypassed="0" Gain="0" Frequency="2223.88"
-                       Q="1" Mode="6" Quality="1" BipolarIntensity="0">
+            <Processor Type="PolyphonicFilter" ID="Filter2" Bypassed="0" Gain="0" Frequency="1766.14"
+                       Q="0.73" Mode="6" Quality="1" BipolarIntensity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1">
@@ -10955,7 +10955,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="perc2ndGain" Bypassed="0" Gain="-100" Delay="0"
+            <Processor Type="SimpleGain" ID="perc2ndGain" Bypassed="0" Gain="-23" Delay="0"
                        Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -11036,7 +11036,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="perc3rdGain" Bypassed="0" Gain="-23" Delay="0"
+            <Processor Type="SimpleGain" ID="perc3rdGain" Bypassed="0" Gain="-100" Delay="0"
                        Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
