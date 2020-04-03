@@ -13,7 +13,7 @@
             <Control type="ScriptButton" id="presetsButton" value="0"/>
             <Control type="ScriptButton" id="moreButton" value="0"/>
             <Control type="ScriptSlider" id="MainGainKnob" value="1.49012e-06"/>
-            <Control type="ScriptButton" id="percOnOffBtn" value="1"/>
+            <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
             <Control type="ScriptButton" id="percHarmBtn" value="0"/>
             <Control type="ScriptSlider" id="leakageGain" value="3.57628e-07"/>
             <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
@@ -209,6 +209,20 @@
                     </Nodes>
                     <Parameters/>
                     <Properties/>
+                  </Node>
+                  <Node ID="gain" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
+                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                    <ModulationTargets/>
+                    <Properties>
+                      <Property ID="ResetValue" Value="0" Public="0"/>
+                      <Property ID="UseResetValue" Value="0" Public="0"/>
+                    </Properties>
+                    <Parameters>
+                      <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
+                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-3"/>
+                      <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                 StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="20"/>
+                    </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
@@ -10679,7 +10693,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="47" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="16" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
@@ -10808,7 +10822,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="perc2nd" Bypassed="1" Gain="1" Balance="-0.33"
+    <Processor Type="SineSynth" ID="perc2nd" Bypassed="0" Gain="1" Balance="-0.33"
                VoiceLimit="256" KillFadeTime="20" IconColour="0" OctaveTranspose="1"
                SemiTones="0" UseFreqRatio="0" CoarseFreqRatio="1" FineFreqRatio="0"
                SaturationAmount="0">
@@ -10882,7 +10896,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="perc3rd" Bypassed="1" Gain="1" Balance="-0.27"
+    <Processor Type="SineSynth" ID="perc3rd" Bypassed="0" Gain="1" Balance="-0.27"
                VoiceLimit="256" KillFadeTime="20" IconColour="0" OctaveTranspose="1"
                SemiTones="7" UseFreqRatio="0" CoarseFreqRatio="1" FineFreqRatio="0"
                SaturationAmount="0">
