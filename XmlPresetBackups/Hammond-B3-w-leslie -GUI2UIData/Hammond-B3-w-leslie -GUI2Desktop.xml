@@ -117,10 +117,10 @@
   <Component type="ScriptPanel" id="presetsPanel" x="0" y="47" width="1024"
              height="443" itemColour="4028242458" itemColour2="4028242458"
              borderSize="1" borderRadius="2" visible="0">
-    <Component type="ScriptFloatingTile" id="presetsScriptFloatingTile" x="19"
-               y="24" width="980" height="389" parentComponent="presetsPanel"
+    <Component type="ScriptFloatingTile" id="presetsScriptFloatingTile" x="119"
+               y="24" width="780" height="389" parentComponent="presetsPanel"
                ContentType="PresetBrowser" bgColour="0" itemColour="4286875003"
-               itemColour2="4294951115" Data="{&#13;&#10;  &quot;ShowSaveButton&quot;: true,&#13;&#10;  &quot;ShowFolderButton&quot;: true,&#13;&#10;  &quot;ShowNotes&quot;: true,&#13;&#10;  &quot;ShowEditButtons&quot;: true,&#13;&#10;  &quot;ShowFavoriteIcon&quot;: true,&#13;&#10;  &quot;NumColumns&quot;: 3&#13;&#10;}"
+               itemColour2="4294951115" Data="{&#13;&#10;  &quot;ShowSaveButton&quot;: true,&#13;&#10;  &quot;ShowFolderButton&quot;: true,&#13;&#10;  &quot;ShowNotes&quot;: true,&#13;&#10;  &quot;ShowEditButtons&quot;: true,&#13;&#10;  &quot;ShowFavoriteIcon&quot;: true,&#13;&#10;  &quot;NumColumns&quot;: 2&#13;&#10;}"
                Font="Abel" textColour="4289109909" FontSize="20"/>
   </Component>
   <Component type="ScriptPanel" id="settingsPanel" x="0" y="47" width="1024"
