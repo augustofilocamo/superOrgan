@@ -14,7 +14,7 @@
             <Control type="ScriptButton" id="moreButton" value="0"/>
             <Control type="ScriptSlider" id="MainGainKnob" value="0"/>
             <Control type="ScriptButton" id="KeyClick" value="1"/>
-            <Control type="ScriptSlider" id="leakageGain" value="-29.7"/>
+            <Control type="ScriptSlider" id="leakageGain" value="-32.8"/>
             <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
             <Control type="ScriptSlider" id="reverbKnob" value="0.4"/>
             <Control type="ScriptButton" id="chorusBtn" value="0"/>
@@ -4524,7 +4524,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="-29.7"
+            <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="-32.8"
                        Delay="0" Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
