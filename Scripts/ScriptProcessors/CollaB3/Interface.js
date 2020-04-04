@@ -6,6 +6,9 @@ Console.clear();
 Engine.loadFontAs("{PROJECT_FOLDER}Fonts/Abel-Regular.ttf", "Abel");
 
 
+include("lookAndFeel.js");
+include("logos.js");
+
 include("pluginVSstandalone.js");
 include("websiteBtns.js");
 include("menuPanels.js");
@@ -13,7 +16,11 @@ include("drawbars.js");
 include("percussionSwitch.js");
 include("rotarySpeakerKnob.js");
 
-include("logos.js");
+
+
+
+
+
 function onNoteOn()
 {
 	

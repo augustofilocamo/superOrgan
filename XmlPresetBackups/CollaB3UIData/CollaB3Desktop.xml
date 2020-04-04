@@ -120,7 +120,7 @@
              filmstripImage="{PROJECT_FOLDER}chorusSwitchFIX 2.png"/>
   <Component type="ScriptPanel" id="presetsPanel" x="0" y="47" width="1024"
              height="443" itemColour="4028242458" itemColour2="4028242458"
-             borderSize="1" borderRadius="2" visible="0">
+             borderSize="1" borderRadius="2">
     <Component type="ScriptFloatingTile" id="presetsScriptFloatingTile" x="119"
                y="24" width="780" height="389" parentComponent="presetsPanel"
                ContentType="PresetBrowser" bgColour="0" itemColour="4286875003"
