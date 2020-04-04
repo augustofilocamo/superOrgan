@@ -42,10 +42,10 @@ for (i = 0; i < NUM_ELEMENTS; i++)
   LeakageTableDecay[i].addTablePoint(1, (1/128)*c0, 1);
   LeakageTableDecay[i].addTablePoint(1, (1/128)*c5, 1);
   LeakageTableDecay[i].addTablePoint(1, (1/128)*c7, 1);
-  LeakageTableDecay[i].setTablePoint(1, 0, (1/128)*c0, 20000/20000, 0.5);
-  LeakageTableDecay[i].setTablePoint(1, 1, (1/128)*c0, 20000/20000, 0.5);
-  LeakageTableDecay[i].setTablePoint(1, 2, (1/128)*c5, 20000/20000, 0.5);
-  LeakageTableDecay[i].setTablePoint(1, 3, (1/128)*c7, 20000/20000, 0.5);
+  LeakageTableDecay[i].setTablePoint(1, 0, (1/128)*c0, 1, 0.5);
+  LeakageTableDecay[i].setTablePoint(1, 1, (1/128)*c0, 1, 0.5);
+  LeakageTableDecay[i].setTablePoint(1, 2, (1/128)*c5, 1, 0.5);
+  LeakageTableDecay[i].setTablePoint(1, 3, (1/128)*c7, 1, 0.5);
 }
 
 //GUI
