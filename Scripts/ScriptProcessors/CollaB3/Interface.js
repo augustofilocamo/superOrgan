@@ -13,9 +13,7 @@ include("drawbars.js");
 include("percussionSwitch.js");
 include("rotarySpeakerKnob.js");
 
-
-
-
+include("logos.js");
 function onNoteOn()
 {
 	
