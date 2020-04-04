@@ -1,4 +1,8 @@
-**/Binaries
+Binaries/
+build/
+Presets/
+Samples/
+PooledResources/
 **/audio.hise.filosian
 .DS_Store
 _local**
