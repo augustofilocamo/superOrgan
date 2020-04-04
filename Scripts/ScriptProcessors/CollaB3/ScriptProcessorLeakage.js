@@ -4,7 +4,7 @@ Content.setWidth(720);
 const var c0 = 24;
 const var c5 = 84;
 const var c7 = 108;
-Console.print("HELLO WORLD");
+
 //Table processor setup
 const var LeakageTablePitch = [];
 const var LeakageTableGain = [];
