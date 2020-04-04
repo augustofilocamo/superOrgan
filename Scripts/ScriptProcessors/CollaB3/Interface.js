@@ -1,5 +1,4 @@
 Content.makeFrontInterface(1024, 768);
-Console.clear();
 
 
 //! Font

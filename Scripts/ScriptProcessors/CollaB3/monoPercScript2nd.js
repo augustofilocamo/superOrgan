@@ -1,5 +1,3 @@
-Console.clear();
-
 reg lastTime2;
 function onNoteOn()
 {
