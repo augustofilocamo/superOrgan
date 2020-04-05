@@ -12,19 +12,19 @@
             <Control type="ScriptSlider" id="MainGainKnob" value="1.49012e-06"/>
             <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
             <Control type="ScriptButton" id="percHarmBtn" value="0"/>
-            <Control type="ScriptSlider" id="leakageGain" value="3.57628e-07"/>
-            <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
-            <Control type="ScriptSlider" id="reverbKnob" value="0.19"/>
-            <Control type="ScriptButton" id="chorusBtn" value="0"/>
+            <Control type="ScriptSlider" id="leakageGain" value="-24"/>
+            <Control type="ScriptSlider" id="leslieSpeed" value="1"/>
+            <Control type="ScriptSlider" id="reverbKnob" value="0"/>
+            <Control type="ScriptButton" id="chorusBtn" value="1"/>
             <Control type="ScriptSlider" id="KnobDrawbar1" value="0"/>
-            <Control type="ScriptSlider" id="KnobDrawbar2" value="1"/>
-            <Control type="ScriptSlider" id="KnobDrawbar3" value="8"/>
-            <Control type="ScriptSlider" id="KnobDrawbar4" value="3"/>
-            <Control type="ScriptSlider" id="KnobDrawbar5" value="7"/>
-            <Control type="ScriptSlider" id="KnobDrawbar6" value="1"/>
-            <Control type="ScriptSlider" id="KnobDrawbar7" value="6"/>
-            <Control type="ScriptSlider" id="KnobDrawbar8" value="7"/>
-            <Control type="ScriptSlider" id="KnobDrawbar9" value="4"/>
+            <Control type="ScriptSlider" id="KnobDrawbar2" value="0"/>
+            <Control type="ScriptSlider" id="KnobDrawbar3" value="0"/>
+            <Control type="ScriptSlider" id="KnobDrawbar4" value="6"/>
+            <Control type="ScriptSlider" id="KnobDrawbar5" value="8"/>
+            <Control type="ScriptSlider" id="KnobDrawbar6" value="8"/>
+            <Control type="ScriptSlider" id="KnobDrawbar7" value="8"/>
+            <Control type="ScriptSlider" id="KnobDrawbar8" value="8"/>
+            <Control type="ScriptSlider" id="KnobDrawbar9" value="8"/>
           </Content>
           <UIData Source="CollaB3UIData"/>
         </Processor>
@@ -51,7 +51,7 @@
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="ScriptFX" ID="Chorus" Bypassed="0">
+        <Processor Type="ScriptFX" ID="Chorus" Bypassed="1">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
           <Content/>
@@ -867,7 +867,7 @@
                                     </Properties>
                                     <Parameters>
                                       <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
-                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-100"/>
+                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="0"/>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
                                                  StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
                                     </Parameters>
@@ -951,6 +951,7 @@
                                       </Node>
                                     </Nodes>
                                     <Parameters/>
+                                    <Properties/>
                                   </Node>
                                   <Node ID="multi1" FactoryPath="container.multi" NumChannels="2" LockNumChannels="0"
                                         NodeColour="0" Comment="" CommentWidth="300" Bypassed="0">
@@ -1037,7 +1038,7 @@
                                     </Properties>
                                     <Parameters>
                                       <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
-                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-100"/>
+                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="0"/>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
                                                  StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
                                     </Parameters>
@@ -1070,7 +1071,7 @@
                                     </Properties>
                                     <Parameters>
                                       <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
-                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="0"/>
+                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-100"/>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
                                                  StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
                                     </Parameters>
@@ -1135,6 +1136,7 @@
                       </Node>
                     </Nodes>
                     <Parameters/>
+                    <Properties/>
                   </Node>
                 </Nodes>
                 <Parameters>
@@ -1150,7 +1152,7 @@
                     </Connections>
                   </Parameter>
                   <Parameter ID="Stop" MinValue="0" MaxValue="1" StepSize="1" SkewFactor="1"
-                             Value="1">
+                             Value="0">
                     <Connections>
                       <Connection NodeId="gain6" ParameterId="Gain" Converter="Identity" OpType="SetValue"
                                   Inverted="1" MinValue="0" MaxValue="-100" LowerLimit="-100" UpperLimit="0"
@@ -1173,7 +1175,7 @@
           </UIData>
         </Processor>
         <Processor Type="SimpleReverb" ID="Reverb" Bypassed="0" RoomSize="0.54"
-                   Damping="0.94" WetLevel="0.19" DryLevel="0.81" Width="0.61" FreezeMode="0.1">
+                   Damping="0.94" WetLevel="0" DryLevel="1" Width="0.61" FreezeMode="0.1">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
@@ -4613,7 +4615,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="0" Delay="0"
+            <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="-24" Delay="0"
                        Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -9956,7 +9958,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="AHDSR EnvelopeMain1" Bypassed="0" Monophonic="0"
                            Retrigger="1" Intensity="1" AttackCurve="0.08" DecayCurve="1"
-                           Attack="4" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
+                           Attack="22" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
                            Release="66" EcoMode="1">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1">
@@ -9968,7 +9970,7 @@
                     <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1">
                       <ChildProcessors>
                         <Processor Type="KeyNumber" ID="NotenumberDecayMain1" Bypassed="0" Intensity="1"
-                                   Mode="1" MidiTableData="108..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+....9C...vO...V+....9C...vO...f+....9C...vO"
+                                   Mode="1" MidiTableData="120..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+....9C...vO...V+....9C...vO...V+....9C...vO...f+....9C...vO"
                                    KeyTableData="512.......f2cuCvc2EOfYlo7.d2cyCrppPOfYlI8.hHB0C3c2UOflYd8fppJ1ChHhYOnYlo8.DQz1CHhHbO...z8.d2c2Cv6tdOXlY98v6tC3CqppfOXlYD9fHhX3Cd28gOnYlI9PUUs3CQDQiOzLyN9.hHB4CDQjjO...T9.u6V4C3c2kOLyLY9v6tq4CqpJmOXlYd9PDQ.5Cu6NnOzLyg9vppJ5iHh3nOZlYj9.QDU5ChHhoO...m9f2ce5C7tKpOlYlo93c2o5CUU0pOLyLr9PDQz5Cu6dqOzLyt9vpp95iHhHrOZlYw9.QDI6ChHxrO...z9f2cS6C7tasOnYl193c2c6CUUEtOLyL49PDQn6Cu6ttOzLy69vppx6iHhXuOZlY99.QD86CQDAvO..f.+v6tC7Cd2UvOyLyA+7t6H7ypppvOlYFC+HhHN7i2c+vOZlYD+TUUS7SDQTwOMyrE+jHhX7CQDowO...G+v6tc7Cd28wOyLSH+7t6h7yppRxOlYlI+HhHn7i2cmxOZl4J+TUUs7SDQ7xOMyLL+jHhx7CQDQyO..fM+v6t27Cd2kyOyLyN+7t677ypp5yOmYFP+HhHB8i2cOzOZlYQ+TUUG8SDQjzOMyrR+jHhL8CQD4zO...T+v6tQ8Cd2M0OyLSU+7t6V8ypph0OmYlV+HhHb8C">
                           <ChildProcessors/>
                         </Processor>
@@ -9987,7 +9989,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainMain1" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="108......rNc81C...vO...P9rNc81C...vO...v9rNc81C...vO...79rj4m4C...vO...D+nJ3N6C...vO...J+z7zM3C...vO...P+7BGA2C...vO...V+7BGA2C...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="120......rNc81C...vO...P9rNc81C...vO...v9rNc81C...vO...79rj4m4C...vO...D+nJ3N6C...vO...J+z7zM3C...vO...P+7BGA2C...vO...V+7BGA2C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -9996,7 +9998,7 @@
             <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0">
               <ChildProcessors>
                 <Processor Type="KeyNumber" ID="NotenumberPitchMain1" Bypassed="0" Intensity="0.0833333"
-                           Bipolar="1" Mode="1" MidiTableData="108..........7C...vO...P9....7C...vO...v9....7C...vO...79PJb86C...vO...D+....7C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...f+....9C...vO"
+                           Bipolar="1" Mode="1" MidiTableData="120..........7C...vO...P9....7C...vO...v9....7C...vO...79PJb86C...vO...D+....7C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512......vpph3C9UevOZlYi9LlHx7ijjTqOfJmC+vssQ6S3WowOjii59fbbz6ipp5uOiIhL+nK5H7iK5xvOitHD+fQWT7CitfwO...G+7D6d7imXGxOrSLI+rSrm7ihcpxOXmXK+HhHv7iYlIyOppJM+7t617yLyjyO3c2N+v6t87C...zODObP+f3gC8yRKUzOO7vQ+LszH8ikVpzOZoES+3gGN8CJu9zO40PT+n7ZR8yFJO0OrgRU+zqgV8iCke0OdMTV+7ZnZ8C..v0OwvPW+HFFd8ijj70OCCCX+POOg8SIII1OUU0X+XXXj8yssU1OnmmY+vBYm8igrf1OeSOZ+fSuo8SjEp1Op2zZ+LjEr8Cmdy1O0aZa+3zat8yo271O...b+v0iv8CtdD2OT3Zb+DWOx8SyLK2Oov0b+T35y8S35Q2O8nPc+nYl08i8nX2ORgqc+f1K28SNNd2OJz9c+n8R38ypph2O6kPd+vDZ48CGGm2OsWhd+3Kg58iiiq2OeIzd+7Rn68C..v2O2SCe+3dZ78i4dx2OcOMe+PMB88yx8z2OBKWe+j6o88Srb22OnFge+7oQ98ik642OMBqe+PX498iPH72OFiwe+nTJ+8iy472OSoze+bsV+8yVq82Oeu2e+LFi+8y4b92Oq05e+7du+8CcN+2O368e+v26+8C">
                   <ChildProcessors/>
                 </Processor>
@@ -10047,7 +10049,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="AHDSR EnvelopeMain2" Bypassed="0" Monophonic="0"
                            Retrigger="1" Intensity="1" AttackCurve="0.08" DecayCurve="1"
-                           Attack="1" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
+                           Attack="11" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
                            Release="66" EcoMode="1">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1">
@@ -10059,7 +10061,7 @@
                     <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1">
                       <ChildProcessors>
                         <Processor Type="KeyNumber" ID="NotenumberDecayMain2" Bypassed="0" Intensity="1"
-                                   Mode="1" MidiTableData="108..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+....9C...vO...V+....9C...vO...f+....9C...vO"
+                                   Mode="1" MidiTableData="120..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+....9C...vO...V+....9C...vO...V+....9C...vO...f+....9C...vO"
                                    KeyTableData="512.......f2cuCvc2EOfYlo7.d2cyCrppPOfYlI8.hHB0C3c2UOflYd8fppJ1ChHhYOnYlo8.DQz1CHhHbO...z8.d2c2Cv6tdOXlY98v6tC3CqppfOXlYD9fHhX3Cd28gOnYlI9PUUs3CQDQiOzLyN9.hHB4CDQjjO...T9.u6V4C3c2kOLyLY9v6tq4CqpJmOXlYd9PDQ.5Cu6NnOzLyg9vppJ5iHh3nOZlYj9.QDU5ChHhoO...m9f2ce5C7tKpOlYlo93c2o5CUU0pOLyLr9PDQz5Cu6dqOzLyt9vpp95iHhHrOZlYw9.QDI6ChHxrO...z9f2cS6C7tasOnYl193c2c6CUUEtOLyL49PDQn6Cu6ttOzLy69vppx6iHhXuOZlY99.QD86CQDAvO..f.+v6tC7Cd2UvOyLyA+7t6H7ypppvOlYFC+HhHN7i2c+vOZlYD+TUUS7SDQTwOMyrE+jHhX7CQDowO...G+v6tc7Cd28wOyLSH+7t6h7yppRxOlYlI+HhHn7i2cmxOZl4J+TUUs7SDQ7xOMyLL+jHhx7CQDQyO..fM+v6t27Cd2kyOyLyN+7t677ypp5yOmYFP+HhHB8i2cOzOZlYQ+TUUG8SDQjzOMyrR+jHhL8CQD4zO...T+v6tQ8Cd2M0OyLSU+7t6V8ypph0OmYlV+HhHb8C">
                           <ChildProcessors/>
                         </Processor>
@@ -10078,7 +10080,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainMain2" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="108......XqZm2C...vO...P9XqZm2C...vO...v9XqZm2C...vO...79vO0I5C...vO...D+XL210C...vO...J+DNd60C...vO...P+nf0S4C...vO...V+nf0S4C...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="120......XqZm2C...vO...P9XqZm2C...vO...v9XqZm2C...vO...79vO0I5C...vO...D+XL210C...vO...J+DNd60C...vO...P+nf0S4C...vO...V+nf0S4C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -10087,7 +10089,7 @@
             <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0">
               <ChildProcessors>
                 <Processor Type="KeyNumber" ID="NotenumberPitchMain2" Bypassed="0" Intensity="0.0833333"
-                           Bipolar="1" Mode="1" MidiTableData="108..........7C...vO...P9....7C...vO...v9....7C...vO...79PJb86C...vO...D+PJb86C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...f+....9C...vO"
+                           Bipolar="1" Mode="1" MidiTableData="120..........7C...vO...P9....7C...vO...v9....7C...vO...79PJb86C...vO...D+PJb86C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512......vpph3C9UevOZlYi9LlHx7ijjTqOfJmC+vssQ6S3WowOjii59fbbz6ipp5uOiIhL+nK5H7iK5xvOitHD+fQWT7CitfwO...G+7D6d7imXGxOrSLI+rSrm7ihcpxOXmXK+HhHv7iYlIyOppJM+7t617yLyjyO3c2N+v6t87C...zODObP+f3gC8yRKUzOO7vQ+LszH8ikVpzOZoES+3gGN8CJu9zO40PT+n7ZR8yFJO0OrgRU+zqgV8iCke0OdMTV+7ZnZ8C..v0OwvPW+HFFd8ijj70OCCCX+POOg8SIII1OUU0X+XXXj8yssU1OnmmY+vBYm8igrf1OeSOZ+fSuo8SjEp1Op2zZ+LjEr8Cmdy1O0aZa+3zat8yo271O...b+v0iv8CtdD2OT3Zb+DWOx8SyLK2Oov0b+T35y8S35Q2O8nPc+nYl08i8nX2ORgqc+f1K28SNNd2OJz9c+n8R38ypph2O6kPd+vDZ48CGGm2OsWhd+3Kg58iiiq2OeIzd+7Rn68C..v2O2SCe+3dZ78i4dx2OcOMe+PMB88yx8z2OBKWe+j6o88Srb22OnFge+7oQ98ik642OMBqe+PX498iPH72OFiwe+nTJ+8iy472OSoze+bsV+8yVq82Oeu2e+LFi+8y4b92Oq05e+7du+8CcN+2O368e+v26+8C">
                   <ChildProcessors/>
                 </Processor>
@@ -10095,7 +10097,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain2" Bypassed="0" Gain="-3"
+                <Processor Type="SimpleGain" ID="SimpleGainMain2" Bypassed="0" Gain="0"
                            Delay="8" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10138,7 +10140,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="AHDSR EnvelopeMain3" Bypassed="0" Monophonic="0"
                            Retrigger="1" Intensity="1" AttackCurve="0.08" DecayCurve="1"
-                           Attack="1" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
+                           Attack="6" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
                            Release="66" EcoMode="1">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1">
@@ -10150,7 +10152,7 @@
                     <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1">
                       <ChildProcessors>
                         <Processor Type="KeyNumber" ID="NotenumberDecayMain3" Bypassed="0" Intensity="1"
-                                   Mode="1" MidiTableData="108..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+....9C...vO...V+....9C...vO...f+....9C...vO"
+                                   Mode="1" MidiTableData="120..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+....9C...vO...V+....9C...vO...V+....9C...vO...f+....9C...vO"
                                    KeyTableData="512.......f2cuCvc2EOfYlo7.d2cyCrppPOfYlI8.hHB0C3c2UOflYd8fppJ1ChHhYOnYlo8.DQz1CHhHbO...z8.d2c2Cv6tdOXlY98v6tC3CqppfOXlYD9fHhX3Cd28gOnYlI9PUUs3CQDQiOzLyN9.hHB4CDQjjO...T9.u6V4C3c2kOLyLY9v6tq4CqpJmOXlYd9PDQ.5Cu6NnOzLyg9vppJ5iHh3nOZlYj9.QDU5ChHhoO...m9f2ce5C7tKpOlYlo93c2o5CUU0pOLyLr9PDQz5Cu6dqOzLyt9vpp95iHhHrOZlYw9.QDI6ChHxrO...z9f2cS6C7tasOnYl193c2c6CUUEtOLyL49PDQn6Cu6ttOzLy69vppx6iHhXuOZlY99.QD86CQDAvO..f.+v6tC7Cd2UvOyLyA+7t6H7ypppvOlYFC+HhHN7i2c+vOZlYD+TUUS7SDQTwOMyrE+jHhX7CQDowO...G+v6tc7Cd28wOyLSH+7t6h7yppRxOlYlI+HhHn7i2cmxOZl4J+TUUs7SDQ7xOMyLL+jHhx7CQDQyO..fM+v6t27Cd2kyOyLyN+7t677ypp5yOmYFP+HhHB8i2cOzOZlYQ+TUUG8SDQjzOMyrR+jHhL8CQD4zO...T+v6tQ8Cd2M0OyLSU+7t6V8ypph0OmYlV+HhHb8C">
                           <ChildProcessors/>
                         </Processor>
@@ -10169,7 +10171,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainMain3" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="108......3PHx3C...vO...P93PHx3C...vO...v93PHx3C...vO...79PvZd2C...vO...D+T1Wo2C...vO...J+D8..4C...vO...P+zt6d4C...vO...V+zt6d4C...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="120......3PHx3C...vO...P93PHx3C...vO...v93PHx3C...vO...79PvZd2C...vO...D+T1Wo2C...vO...J+D8..4C...vO...P+zt6d4C...vO...V+zt6d4C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -10178,7 +10180,7 @@
             <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0">
               <ChildProcessors>
                 <Processor Type="KeyNumber" ID="NotenumberPitchMain3" Bypassed="0" Intensity="0.0833333"
-                           Bipolar="1" Mode="1" MidiTableData="108..........7C...vO...P9....7C...vO...v9....7C...vO...79PJb86C...vO...D+PJb86C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...f+....9C...vO"
+                           Bipolar="1" Mode="1" MidiTableData="120..........7C...vO...P9....7C...vO...v9....7C...vO...79PJb86C...vO...D+PJb86C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512......vpph3C9UevOZlYi9LlHx7ijjTqOfJmC+vssQ6S3WowOjii59fbbz6ipp5uOiIhL+nK5H7iK5xvOitHD+fQWT7CitfwO...G+7D6d7imXGxOrSLI+rSrm7ihcpxOXmXK+HhHv7iYlIyOppJM+7t617yLyjyO3c2N+v6t87C...zODObP+f3gC8yRKUzOO7vQ+LszH8ikVpzOZoES+3gGN8CJu9zO40PT+n7ZR8yFJO0OrgRU+zqgV8iCke0OdMTV+7ZnZ8C..v0OwvPW+HFFd8ijj70OCCCX+POOg8SIII1OUU0X+XXXj8yssU1OnmmY+vBYm8igrf1OeSOZ+fSuo8SjEp1Op2zZ+LjEr8Cmdy1O0aZa+3zat8yo271O...b+v0iv8CtdD2OT3Zb+DWOx8SyLK2Oov0b+T35y8S35Q2O8nPc+nYl08i8nX2ORgqc+f1K28SNNd2OJz9c+n8R38ypph2O6kPd+vDZ48CGGm2OsWhd+3Kg58iiiq2OeIzd+7Rn68C..v2O2SCe+3dZ78i4dx2OcOMe+PMB88yx8z2OBKWe+j6o88Srb22OnFge+7oQ98ik642OMBqe+PX498iPH72OFiwe+nTJ+8iy472OSoze+bsV+8yVq82Oeu2e+LFi+8y4b92Oq05e+7du+8CcN+2O368e+v26+8C">
                   <ChildProcessors/>
                 </Processor>
@@ -10186,7 +10188,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain3" Bypassed="0" Gain="-100"
+                <Processor Type="SimpleGain" ID="SimpleGainMain3" Bypassed="0" Gain="0"
                            Delay="6" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10229,7 +10231,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="AHDSR EnvelopeMain4" Bypassed="0" Monophonic="0"
                            Retrigger="1" Intensity="1" AttackCurve="0.08" DecayCurve="1"
-                           Attack="1" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
+                           Attack="6" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
                            Release="66" EcoMode="1">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1">
@@ -10241,7 +10243,7 @@
                     <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1">
                       <ChildProcessors>
                         <Processor Type="KeyNumber" ID="NotenumberDecayMain4" Bypassed="0" Intensity="1"
-                                   Mode="1" MidiTableData="108..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+....9C...vO...V+....9C...vO...f+....9C...vO"
+                                   Mode="1" MidiTableData="120..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+....9C...vO...V+....9C...vO...V+....9C...vO...f+....9C...vO"
                                    KeyTableData="512.......f2cuCvc2EOfYlo7.d2cyCrppPOfYlI8.hHB0C3c2UOflYd8fppJ1ChHhYOnYlo8.DQz1CHhHbO...z8.d2c2Cv6tdOXlY98v6tC3CqppfOXlYD9fHhX3Cd28gOnYlI9PUUs3CQDQiOzLyN9.hHB4CDQjjO...T9.u6V4C3c2kOLyLY9v6tq4CqpJmOXlYd9PDQ.5Cu6NnOzLyg9vppJ5iHh3nOZlYj9.QDU5ChHhoO...m9f2ce5C7tKpOlYlo93c2o5CUU0pOLyLr9PDQz5Cu6dqOzLyt9vpp95iHhHrOZlYw9.QDI6ChHxrO...z9f2cS6C7tasOnYl193c2c6CUUEtOLyL49PDQn6Cu6ttOzLy69vppx6iHhXuOZlY99.QD86CQDAvO..f.+v6tC7Cd2UvOyLyA+7t6H7ypppvOlYFC+HhHN7i2c+vOZlYD+TUUS7SDQTwOMyrE+jHhX7CQDowO...G+v6tc7Cd28wOyLSH+7t6h7yppRxOlYlI+HhHn7i2cmxOZl4J+TUUs7SDQ7xOMyLL+jHhx7CQDQyO..fM+v6t27Cd2kyOyLyN+7t677ypp5yOmYFP+HhHB8i2cOzOZlYQ+TUUG8SDQjzOMyrR+jHhL8CQD4zO...T+v6tQ8Cd2M0OyLSU+7t6V8ypph0OmYlV+HhHb8C">
                           <ChildProcessors/>
                         </Processor>
@@ -10260,7 +10262,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainMain4" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="108......DmHA4C...vO...P9DmHA4C...vO...v9DmHA4C...vO...79ni010C...vO...D+7yumzC...vO...J+Tgn90C...vO...P+DIuR0C...vO...V+DIuR0C...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="120......DmHA4C...vO...P9DmHA4C...vO...v9DmHA4C...vO...79ni010C...vO...D+7yumzC...vO...J+Tgn90C...vO...P+DIuR0C...vO...V+DIuR0C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -10269,7 +10271,7 @@
             <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0">
               <ChildProcessors>
                 <Processor Type="KeyNumber" ID="NotenumberPitchMain4" Bypassed="0" Intensity="0.0833333"
-                           Bipolar="1" Mode="1" MidiTableData="108..........7C...vO...P9....7C...vO...v9....7C...vO...79PJb86C...vO...D+PJb86C...vO...J+PJb86C...vO...P+PJb86C...vO...V+PJb86C...vO...f+....9C...vO"
+                           Bipolar="1" Mode="1" MidiTableData="120..........7C...vO...P9....7C...vO...v9....7C...vO...79PJb86C...vO...D+PJb86C...vO...J+PJb86C...vO...P+PJb86C...vO...V+PJb86C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512......vpph3C9UevOZlYi9LlHx7ijjTqOfJmC+vssQ6S3WowOjii59fbbz6ipp5uOiIhL+nK5H7iK5xvOitHD+fQWT7CitfwO...G+7D6d7imXGxOrSLI+rSrm7ihcpxOXmXK+HhHv7iYlIyOppJM+7t617yLyjyO3c2N+v6t87C...zODObP+f3gC8yRKUzOO7vQ+LszH8ikVpzOZoES+3gGN8CJu9zO40PT+n7ZR8yFJO0OrgRU+zqgV8iCke0OdMTV+7ZnZ8C..v0OwvPW+HFFd8ijj70OCCCX+POOg8SIII1OUU0X+XXXj8yssU1OnmmY+vBYm8igrf1OeSOZ+fSuo8SjEp1Op2zZ+LjEr8Cmdy1O0aZa+3zat8yo271O...b+v0iv8CtdD2OT3Zb+DWOx8SyLK2Oov0b+T35y8S35Q2O8nPc+nYl08i8nX2ORgqc+f1K28SNNd2OJz9c+n8R38ypph2O6kPd+vDZ48CGGm2OsWhd+3Kg58iiiq2OeIzd+7Rn68C..v2O2SCe+3dZ78i4dx2OcOMe+PMB88yx8z2OBKWe+j6o88Srb22OnFge+7oQ98ik642OMBqe+PX498iPH72OFiwe+nTJ+8iy472OSoze+bsV+8yVq82Oeu2e+LFi+8y4b92Oq05e+7du+8CcN+2O368e+v26+8C">
                   <ChildProcessors/>
                 </Processor>
@@ -10277,7 +10279,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain4" Bypassed="0" Gain="-9"
+                <Processor Type="SimpleGain" ID="SimpleGainMain4" Bypassed="0" Gain="-18"
                            Delay="4" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10332,7 +10334,7 @@
                     <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1">
                       <ChildProcessors>
                         <Processor Type="KeyNumber" ID="NotenumberDecayMain5" Bypassed="0" Intensity="1"
-                                   Mode="1" MidiTableData="108..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+.........vO...V+.........vO...f+....9C...vO"
+                                   Mode="1" MidiTableData="120..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+.........vO...V+.........vO...V+....9C...vO...f+....9C...vO"
                                    KeyTableData="512.......f2cuCvc2EOfYlo7.d2cyCrppPOfYlI8.hHB0C3c2UOflYd8fppJ1ChHhYOnYlo8.DQz1CHhHbO...z8.d2c2Cv6tdOXlY98v6tC3CqppfOXlYD9fHhX3Cd28gOnYlI9PUUs3CQDQiOzLyN9.hHB4CDQjjO...T9.u6V4C3c2kOLyLY9v6tq4CqpJmOXlYd9PDQ.5Cu6NnOzLyg9vppJ5iHh3nOZlYj9.QDU5ChHhoO...m9f2ce5C7tKpOlYlo93c2o5CUU0pOLyLr9PDQz5Cu6dqOzLyt9vpp95iHhHrOZlYw9.QDI6ChHxrO...z9f2cS6C7tasOnYl193c2c6CUUEtOLyL49PDQn6Cu6ttOzLy69vppx6iHhXuOZlY99.QD86CQDAvO..f.+v6tC7Cd2UvOyLyA+7t6H7ypppvOlYFC+HhHN7i2c+vOZlYD+TUUS7SDQTwOMyrE+jHhX7CQDowO...G+v6tc7Cd28wOyLSH+7t6h7yppRxOlYlI+HhHn7i2cmxOZl4J+TUUs7SDQ7xOMyLL+jHhx7CQDQyO..fM+v6t27Cd2kyOyLyN+7t677ypp5yOmYFP+HhHB8i2cOzOZlYQ+TUUG8SDQjzOMyrR+jHhL8CQD4zO...T+v6tQ8Cd2M0OyLSU+7t6V8ypph0OmYlV+HhHb8C">
                           <ChildProcessors/>
                         </Processor>
@@ -10351,7 +10353,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainMain5" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="108......ziiq3C...vO...P9ziiq3C...vO...v9ziiq3C...vO...79LBSo2C...vO...D+j8dF3C...vO...J+Pl.91C...vO...P+.........vO...V+.........vO...f+....9C...vO"
+                           Mode="1" MidiTableData="120......ziiq3C...vO...P9ziiq3C...vO...v9ziiq3C...vO...79LBSo2C...vO...D+j8dF3C...vO...J+Pl.91C...vO...P+.........vO...V+.........vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -10360,7 +10362,7 @@
             <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0">
               <ChildProcessors>
                 <Processor Type="KeyNumber" ID="NotenumberPitchMain5" Bypassed="0" Intensity="0.0833333"
-                           Bipolar="1" Mode="1" MidiTableData="108......PJb86C...vO...P9PJb86C...vO...v9PJb86C...vO...79....7C...vO...D+PJb86C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...f+....9C...vO"
+                           Bipolar="1" Mode="1" MidiTableData="120......PJb86C...vO...P9PJb86C...vO...v9PJb86C...vO...79....7C...vO...D+PJb86C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512......vpph3C9UevOZlYi9LlHx7ijjTqOfJmC+vssQ6S3WowOjii59fbbz6ipp5uOiIhL+nK5H7iK5xvOitHD+fQWT7CitfwO...G+7D6d7imXGxOrSLI+rSrm7ihcpxOXmXK+HhHv7iYlIyOppJM+7t617yLyjyO3c2N+v6t87C...zODObP+f3gC8yRKUzOO7vQ+LszH8ikVpzOZoES+3gGN8CJu9zO40PT+n7ZR8yFJO0OrgRU+zqgV8iCke0OdMTV+7ZnZ8C..v0OwvPW+HFFd8ijj70OCCCX+POOg8SIII1OUU0X+XXXj8yssU1OnmmY+vBYm8igrf1OeSOZ+fSuo8SjEp1Op2zZ+LjEr8Cmdy1O0aZa+3zat8yo271O...b+v0iv8CtdD2OT3Zb+DWOx8SyLK2Oov0b+T35y8S35Q2O8nPc+nYl08i8nX2ORgqc+f1K28SNNd2OJz9c+n8R38ypph2O6kPd+vDZ48CGGm2OsWhd+3Kg58iiiq2OeIzd+7Rn68C..v2O2SCe+3dZ78i4dx2OcOMe+PMB88yx8z2OBKWe+j6o88Srb22OnFge+7oQ98ik642OMBqe+PX498iPH72OFiwe+nTJ+8iy472OSoze+bsV+8yVq82Oeu2e+LFi+8y4b92Oq05e+7du+8CcN+2O368e+v26+8C">
                   <ChildProcessors/>
                 </Processor>
@@ -10368,7 +10370,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain5" Bypassed="0" Gain="-21"
+                <Processor Type="SimpleGain" ID="SimpleGainMain5" Bypassed="0" Gain="-100"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10423,7 +10425,7 @@
                     <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1">
                       <ChildProcessors>
                         <Processor Type="KeyNumber" ID="NotenumberDecayMain6" Bypassed="0" Intensity="1"
-                                   Mode="1" MidiTableData="108..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+.........vO...V+.........vO...f+....9C...vO"
+                                   Mode="1" MidiTableData="120..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+.........vO...V+.........vO...V+....9C...vO...f+....9C...vO"
                                    KeyTableData="512.......f2cuCvc2EOfYlo7.d2cyCrppPOfYlI8.hHB0C3c2UOflYd8fppJ1ChHhYOnYlo8.DQz1CHhHbO...z8.d2c2Cv6tdOXlY98v6tC3CqppfOXlYD9fHhX3Cd28gOnYlI9PUUs3CQDQiOzLyN9.hHB4CDQjjO...T9.u6V4C3c2kOLyLY9v6tq4CqpJmOXlYd9PDQ.5Cu6NnOzLyg9vppJ5iHh3nOZlYj9.QDU5ChHhoO...m9f2ce5C7tKpOlYlo93c2o5CUU0pOLyLr9PDQz5Cu6dqOzLyt9vpp95iHhHrOZlYw9.QDI6ChHxrO...z9f2cS6C7tasOnYl193c2c6CUUEtOLyL49PDQn6Cu6ttOzLy69vppx6iHhXuOZlY99.QD86CQDAvO..f.+v6tC7Cd2UvOyLyA+7t6H7ypppvOlYFC+HhHN7i2c+vOZlYD+TUUS7SDQTwOMyrE+jHhX7CQDowO...G+v6tc7Cd28wOyLSH+7t6h7yppRxOlYlI+HhHn7i2cmxOZl4J+TUUs7SDQ7xOMyLL+jHhx7CQDQyO..fM+v6t27Cd2kyOyLyN+7t677ypp5yOmYFP+HhHB8i2cOzOZlYQ+TUUG8SDQjzOMyrR+jHhL8CQD4zO...T+v6tQ8Cd2M0OyLSU+7t6V8ypph0OmYlV+HhHb8C">
                           <ChildProcessors/>
                         </Processor>
@@ -10442,7 +10444,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainMain6" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="108......37E41C...vO...P937E41C...vO...v937E41C...vO...79Dy7mzC...vO...D+X2dw1C...vO...J+7kLrzC...vO...P+.........vO...V+.........vO...f+....9C...vO"
+                           Mode="1" MidiTableData="120......37E41C...vO...P937E41C...vO...v937E41C...vO...79Dy7mzC...vO...D+X2dw1C...vO...J+7kLrzC...vO...P+.........vO...V+.........vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -10451,7 +10453,7 @@
             <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0">
               <ChildProcessors>
                 <Processor Type="KeyNumber" ID="NotenumberPitchMain6" Bypassed="0" Intensity="0.0833333"
-                           Bipolar="1" Mode="1" MidiTableData="108......PJb86C...vO...P9PJb86C...vO...v9PJb86C...vO...79....7C...vO...D+PJb86C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...f+....9C...vO"
+                           Bipolar="1" Mode="1" MidiTableData="120......PJb86C...vO...P9PJb86C...vO...v9PJb86C...vO...79....7C...vO...D+PJb86C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512......vpph3C9UevOZlYi9LlHx7ijjTqOfJmC+vssQ6S3WowOjii59fbbz6ipp5uOiIhL+nK5H7iK5xvOitHD+fQWT7CitfwO...G+7D6d7imXGxOrSLI+rSrm7ihcpxOXmXK+HhHv7iYlIyOppJM+7t617yLyjyO3c2N+v6t87C...zODObP+f3gC8yRKUzOO7vQ+LszH8ikVpzOZoES+3gGN8CJu9zO40PT+n7ZR8yFJO0OrgRU+zqgV8iCke0OdMTV+7ZnZ8C..v0OwvPW+HFFd8ijj70OCCCX+POOg8SIII1OUU0X+XXXj8yssU1OnmmY+vBYm8igrf1OeSOZ+fSuo8SjEp1Op2zZ+LjEr8Cmdy1O0aZa+3zat8yo271O...b+v0iv8CtdD2OT3Zb+DWOx8SyLK2Oov0b+T35y8S35Q2O8nPc+nYl08i8nX2ORgqc+f1K28SNNd2OJz9c+n8R38ypph2O6kPd+vDZ48CGGm2OsWhd+3Kg58iiiq2OeIzd+7Rn68C..v2O2SCe+3dZ78i4dx2OcOMe+PMB88yx8z2OBKWe+j6o88Srb22OnFge+7oQ98ik642OMBqe+PX498iPH72OFiwe+nTJ+8iy472OSoze+bsV+8yVq82Oeu2e+LFi+8y4b92Oq05e+7du+8CcN+2O368e+v26+8C">
                   <ChildProcessors/>
                 </Processor>
@@ -10459,7 +10461,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain6" Bypassed="0" Gain="-3"
+                <Processor Type="SimpleGain" ID="SimpleGainMain6" Bypassed="0" Gain="-100"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10502,7 +10504,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="AHDSR EnvelopeMain7" Bypassed="0" Monophonic="0"
                            Retrigger="1" Intensity="1" AttackCurve="0.08" DecayCurve="1"
-                           Attack="1" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
+                           Attack="8" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
                            Release="66" EcoMode="1">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1">
@@ -10514,7 +10516,7 @@
                     <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1">
                       <ChildProcessors>
                         <Processor Type="KeyNumber" ID="NotenumberDecayMain7" Bypassed="0" Intensity="1"
-                                   Mode="1" MidiTableData="108..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+.........vO...V+.........vO...f+....9C...vO"
+                                   Mode="1" MidiTableData="120..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+....9C...vO...P+.........vO...V+.........vO...V+....9C...vO...f+....9C...vO"
                                    KeyTableData="512.......f2cuCvc2EOfYlo7.d2cyCrppPOfYlI8.hHB0C3c2UOflYd8fppJ1ChHhYOnYlo8.DQz1CHhHbO...z8.d2c2Cv6tdOXlY98v6tC3CqppfOXlYD9fHhX3Cd28gOnYlI9PUUs3CQDQiOzLyN9.hHB4CDQjjO...T9.u6V4C3c2kOLyLY9v6tq4CqpJmOXlYd9PDQ.5Cu6NnOzLyg9vppJ5iHh3nOZlYj9.QDU5ChHhoO...m9f2ce5C7tKpOlYlo93c2o5CUU0pOLyLr9PDQz5Cu6dqOzLyt9vpp95iHhHrOZlYw9.QDI6ChHxrO...z9f2cS6C7tasOnYl193c2c6CUUEtOLyL49PDQn6Cu6ttOzLy69vppx6iHhXuOZlY99.QD86CQDAvO..f.+v6tC7Cd2UvOyLyA+7t6H7ypppvOlYFC+HhHN7i2c+vOZlYD+TUUS7SDQTwOMyrE+jHhX7CQDowO...G+v6tc7Cd28wOyLSH+7t6h7yppRxOlYlI+HhHn7i2cmxOZl4J+TUUs7SDQ7xOMyLL+jHhx7CQDQyO..fM+v6t27Cd2kyOyLyN+7t677ypp5yOmYFP+HhHB8i2cOzOZlYQ+TUUG8SDQjzOMyrR+jHhL8CQD4zO...T+v6tQ8Cd2M0OyLSU+7t6V8ypph0OmYlV+HhHb8C">
                           <ChildProcessors/>
                         </Processor>
@@ -10533,7 +10535,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainMain7" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="108......LcEe3C...vO...P9LcEe3C...vO...v9LcEe3C...vO...79DaW.3C...vO...D+fx.M2C...vO...J+fCxPxC...vO...P+.........vO...V+.........vO...f+....9C...vO"
+                           Mode="1" MidiTableData="120......LcEe3C...vO...P9LcEe3C...vO...v9LcEe3C...vO...79DaW.3C...vO...D+fx.M2C...vO...J+fCxPxC...vO...P+.........vO...V+.........vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -10542,7 +10544,7 @@
             <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0">
               <ChildProcessors>
                 <Processor Type="KeyNumber" ID="NotenumberPitchMain7" Bypassed="0" Intensity="0.0833333"
-                           Bipolar="1" Mode="1" MidiTableData="108......PJb86C...vO...P9PJb86C...vO...v9PJb86C...vO...79....7C...vO...D+PJb86C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...f+....9C...vO"
+                           Bipolar="1" Mode="1" MidiTableData="120......PJb86C...vO...P9PJb86C...vO...v9PJb86C...vO...79....7C...vO...D+PJb86C...vO...J+PJb86C...vO...P+....7C...vO...V+....7C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512......vpph3C9UevOZlYi9LlHx7ijjTqOfJmC+vssQ6S3WowOjii59fbbz6ipp5uOiIhL+nK5H7iK5xvOitHD+fQWT7CitfwO...G+7D6d7imXGxOrSLI+rSrm7ihcpxOXmXK+HhHv7iYlIyOppJM+7t617yLyjyO3c2N+v6t87C...zODObP+f3gC8yRKUzOO7vQ+LszH8ikVpzOZoES+3gGN8CJu9zO40PT+n7ZR8yFJO0OrgRU+zqgV8iCke0OdMTV+7ZnZ8C..v0OwvPW+HFFd8ijj70OCCCX+POOg8SIII1OUU0X+XXXj8yssU1OnmmY+vBYm8igrf1OeSOZ+fSuo8SjEp1Op2zZ+LjEr8Cmdy1O0aZa+3zat8yo271O...b+v0iv8CtdD2OT3Zb+DWOx8SyLK2Oov0b+T35y8S35Q2O8nPc+nYl08i8nX2ORgqc+f1K28SNNd2OJz9c+n8R38ypph2O6kPd+vDZ48CGGm2OsWhd+3Kg58iiiq2OeIzd+7Rn68C..v2O2SCe+3dZ78i4dx2OcOMe+PMB88yx8z2OBKWe+j6o88Srb22OnFge+7oQ98ik642OMBqe+PX498iPH72OFiwe+nTJ+8iy472OSoze+bsV+8yVq82Oeu2e+LFi+8y4b92Oq05e+7du+8CcN+2O368e+v26+8C">
                   <ChildProcessors/>
                 </Processor>
@@ -10550,7 +10552,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain7" Bypassed="0" Gain="-18"
+                <Processor Type="SimpleGain" ID="SimpleGainMain7" Bypassed="0" Gain="-100"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10593,7 +10595,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="AHDSR EnvelopeMain8" Bypassed="0" Monophonic="0"
                            Retrigger="1" Intensity="1" AttackCurve="0.08" DecayCurve="1"
-                           Attack="1" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
+                           Attack="4" AttackLevel="0" Hold="0" Decay="20000" Sustain="0"
                            Release="66" EcoMode="1">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1">
@@ -10605,7 +10607,7 @@
                     <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1">
                       <ChildProcessors>
                         <Processor Type="KeyNumber" ID="NotenumberDecayMain8" Bypassed="0" Intensity="1"
-                                   Mode="1" MidiTableData="108..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+.........vO...P+.........vO...V+.........vO...f+....9C...vO"
+                                   Mode="1" MidiTableData="120..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+....9C...vO...J+.........vO...P+.........vO...V+.........vO...V+....9C...vO...f+....9C...vO"
                                    KeyTableData="512.......f2cuCvc2EOfYlo7.d2cyCrppPOfYlI8.hHB0C3c2UOflYd8fppJ1ChHhYOnYlo8.DQz1CHhHbO...z8.d2c2Cv6tdOXlY98v6tC3CqppfOXlYD9fHhX3Cd28gOnYlI9PUUs3CQDQiOzLyN9.hHB4CDQjjO...T9.u6V4C3c2kOLyLY9v6tq4CqpJmOXlYd9PDQ.5Cu6NnOzLyg9vppJ5iHh3nOZlYj9.QDU5ChHhoO...m9f2ce5C7tKpOlYlo93c2o5CUU0pOLyLr9PDQz5Cu6dqOzLyt9vpp95iHhHrOZlYw9.QDI6ChHxrO...z9f2cS6C7tasOnYl193c2c6CUUEtOLyL49PDQn6Cu6ttOzLy69vppx6iHhXuOZlY99.QD86CQDAvO..f.+v6tC7Cd2UvOyLyA+7t6H7ypppvOlYFC+HhHN7i2c+vOZlYD+TUUS7SDQTwOMyrE+jHhX7CQDowO...G+v6tc7Cd28wOyLSH+7t6h7yppRxOlYlI+HhHn7i2cmxOZl4J+TUUs7SDQ7xOMyLL+jHhx7CQDQyO..fM+v6t27Cd2kyOyLyN+7t677ypp5yOmYFP+HhHB8i2cOzOZlYQ+TUUG8SDQjzOMyrR+jHhL8CQD4zO...T+v6tQ8Cd2M0OyLSU+7t6V8ypph0OmYlV+HhHb8C">
                           <ChildProcessors/>
                         </Processor>
@@ -10624,7 +10626,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainMain8" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="108......bIwo2C...vO...P9bIwo2C...vO...v9bIwo2C...vO...79b7F+2C...vO...D+.8Hz1C...vO...J+.........vO...P+.........vO...V+.........vO...f+....9C...vO"
+                           Mode="1" MidiTableData="120......bIwo2C...vO...P9bIwo2C...vO...v9bIwo2C...vO...79b7F+2C...vO...D+.8Hz1C...vO...J+.........vO...P+.........vO...V+.........vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -10633,7 +10635,7 @@
             <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0">
               <ChildProcessors>
                 <Processor Type="KeyNumber" ID="NotenumberPitchMain8" Bypassed="0" Intensity="0.0833333"
-                           Bipolar="1" Mode="1" MidiTableData="108......PJb86C...vO...P9PJb86C...vO...v9PJb86C...vO...79....7C...vO...D+PJb86C...vO...J+....7C...vO...P+....7C...vO...V+....7C...vO...f+....9C...vO"
+                           Bipolar="1" Mode="1" MidiTableData="120......PJb86C...vO...P9PJb86C...vO...v9PJb86C...vO...79....7C...vO...D+PJb86C...vO...J+....7C...vO...P+....7C...vO...V+....7C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512......vpph3C9UevOZlYi9LlHx7ijjTqOfJmC+vssQ6S3WowOjii59fbbz6ipp5uOiIhL+nK5H7iK5xvOitHD+fQWT7CitfwO...G+7D6d7imXGxOrSLI+rSrm7ihcpxOXmXK+HhHv7iYlIyOppJM+7t617yLyjyO3c2N+v6t87C...zODObP+f3gC8yRKUzOO7vQ+LszH8ikVpzOZoES+3gGN8CJu9zO40PT+n7ZR8yFJO0OrgRU+zqgV8iCke0OdMTV+7ZnZ8C..v0OwvPW+HFFd8ijj70OCCCX+POOg8SIII1OUU0X+XXXj8yssU1OnmmY+vBYm8igrf1OeSOZ+fSuo8SjEp1Op2zZ+LjEr8Cmdy1O0aZa+3zat8yo271O...b+v0iv8CtdD2OT3Zb+DWOx8SyLK2Oov0b+T35y8S35Q2O8nPc+nYl08i8nX2ORgqc+f1K28SNNd2OJz9c+n8R38ypph2O6kPd+vDZ48CGGm2OsWhd+3Kg58iiiq2OeIzd+7Rn68C..v2O2SCe+3dZ78i4dx2OcOMe+PMB88yx8z2OBKWe+j6o88Srb22OnFge+7oQ98ik642OMBqe+PX498iPH72OFiwe+nTJ+8iy472OSoze+bsV+8yVq82Oeu2e+LFi+8y4b92Oq05e+7du+8CcN+2O368e+v26+8C">
                   <ChildProcessors/>
                 </Processor>
@@ -10641,7 +10643,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain8" Bypassed="0" Gain="-21"
+                <Processor Type="SimpleGain" ID="SimpleGainMain8" Bypassed="0" Gain="-100"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10696,7 +10698,7 @@
                     <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1">
                       <ChildProcessors>
                         <Processor Type="KeyNumber" ID="NotenumberDecayMain9" Bypassed="0" Intensity="1"
-                                   Mode="1" MidiTableData="108..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+.........vO...J+.........vO...P+.........vO...V+.........vO...f+....9C...vO"
+                                   Mode="1" MidiTableData="120..........9C...vO...P9....9C...vO...v9....9C...vO...79....9C...vO...D+.........vO...J+.........vO...P+.........vO...V+.........vO...V+....9C...vO...f+....9C...vO"
                                    KeyTableData="512.......f2cuCvc2EOfYlo7.d2cyCrppPOfYlI8.hHB0C3c2UOflYd8fppJ1ChHhYOnYlo8.DQz1CHhHbO...z8.d2c2Cv6tdOXlY98v6tC3CqppfOXlYD9fHhX3Cd28gOnYlI9PUUs3CQDQiOzLyN9.hHB4CDQjjO...T9.u6V4C3c2kOLyLY9v6tq4CqpJmOXlYd9PDQ.5Cu6NnOzLyg9vppJ5iHh3nOZlYj9.QDU5ChHhoO...m9f2ce5C7tKpOlYlo93c2o5CUU0pOLyLr9PDQz5Cu6dqOzLyt9vpp95iHhHrOZlYw9.QDI6ChHxrO...z9f2cS6C7tasOnYl193c2c6CUUEtOLyL49PDQn6Cu6ttOzLy69vppx6iHhXuOZlY99.QD86CQDAvO..f.+v6tC7Cd2UvOyLyA+7t6H7ypppvOlYFC+HhHN7i2c+vOZlYD+TUUS7SDQTwOMyrE+jHhX7CQDowO...G+v6tc7Cd28wOyLSH+7t6h7yppRxOlYlI+HhHn7i2cmxOZl4J+TUUs7SDQ7xOMyLL+jHhx7CQDQyO..fM+v6t27Cd2kyOyLyN+7t677ypp5yOmYFP+HhHB8i2cOzOZlYQ+TUUG8SDQjzOMyrR+jHhL8CQD4zO...T+v6tQ8Cd2M0OyLSU+7t6V8ypph0OmYlV+HhHb8C">
                           <ChildProcessors/>
                         </Processor>
@@ -10715,7 +10717,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainMain9" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="108......nWBnzC...vO...P9nWBnzC...vO...v9nWBnzC...vO...79.V211C...vO...D+.........vO...J+.........vO...P+.........vO...V+.........vO...f+....9C...vO"
+                           Mode="1" MidiTableData="120......nWBnzC...vO...P9nWBnzC...vO...v9nWBnzC...vO...79.V211C...vO...D+.........vO...J+.........vO...P+.........vO...V+.........vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -10724,7 +10726,7 @@
             <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0">
               <ChildProcessors>
                 <Processor Type="KeyNumber" ID="NotenumberPitchMain9" Bypassed="0" Intensity="0.0833333"
-                           Bipolar="1" Mode="1" MidiTableData="108......PJb86C...vO...P9PJb86C...vO...v9PJb86C...vO...79....7C...vO...D+....7C...vO...J+....7C...vO...P+....7C...vO...V+....7C...vO...f+....9C...vO"
+                           Bipolar="1" Mode="1" MidiTableData="120......PJb86C...vO...P9PJb86C...vO...v9PJb86C...vO...79....7C...vO...D+....7C...vO...J+....7C...vO...P+....7C...vO...V+....7C...vO...V+....9C...vO...f+....9C...vO"
                            KeyTableData="512......vpph3C9UevOZlYi9LlHx7ijjTqOfJmC+vssQ6S3WowOjii59fbbz6ipp5uOiIhL+nK5H7iK5xvOitHD+fQWT7CitfwO...G+7D6d7imXGxOrSLI+rSrm7ihcpxOXmXK+HhHv7iYlIyOppJM+7t617yLyjyO3c2N+v6t87C...zODObP+f3gC8yRKUzOO7vQ+LszH8ikVpzOZoES+3gGN8CJu9zO40PT+n7ZR8yFJO0OrgRU+zqgV8iCke0OdMTV+7ZnZ8C..v0OwvPW+HFFd8ijj70OCCCX+POOg8SIII1OUU0X+XXXj8yssU1OnmmY+vBYm8igrf1OeSOZ+fSuo8SjEp1Op2zZ+LjEr8Cmdy1O0aZa+3zat8yo271O...b+v0iv8CtdD2OT3Zb+DWOx8SyLK2Oov0b+T35y8S35Q2O8nPc+nYl08i8nX2ORgqc+f1K28SNNd2OJz9c+n8R38ypph2O6kPd+vDZ48CGGm2OsWhd+3Kg58iiiq2OeIzd+7Rn68C..v2O2SCe+3dZ78i4dx2OcOMe+PMB88yx8z2OBKWe+j6o88Srb22OnFge+7oQ98ik642OMBqe+PX498iPH72OFiwe+nTJ+8iy472OSoze+bsV+8yVq82Oeu2e+LFi+8y4b92Oq05e+7du+8CcN+2O368e+v26+8C">
                   <ChildProcessors/>
                 </Processor>
@@ -10732,7 +10734,7 @@
             </Processor>
             <Processor Type="EffectChain" ID="FX" Bypassed="0">
               <ChildProcessors>
-                <Processor Type="SimpleGain" ID="SimpleGainMain9" Bypassed="0" Gain="-12"
+                <Processor Type="SimpleGain" ID="SimpleGainMain9" Bypassed="0" Gain="-100"
                            Delay="0" Width="100" Balance="0" InvertPolarity="0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10768,7 +10770,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="5" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="114" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
@@ -10808,12 +10810,18 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyphonicFilter" ID="Filter1" Bypassed="0" Gain="0" Frequency="2223.88"
+            <Processor Type="PolyphonicFilter" ID="Filter1" Bypassed="0" Gain="0" Frequency="3871.8"
                        Q="1" Mode="6" Quality="1" BipolarIntensity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1">
-                  <ChildProcessors/>
+                  <ChildProcessors>
+                    <Processor Type="KeyNumber" ID="Notenumber Modulator1" Bypassed="0" Intensity="1"
+                               Mode="1" MidiTableData="48......fwIC3C...vOfNsw9PRRR3C...vOfNsI+PLqE5C...vO...f+....9C...vO"
+                               KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
                 </Processor>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
                   <ChildProcessors/>
@@ -10832,7 +10840,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.0489779"
+    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.0204174"
                Balance="0.2" VoiceLimit="256" KillFadeTime="20" IconColour="0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -10873,12 +10881,18 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyphonicFilter" ID="Filter2" Bypassed="0" Gain="0" Frequency="1766.14"
+            <Processor Type="PolyphonicFilter" ID="Filter2" Bypassed="0" Gain="0" Frequency="5859"
                        Q="0.73" Mode="6" Quality="1" BipolarIntensity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1">
-                  <ChildProcessors/>
+                  <ChildProcessors>
+                    <Processor Type="KeyNumber" ID="Notenumber Modulator2" Bypassed="0" Intensity="1"
+                               Mode="1" MidiTableData="48......3Siv5C...vOGnS69nzq+5C...vO1iBG+3GUW7C...vO...f+....9C...vO"
+                               KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
                 </Processor>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
                   <ChildProcessors/>
@@ -10978,7 +10992,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="perc3rd" Bypassed="0" Gain="1" Balance="-0.27"
+    <Processor Type="SineSynth" ID="perc3rd" Bypassed="0" Gain="0.285102" Balance="-0.27"
                VoiceLimit="256" KillFadeTime="20" IconColour="0" OctaveTranspose="1"
                SemiTones="7" UseFreqRatio="0" CoarseFreqRatio="1" FineFreqRatio="0"
                SaturationAmount="0">
