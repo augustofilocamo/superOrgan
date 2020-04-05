@@ -1,5 +1,5 @@
 /*
-  Copyright 2020 Studio427 Audio & Augusto Filocamo
+  Copyright 2020 Augusto Filocamo
   
   This file is part of CollaB3.
 
