@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ContentProperties DeviceType="Desktop">
-  <Component type="ScriptImage" id="backgroundImage" x="0" y="0" fileName="{PROJECT_FOLDER}MAIN-TOP-IMAGE-with-menu.png"
+  <Component type="ScriptImage" id="backgroundImage" x="0" y="0" fileName="{PROJECT_FOLDER}MAIN-TOP-IMAGE-with-menu-2.png"
              width="1024" height="768">
-    <Component type="ScriptPanel" id="covidInfoLink" x="355" y="7" parentComponent="backgroundImage"
-               bgColour="0" itemColour="0" itemColour2="0" textColour="0" borderSize="0"
-               borderRadius="0" allowCallbacks="Clicks Only" width="152" height="34"/>
     <Component type="ScriptButton" id="settingsButton" x="899" y="6" parentComponent="backgroundImage"
                filmstripImage="{PROJECT_FOLDER}settings-03.png" scaleFactor="0.2"
                width="98" height="32" saveInPreset="0"/>
@@ -18,6 +15,9 @@
     <Component type="ScriptImage" id="covidImage" x="370" y="10" parentComponent="backgroundImage"
                fileName="{PROJECT_FOLDER}COVID-INFO.png" width="128" height="22"/>
   </Component>
+  <Component type="ScriptPanel" id="covidInfoLink" x="355" y="7" bgColour="0"
+             itemColour="0" itemColour2="0" textColour="0" borderSize="0"
+             borderRadius="0" allowCallbacks="Clicks Only" width="152" height="34"/>
   <Component type="ScriptImage" id="lowerGuiBkg" x="0" y="498" width="1024"
              height="270" fileName="{PROJECT_FOLDER}lowerGUInoFonts.png"/>
   <Component type="ScriptPanel" id="fontpanel" x="0" y="506" width="1014"
@@ -98,26 +98,27 @@
              suffix=" dB" middlePosition="-18" filmstripImage="{PROJECT_FOLDER}mainKnob.png"
              numStrips="128" scaleFactor="0.5" width="104" height="89"/>
   <Component type="ScriptButton" id="percOnOffBtn" x="742" y="594" filmstripImage="{PROJECT_FOLDER}percSwitch.png"
-             scaleFactor="0.5" width="63" height="113"/>
+             scaleFactor="0.5" width="63" height="113" pluginParameterName="Perc On/Off"/>
   <Component type="ScriptButton" id="percHarmBtn" x="799" y="594" filmstripImage="{PROJECT_FOLDER}harmSwitch.png"
-             width="65" height="119" scaleFactor="0.5"/>
+             width="65" height="119" scaleFactor="0.5" pluginParameterName="Perc 2/3"/>
   <Component type="ScriptSlider" id="leakageGain" x="148" y="605" processorId="Simple Gain1"
              parameterId="Gain" mode="Decibel" min="-24" max="6" stepSize="0.1"
              suffix=" dB" middlePosition="0" filmstripImage="{PROJECT_FOLDER}mainKnob.png"
              numStrips="128" scaleFactor="0.5" width="104" height="89"/>
   <Component type="ScriptSlider" id="leslieSpeed" x="105" y="710" stepSize="1"
              max="2" numStrips="3" scaleFactor="0.5" width="171" height="56"
-             mouseSensitivity="0.3" dragDirection="Horizontal" filmstripImage="{PROJECT_FOLDER}rotarySwitch2PS.png"/>
+             mouseSensitivity="0.3" dragDirection="Horizontal" filmstripImage="{PROJECT_FOLDER}rotarySwitch2PS.png"
+             pluginParameterName="Rotary"/>
   <Component type="ScriptImage" id="reverbKnobShadow" x="939" y="712" width="31.5"
              height="41.5" fileName="{PROJECT_FOLDER}smallKnobShadow.png"
              enabled="0"/>
   <Component type="ScriptSlider" id="reverbKnob" x="939" y="724" processorId="Reverb"
              parameterId="WetLevel" mode="NormalizedPercentage" suffix="%"
              middlePosition="0.1" max="0.4" filmstripImage="{PROJECT_FOLDER}smallKnob.png"
-             numStrips="128" scaleFactor="0.5" width="33" height="41"/>
+             numStrips="128" scaleFactor="0.5" width="33" height="41" pluginParameterName="Reverb"/>
   <Component type="ScriptButton" id="chorusBtn" x="890" y="719" processorId="Chorus"
              parameterId="Bypass" scaleFactor="0.5" width="36" height="56"
-             filmstripImage="{PROJECT_FOLDER}chorusSwitchFIX 2.png"/>
+             filmstripImage="{PROJECT_FOLDER}chorusSwitchFIX 2.png" pluginParameterName="Chorus"/>
   <Component type="ScriptPanel" id="presetsPanel" x="0" y="47" width="1024"
              height="443" itemColour="4028242458" itemColour2="4028242458"
              borderSize="1" borderRadius="2" visible="0">
@@ -192,9 +193,6 @@
     <Component type="ScriptLabel" id="Label8" x="413" y="239" parentComponent="morePanel"
                text="PROUDLY CREATED BY" textColour="4289109909" fontName="Abel"
                fontSize="22" width="224" editable="0"/>
-    <Component type="ScriptLabel" id="Label11" x="432" y="323" parentComponent="morePanel"
-               text="LALALAND AUDIO" textColour="4289109909" fontName="Abel"
-               fontSize="30" width="224" editable="0"/>
     <Component type="ScriptLabel" id="FiloWebsiteLbl" x="13" y="360" parentComponent="morePanel"
                text="VISIT WEBSITE" textColour="4289109909" fontName="Abel"
                editable="0" width="224" fontSize="18">
@@ -238,52 +236,54 @@
     </Component>
     <Component type="ScriptImage" id="Image2" x="863" y="317" parentComponent="morePanel"
                fileName="{PROJECT_FOLDER}fabricationDate.png" width="101" height="24"/>
-    <Component type="ScriptImage" id="ScriptImage1" x="48" y="320" width="172"
-               height="39" parentComponent="morePanel" fileName="{PROJECT_FOLDER}logo-sampleson.png"/>
-    <Component type="ScriptImage" id="Image3" x="241" y="321" width="180" fileName="{PROJECT_FOLDER}Studio427audio-logo.png"
+    <Component type="ScriptImage" id="ScriptImage1" x="35" y="320" width="177"
+               height="43" parentComponent="morePanel" fileName="{PROJECT_FOLDER}logo-sampleson.png"/>
+    <Component type="ScriptImage" id="Image3" x="250" y="321" width="174" fileName="{PROJECT_FOLDER}Studio427audio-logo.png"
                height="32" parentComponent="morePanel"/>
     <Component type="ScriptLabel" id="Label15" x="856" y="366" parentComponent="morePanel"
                editable="0" fontName="Abel" textColour="4289109909" fontSize="18"
                text="WITH" width="60" height="28"/>
     <Component type="ScriptPanel" id="libreWaveLogoPnl" x="666" y="325" parentComponent="morePanel"
                width="157" height="21"/>
+    <Component type="ScriptImage" id="ScriptImage2" x="457" y="322" width="172"
+               height="35" parentComponent="morePanel" fileName="{PROJECT_FOLDER}FxoTx12.png"/>
   </Component>
   <Component type="ScriptSlider" id="KnobDrawbar1" x="285" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarMaroonFinal.png"
-             numStrips="9" scaleFactor="0.5"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 16"/>
   <Component type="ScriptSlider" id="KnobDrawbar2" x="379" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png"
-             numStrips="9" scaleFactor="0.5"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 8"/>
   <Component type="ScriptSlider" id="KnobDrawbar3" x="332" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarMaroonFinal.png"
-             scaleFactor="0.5" numStrips="9"/>
+             scaleFactor="0.5" numStrips="9" pluginParameterName="Drawbar 5 1/3"/>
   <Component type="ScriptSlider" id="KnobDrawbar4" x="426" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png"
-             scaleFactor="0.5" numStrips="9"/>
+             scaleFactor="0.5" numStrips="9" pluginParameterName="Drawbar 4"/>
   <Component type="ScriptSlider" id="KnobDrawbar5" x="473" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarBlackFinal.png"
-             numStrips="9" scaleFactor="0.5"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 2 2/3"/>
   <Component type="ScriptSlider" id="KnobDrawbar6" x="520" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png"
-             numStrips="9" scaleFactor="0.5"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 2"/>
   <Component type="ScriptSlider" id="KnobDrawbar7" x="567" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarBlackFinal.png"
-             numStrips="9" scaleFactor="0.5"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 1 3/6"/>
   <Component type="ScriptSlider" id="KnobDrawbar8" x="614" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarBlackFinal.png"
-             numStrips="9" scaleFactor="0.5"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 1 1/3"/>
   <Component type="ScriptSlider" id="KnobDrawbar9" x="662" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" numStrips="9" scaleFactor="0.5"
-             filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png"/>
+             filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png" pluginParameterName="Drawbar 1"/>
   <Component type="ScriptImage" id="lowerWoodShadow" x="183" y="524" width="670"
              height="22.5" fileName="{PROJECT_FOLDER}topFrameShadow.png" enabled="0"/>
   <Component type="ScriptImage" id="lowerWoodFrame" x="0" y="499" width="1024"
