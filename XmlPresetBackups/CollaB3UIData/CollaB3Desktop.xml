@@ -25,73 +25,73 @@
              textColour="0">
     <Component type="ScriptLabel" id="leakageLabel" x="140" y="52" width="116"
                height="45" fontName="Abel" text="LEAKAGE" fontSize="22" textColour="2594809496"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="rotaryLabel" x="164" y="182" width="72"
                height="39" fontName="Abel" text="ROTARY" fontSize="22" textColour="2594809496"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="percussionLabel" x="743" y="52" width="116"
                height="45" fontName="Abel" text="PERCUSSION" fontSize="22" textColour="2594809496"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="volumeLabel" x="871" y="52" width="116"
                height="45" fontName="Abel" text="VOLUME" fontSize="22" textColour="2594809496"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="offLabel" x="140" y="236" width="48" height="18"
                fontName="Abel" text="OFF" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="1Label" x="171" y="236" width="48" height="18"
                fontName="Abel" text="1" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="2Label" x="207" y="236" width="48" height="18"
                fontName="Abel" text="2" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="chorusLabel" x="877" y="196" width="59"
                height="18" fontName="Abel" text="CHORUS" fontSize="17" textColour="2594809496"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="16Label1" x="285" y="235" width="48" height="18"
                fontName="Abel" text="16" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="reverbLabel" x="927" y="196" width="59"
                height="18" fontName="Abel" text="REVERB" fontSize="17" textColour="2594809496"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="5Label" x="325" y="235" width="48" height="18"
                fontName="Abel" text="5" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="1_3Label" x="347" y="233" width="27" height="20"
                fontName="Abel" text="1/3" fontSize="11" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="8Label" x="379" y="235" width="48" height="18"
                fontName="Abel" text="8" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="2Label1" x="466" y="235" width="48" height="18"
                fontName="Abel" text="2" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="2_3Label1" x="488" y="233" width="27"
                height="20" fontName="Abel" text="2/3" fontSize="11" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="2Label2" x="519" y="235" width="48" height="18"
                fontName="Abel" text="2" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="1Label1" x="560" y="235" width="48" height="18"
                fontName="Abel" text="1" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="3_5Label2" x="582" y="233" width="27"
                height="20" fontName="Abel" text="3/5" fontSize="11" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="1Label2" x="607" y="235" width="48" height="18"
                fontName="Abel" text="1" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="1_3Label1" x="630" y="233" width="27"
                height="20" fontName="Abel" text="1/3" fontSize="11" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="1Label3" x="663" y="235" width="48" height="18"
                fontName="Abel" text="1" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="4Label" x="425" y="235" width="48" height="18"
                fontName="Abel" text="4" fontSize="17" textColour="4289308312"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
     <Component type="ScriptLabel" id="claimLabel" x="1" y="208" width="129"
                height="35" fontName="Abel" text="FREE TONEWHEEL ORGAN" textColour="2594809496"
-               parentComponent="fontpanel"/>
+               parentComponent="fontpanel" editable="0"/>
   </Component>
   <Component type="ScriptSlider" id="MainGainKnob" x="882" y="608" processorId="mainGain"
              parameterId="Gain" mode="Decibel" min="-100" max="12" stepSize="0.1"
@@ -120,7 +120,7 @@
              filmstripImage="{PROJECT_FOLDER}chorusSwitchFIX 2.png"/>
   <Component type="ScriptPanel" id="presetsPanel" x="0" y="47" width="1024"
              height="443" itemColour="4028242458" itemColour2="4028242458"
-             borderSize="1" borderRadius="2" visible="0">
+             borderSize="1" borderRadius="2">
     <Component type="ScriptFloatingTile" id="presetsScriptFloatingTile" x="119"
                y="24" width="780" height="389" parentComponent="presetsPanel"
                ContentType="PresetBrowser" bgColour="0" itemColour="4286875003"
