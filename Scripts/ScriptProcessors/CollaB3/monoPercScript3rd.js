@@ -22,7 +22,7 @@ function onNoteOn()
 {
     if (Synth.isLegatoInterval()){
     
-       if (Engine.getUptime() - lastTime2 > 0.5){
+       if (Engine.getUptime() - lastTime2 > 0.1){
         
             Message.ignoreEvent(true);
             lastTime2 = Engine.getUptime();
