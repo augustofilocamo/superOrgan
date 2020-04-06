@@ -2,7 +2,7 @@
 
 <Preset Version="1.0.0">
   <Content Processor="Interface">
-    <Control type="ScriptSlider" id="MainGainKnob" value="0.100001"/>
+    <Control type="ScriptSlider" id="MainGainKnob" value="5.8"/>
     <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
     <Control type="ScriptButton" id="percHarmBtn" value="1"/>
     <Control type="ScriptSlider" id="leakageGain" value="3"/>
