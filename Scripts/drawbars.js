@@ -41,7 +41,7 @@ const var drawbars = [Content.getComponent("KnobDrawbar1"),
 
                       
 // Gain lookup table
-const var drawbarGains = [0, -3, -6, -9, -12, -18, -28, -36, -100];
+const var drawbarGains = [0, -3, -6, -9, -12, -21, -28, -36, -100];
 
 inline function onKnobDrawbarControl(component, value)
 {
