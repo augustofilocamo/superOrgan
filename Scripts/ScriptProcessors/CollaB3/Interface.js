@@ -36,9 +36,6 @@ include("rotarySpeakerKnob.js");
 
 
 
-
-
-
 function onNoteOn()
 {
 	

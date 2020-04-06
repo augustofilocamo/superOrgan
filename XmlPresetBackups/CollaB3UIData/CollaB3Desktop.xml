@@ -96,7 +96,8 @@
   <Component type="ScriptSlider" id="MainGainKnob" x="882" y="608" processorId="mainGain"
              parameterId="Gain" mode="Decibel" min="-100" max="12" stepSize="0.1"
              suffix=" dB" middlePosition="-18" filmstripImage="{PROJECT_FOLDER}mainKnob.png"
-             numStrips="128" scaleFactor="0.5" width="104" height="89"/>
+             numStrips="128" scaleFactor="0.5" width="104" height="89" isPluginParameter="1"
+             pluginParameterName="Volume"/>
   <Component type="ScriptButton" id="percOnOffBtn" x="742" y="594" filmstripImage="{PROJECT_FOLDER}percSwitch.png"
              scaleFactor="0.5" width="63" height="113" pluginParameterName="Perc On/Off"/>
   <Component type="ScriptButton" id="percHarmBtn" x="799" y="594" filmstripImage="{PROJECT_FOLDER}harmSwitch.png"
