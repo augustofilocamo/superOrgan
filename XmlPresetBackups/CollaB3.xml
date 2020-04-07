@@ -1034,7 +1034,7 @@
                                   </Node>
                                   <Node ID="chain11" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
                                         NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                        Bypassed="1">
+                                        Bypassed="1" ShowParameters="0">
                                     <Nodes>
                                       <Node ID="tanh" FactoryPath="math.tanh" NumChannels="2" LockNumChannels="0"
                                             NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
@@ -1048,7 +1048,7 @@
                                       </Node>
                                       <Node ID="gain" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
                                             NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                            Bypassed="1">
+                                            Bypassed="0">
                                         <ModulationTargets/>
                                         <Properties>
                                           <Property ID="ResetValue" Value="0" Public="0"/>
@@ -1063,7 +1063,7 @@
                                       </Node>
                                       <Node ID="gain2" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
                                             NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                            Bypassed="1">
+                                            Bypassed="0">
                                         <ModulationTargets/>
                                         <Properties>
                                           <Property ID="ResetValue" Value="0" Public="0"/>
@@ -1100,7 +1100,7 @@
                                           </Node>
                                           <Node ID="gain4" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
                                                 NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                                Bypassed="1">
+                                                Bypassed="0">
                                             <ModulationTargets/>
                                             <Properties>
                                               <Property ID="ResetValue" Value="0" Public="0"/>
@@ -1309,7 +1309,7 @@
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
         <Processor Type="SimpleGain" ID="mainGain" Bypassed="0" Gain="-3.5" Delay="0"
-                   Width="100" Balance="0" InvertPolarity="0">
+                   Width="120" Balance="0" InvertPolarity="0">
           <ChildProcessors>
             <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
               <ChildProcessors/>
@@ -4745,7 +4745,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="Filter1" Bypassed="1" Gain="0" Frequency="753.75"
-                       Q="1" Mode="6" Quality="5.40593e+07" BipolarIntensity="0">
+                       Q="1" Mode="6" Quality="0" BipolarIntensity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1">
@@ -10918,7 +10918,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="127" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="43" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
@@ -10988,7 +10988,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.0416869"
+    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.0912011"
                Balance="0.2" VoiceLimit="256" KillFadeTime="20" IconColour="0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -11029,7 +11029,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyphonicFilter" ID="Filter2" Bypassed="0" Gain="0" Frequency="4109.26"
+            <Processor Type="PolyphonicFilter" ID="Filter2" Bypassed="0" Gain="0" Frequency="1874.4"
                        Q="0.73" Mode="6" Quality="1" BipolarIntensity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
