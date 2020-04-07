@@ -9,9 +9,9 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSlider" id="MainGainKnob" value="-3.5"/>
+            <Control type="ScriptSlider" id="MainGainKnob" value="-6.2"/>
             <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
-            <Control type="ScriptButton" id="percHarmBtn" value="0"/>
+            <Control type="ScriptButton" id="percHarmBtn" value="1"/>
             <Control type="ScriptSlider" id="leakageGain" value="-18"/>
             <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
             <Control type="ScriptSlider" id="reverbKnob" value="0"/>
@@ -131,10 +131,10 @@
                                             Bypassed="0">
                                         <ModulationTargets>
                                           <ModulationTarget NodeId="delay_l" ParameterId="Delay" OpType="SetValue" Enabled="1"
-                                                            Inverted="0" MinValue="0" MaxValue="20" LowerLimit="0" UpperLimit="10"
+                                                            Inverted="0" MinValue="0" MaxValue="30" LowerLimit="0" UpperLimit="10"
                                                             StepSize="0.0001" SkewFactor="1" Expression=""/>
                                           <ModulationTarget NodeId="delay_l1" ParameterId="Delay" OpType="SetValue" Enabled="1"
-                                                            Inverted="0" MinValue="0" MaxValue="20" LowerLimit="0" UpperLimit="10"
+                                                            Inverted="1" MinValue="30" MaxValue="0" LowerLimit="0" UpperLimit="10"
                                                             StepSize="0.0001" SkewFactor="1" Expression=""/>
                                         </ModulationTargets>
                                         <Parameters/>
@@ -158,9 +158,65 @@
                                 <Parameters/>
                                 <Properties/>
                               </Node>
+                              <Node ID="chain3" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
+                                    NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                <Nodes>
+                                  <Node ID="svf_eq" FactoryPath="filters.svf_eq" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="20" MaxValue="400" LowerLimit="20" UpperLimit="20000"
+                                                 StepSize="0.1" SkewFactor="0.229905" ID="Frequency" Value="1000"/>
+                                      <Parameter Inverted="0" MinValue="0.3" MaxValue="9.9" LowerLimit="0.3" UpperLimit="9.9"
+                                                 StepSize="0.1" SkewFactor="0.264718" ID="Q" Value="1"/>
+                                      <Parameter Inverted="0" MinValue="-18" MaxValue="18" LowerLimit="-18" UpperLimit="18"
+                                                 StepSize="0.1" SkewFactor="1" ID="Gain" Value="0"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="0.30103" ID="Smoothing" Value="0.01"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="4" LowerLimit="0" UpperLimit="4"
+                                                 StepSize="1" SkewFactor="1" ID="Mode" Value="0"/>
+                                    </Parameters>
+                                    <Properties/>
+                                  </Node>
+                                  <Node ID="gain1" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Bypassed="0">
+                                    <ModulationTargets/>
+                                    <Properties>
+                                      <Property ID="ResetValue" Value="0" Public="0"/>
+                                      <Property ID="UseResetValue" Value="0" Public="0"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
+                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-3"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                 StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="20"/>
+                                    </Parameters>
+                                  </Node>
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
                               <Node ID="chain1" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
                                     NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
                                 <Nodes>
+                                  <Node ID="svf_eq1" FactoryPath="filters.svf_eq" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Bypassed="0">
+                                    <ModulationTargets/>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="20" MaxValue="400" LowerLimit="20" UpperLimit="20000"
+                                                 StepSize="0.1" SkewFactor="0.229905" ID="Frequency" Value="431.5"/>
+                                      <Parameter Inverted="0" MinValue="0.3" MaxValue="9.9" LowerLimit="0.3" UpperLimit="9.9"
+                                                 StepSize="0.1" SkewFactor="0.264718" ID="Q" Value="1"/>
+                                      <Parameter Inverted="0" MinValue="-18" MaxValue="18" LowerLimit="-18" UpperLimit="18"
+                                                 StepSize="0.1" SkewFactor="1" ID="Gain" Value="0"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
+                                                 StepSize="0.01" SkewFactor="0.30103" ID="Smoothing" Value="0.01"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="4" LowerLimit="0" UpperLimit="4"
+                                                 StepSize="1" SkewFactor="1" ID="Mode" Value="1"/>
+                                    </Parameters>
+                                    <Properties/>
+                                  </Node>
                                   <Node ID="multi" FactoryPath="container.multi" NumChannels="2" LockNumChannels="0"
                                         NodeColour="0" Comment="" CommentWidth="300">
                                     <Nodes>
@@ -169,7 +225,7 @@
                                             Bypassed="0">
                                         <ModulationTargets/>
                                         <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
+                                          <Parameter Inverted="0" MinValue="0" MaxValue="20" LowerLimit="0" UpperLimit="10"
                                                      StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
                                         </Parameters>
                                         <Properties/>
@@ -179,7 +235,7 @@
                                             Bypassed="0">
                                         <ModulationTargets/>
                                         <Parameters>
-                                          <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
+                                          <Parameter Inverted="0" MinValue="0" MaxValue="20" LowerLimit="0" UpperLimit="10"
                                                      StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
                                         </Parameters>
                                         <Properties/>
@@ -187,6 +243,21 @@
                                     </Nodes>
                                     <Parameters/>
                                     <Properties/>
+                                  </Node>
+                                  <Node ID="gain2" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
+                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
+                                        Bypassed="0">
+                                    <ModulationTargets/>
+                                    <Properties>
+                                      <Property ID="ResetValue" Value="0" Public="0"/>
+                                      <Property ID="UseResetValue" Value="0" Public="0"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
+                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-3"/>
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
+                                                 StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="20"/>
+                                    </Parameters>
                                   </Node>
                                 </Nodes>
                                 <Parameters/>
@@ -384,7 +455,7 @@
                                                         Enabled="1" Inverted="0" MinValue="207" MaxValue="75" LowerLimit="0"
                                                         UpperLimit="1000" StepSize="0.0001" SkewFactor="0.30103" Expression=""/>
                                       <ModulationTarget NodeId="fix_delay3" ParameterId="DelayTime" OpType="SetValue"
-                                                        Enabled="1" Inverted="1" MinValue="1200" MaxValue="150" LowerLimit="0"
+                                                        Enabled="1" Inverted="0" MinValue="1200" MaxValue="150" LowerLimit="0"
                                                         UpperLimit="1000" StepSize="0.0001" SkewFactor="0.30103" Expression=""/>
                                       <ModulationTarget NodeId="fix_delay2" ParameterId="DelayTime" OpType="SetValue"
                                                         Enabled="1" Inverted="0" MinValue="207" MaxValue="75" LowerLimit="0"
@@ -1115,7 +1186,7 @@
                                 <Nodes>
                                   <Node ID="gain1" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
                                         NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                        Bypassed="1">
+                                        Bypassed="0">
                                     <ModulationTargets/>
                                     <Properties>
                                       <Property ID="ResetValue" Value="0" Public="0"/>
@@ -1207,13 +1278,13 @@
                              Value="1">
                     <Connections>
                       <Connection NodeId="gain6" ParameterId="Gain" Converter="Identity" OpType="SetValue"
-                                  Inverted="1" MinValue="0" MaxValue="-100" LowerLimit="-100" UpperLimit="0"
-                                  StepSize="0.1" SkewFactor="5.42227" Expression=""/>
+                                  Inverted="1" MinValue="-3" MaxValue="-100" LowerLimit="-100"
+                                  UpperLimit="0" StepSize="0.1" SkewFactor="5.42227" Expression=""/>
                       <Connection NodeId="gain7" ParameterId="Gain" Converter="Identity" OpType="SetValue"
-                                  Inverted="1" MinValue="0" MaxValue="-100" LowerLimit="-100" UpperLimit="0"
-                                  StepSize="0.1" SkewFactor="5.42227" Expression=""/>
+                                  Inverted="1" MinValue="-3" MaxValue="-100" LowerLimit="-100"
+                                  UpperLimit="0" StepSize="0.1" SkewFactor="5.42227" Expression=""/>
                       <Connection NodeId="gain1" ParameterId="Gain" Converter="Identity" OpType="SetValue"
-                                  Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
+                                  Inverted="0" MinValue="-3" MaxValue="0" LowerLimit="-100" UpperLimit="0"
                                   StepSize="0.1" SkewFactor="5.42227" Expression=""/>
                     </Connections>
                   </Parameter>
@@ -1231,7 +1302,7 @@
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SimpleGain" ID="mainGain" Bypassed="0" Gain="-3.5" Delay="0"
+        <Processor Type="SimpleGain" ID="mainGain" Bypassed="0" Gain="-6.2" Delay="0"
                    Width="200" Balance="0" InvertPolarity="0">
           <ChildProcessors>
             <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -10822,7 +10893,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="25" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="3" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
@@ -11021,7 +11092,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="perc2ndGain" Bypassed="0" Gain="-100" Delay="0"
+            <Processor Type="SimpleGain" ID="perc2ndGain" Bypassed="0" Gain="-23" Delay="0"
                        Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
@@ -11102,7 +11173,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="perc3rdGain" Bypassed="0" Gain="-23" Delay="0"
+            <Processor Type="SimpleGain" ID="perc3rdGain" Bypassed="0" Gain="-100" Delay="0"
                        Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
