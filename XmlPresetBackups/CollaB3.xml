@@ -161,19 +161,20 @@
                               <Node ID="chain3" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
                                     NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
                                 <Nodes>
-                                  <Node ID="svf_eq" FactoryPath="filters.svf_eq" NumChannels="2" LockNumChannels="0"
-                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
+                                  <Node ID="linkwitzriley" FactoryPath="filters.linkwitzriley" NumChannels="2"
+                                        LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
+                                        BypassRampTimeMs="20">
                                     <ModulationTargets/>
                                     <Parameters>
-                                      <Parameter Inverted="0" MinValue="20" MaxValue="400" LowerLimit="20" UpperLimit="20000"
-                                                 StepSize="0.1" SkewFactor="0.229905" ID="Frequency" Value="1000"/>
+                                      <Parameter Inverted="0" MinValue="20" MaxValue="20000" LowerLimit="20" UpperLimit="20000"
+                                                 StepSize="0.1" SkewFactor="0.229905" ID="Frequency" Value="400"/>
                                       <Parameter Inverted="0" MinValue="0.3" MaxValue="9.9" LowerLimit="0.3" UpperLimit="9.9"
                                                  StepSize="0.1" SkewFactor="0.264718" ID="Q" Value="1"/>
                                       <Parameter Inverted="0" MinValue="-18" MaxValue="18" LowerLimit="-18" UpperLimit="18"
                                                  StepSize="0.1" SkewFactor="1" ID="Gain" Value="0"/>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
                                                  StepSize="0.01" SkewFactor="0.30103" ID="Smoothing" Value="0.01"/>
-                                      <Parameter Inverted="0" MinValue="0" MaxValue="4" LowerLimit="0" UpperLimit="4"
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="2" LowerLimit="0" UpperLimit="2"
                                                  StepSize="1" SkewFactor="1" ID="Mode" Value="0"/>
                                     </Parameters>
                                     <Properties/>
@@ -200,20 +201,20 @@
                               <Node ID="chain1" FactoryPath="container.chain" NumChannels="2" LockNumChannels="0"
                                     NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20">
                                 <Nodes>
-                                  <Node ID="svf_eq1" FactoryPath="filters.svf_eq" NumChannels="2" LockNumChannels="0"
-                                        NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                        Bypassed="0">
+                                  <Node ID="linkwitzriley1" FactoryPath="filters.linkwitzriley" NumChannels="2"
+                                        LockNumChannels="0" NodeColour="0" Comment="" CommentWidth="300"
+                                        BypassRampTimeMs="20">
                                     <ModulationTargets/>
                                     <Parameters>
-                                      <Parameter Inverted="0" MinValue="20" MaxValue="400" LowerLimit="20" UpperLimit="20000"
-                                                 StepSize="0.1" SkewFactor="0.229905" ID="Frequency" Value="431.5"/>
+                                      <Parameter Inverted="0" MinValue="20" MaxValue="20000" LowerLimit="20" UpperLimit="20000"
+                                                 StepSize="0.1" SkewFactor="0.229905" ID="Frequency" Value="400"/>
                                       <Parameter Inverted="0" MinValue="0.3" MaxValue="9.9" LowerLimit="0.3" UpperLimit="9.9"
                                                  StepSize="0.1" SkewFactor="0.264718" ID="Q" Value="1"/>
                                       <Parameter Inverted="0" MinValue="-18" MaxValue="18" LowerLimit="-18" UpperLimit="18"
                                                  StepSize="0.1" SkewFactor="1" ID="Gain" Value="0"/>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="1" LowerLimit="0" UpperLimit="1"
                                                  StepSize="0.01" SkewFactor="0.30103" ID="Smoothing" Value="0.01"/>
-                                      <Parameter Inverted="0" MinValue="0" MaxValue="4" LowerLimit="0" UpperLimit="4"
+                                      <Parameter Inverted="0" MinValue="0" MaxValue="2" LowerLimit="0" UpperLimit="2"
                                                  StepSize="1" SkewFactor="1" ID="Mode" Value="1"/>
                                     </Parameters>
                                     <Properties/>
@@ -10897,7 +10898,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="18" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="22" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
