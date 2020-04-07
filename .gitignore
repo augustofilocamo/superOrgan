@@ -6,3 +6,7 @@ PooledResources/
 **/audio.hise.filosian
 .DS_Store
 _local**
+*.pkg
+*.exe
+*.dmg
+
