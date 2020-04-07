@@ -13,7 +13,7 @@
             <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
             <Control type="ScriptButton" id="percHarmBtn" value="0"/>
             <Control type="ScriptSlider" id="leakageGain" value="-11.7"/>
-            <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
+            <Control type="ScriptSlider" id="leslieSpeed" value="1"/>
             <Control type="ScriptSlider" id="reverbKnob" value="0"/>
             <Control type="ScriptButton" id="chorusBtn" value="1"/>
             <Control type="ScriptSlider" id="KnobDrawbar1" value="0"/>
@@ -992,7 +992,7 @@
                                     </Properties>
                                     <Parameters>
                                       <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
-                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-100"/>
+                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-3"/>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
                                                  StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
                                     </Parameters>
@@ -1092,14 +1092,15 @@
                                                 Bypassed="0">
                                             <ModulationTargets/>
                                             <Parameters>
-                                              <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
-                                                         StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
+                                              <Parameter Inverted="1" MinValue="6.00106" MaxValue="7.19648" LowerLimit="0"
+                                                         UpperLimit="10" StepSize="0" SkewFactor="1" ID="Delay" Value="0"
+                                                         ModulationTarget="1"/>
                                             </Parameters>
                                             <Properties/>
                                           </Node>
                                           <Node ID="gain4" FactoryPath="core.gain" NumChannels="2" LockNumChannels="0"
                                                 NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                                Bypassed="0">
+                                                Bypassed="1">
                                             <ModulationTargets/>
                                             <Properties>
                                               <Property ID="ResetValue" Value="0" Public="0"/>
@@ -1110,7 +1111,7 @@
                                                          UpperLimit="0" StepSize="0.1" SkewFactor="5.42227" ID="Gain"
                                                          Value="0" ModulationTarget="1"/>
                                               <Parameter Inverted="0" MinValue="0" MaxValue="1000" LowerLimit="0" UpperLimit="1000"
-                                                         StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="2.2"/>
+                                                         StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="0.7"/>
                                             </Parameters>
                                           </Node>
                                         </Nodes>
@@ -1165,7 +1166,7 @@
                                     </Properties>
                                     <Parameters>
                                       <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
-                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-100"/>
+                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-3"/>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
                                                  StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
                                     </Parameters>
@@ -1198,7 +1199,7 @@
                                     </Properties>
                                     <Parameters>
                                       <Parameter Inverted="0" MinValue="-100" MaxValue="0" LowerLimit="-100" UpperLimit="0"
-                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="0"/>
+                                                 StepSize="0.1" SkewFactor="5.42227" ID="Gain" Value="-3"/>
                                       <Parameter Inverted="0" MinValue="0" MaxValue="4000" LowerLimit="0" UpperLimit="1000"
                                                  StepSize="0.1" SkewFactor="0.30103" ID="Smoothing" Value="4000"/>
                                     </Parameters>
@@ -1280,7 +1281,7 @@
                     </Connections>
                   </Parameter>
                   <Parameter ID="Stop" MinValue="0" MaxValue="1" StepSize="1" SkewFactor="1"
-                             Value="1">
+                             Value="0">
                     <Connections>
                       <Connection NodeId="gain6" ParameterId="Gain" Converter="Identity" OpType="SetValue"
                                   Inverted="1" MinValue="-3" MaxValue="-100" LowerLimit="-100"
@@ -1308,7 +1309,7 @@
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
         <Processor Type="SimpleGain" ID="mainGain" Bypassed="0" Gain="-3.5" Delay="0"
-                   Width="200" Balance="0" InvertPolarity="0">
+                   Width="100" Balance="0" InvertPolarity="0">
           <ChildProcessors>
             <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
               <ChildProcessors/>
@@ -1361,193 +1362,193 @@
                 <Control type="ScriptTable" id="LeakageC0Partial4VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial5FreqSlider" value="-0.01"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial5AmpSlider" value="-54.2562"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial5AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial5DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial5StSlider" value="-4"/>
                 <Control type="ScriptTable" id="LeakageC0Partial5VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial6FreqSlider" value="-0.01"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial6AmpSlider" value="-65.1112"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial6AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial6DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial6StSlider" value="6"/>
                 <Control type="ScriptTable" id="LeakageC0Partial6VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial7FreqSlider" value="-0.3"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial7AmpSlider" value="-55.9371"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial7AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial7DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial7StSlider" value="7"/>
                 <Control type="ScriptTable" id="LeakageC0Partial7VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial8FreqSlider" value="0.27"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial8AmpSlider" value="-65.2721"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial8AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial8DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial8StSlider" value="7"/>
                 <Control type="ScriptTable" id="LeakageC0Partial8VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial9FreqSlider" value="-0.22"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial9AmpSlider" value="-63.1136"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial9AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial9DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial9StSlider" value="8"/>
                 <Control type="ScriptTable" id="LeakageC0Partial9VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial10FreqSlider" value="0"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial10AmpSlider" value="-54.0485"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial10AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial10DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial10StSlider" value="8"/>
                 <Control type="ScriptTable" id="LeakageC0Partial10VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial11FreqSlider" value="-0.01"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial11AmpSlider" value="-63.9729"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial11AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial11DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial11StSlider" value="12"/>
                 <Control type="ScriptTable" id="LeakageC0Partial11VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial12FreqSlider" value="-0.01"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial12AmpSlider" value="-64.8153"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial12AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial12DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial12StSlider" value="19"/>
                 <Control type="ScriptTable" id="LeakageC0Partial12VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial13FreqSlider" value="-0.22"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial13AmpSlider" value="-57.3446"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial13AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial13DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial13StSlider" value="12"/>
                 <Control type="ScriptTable" id="LeakageC0Partial13VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial14FreqSlider" value="0.3"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial14AmpSlider" value="-55.8276"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial14AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial14DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial14StSlider" value="12"/>
                 <Control type="ScriptTable" id="LeakageC0Partial14VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial15FreqSlider" value="0.47"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial15AmpSlider" value="-55.1078"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial15AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial15DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial15StSlider" value="12"/>
                 <Control type="ScriptTable" id="LeakageC0Partial15VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial16FreqSlider" value="0.02"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial16AmpSlider" value="-46.6623"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial16AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial16DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial16StSlider" value="13"/>
                 <Control type="ScriptTable" id="LeakageC0Partial16VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial17FreqSlider" value="0.27"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial17AmpSlider" value="-59.4168"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial17AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial17DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial17StSlider" value="13"/>
                 <Control type="ScriptTable" id="LeakageC0Partial17VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial18FreqSlider" value="0.5"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial18AmpSlider" value="-64.198"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial18AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial18DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial18StSlider" value="15"/>
                 <Control type="ScriptTable" id="LeakageC0Partial18VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial19FreqSlider" value="-0.18"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial19AmpSlider" value="-55.5729"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial19AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial19DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial19StSlider" value="16"/>
                 <Control type="ScriptTable" id="LeakageC0Partial19VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial20FreqSlider" value="0.17"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial20AmpSlider" value="-51.8497"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial20AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial20DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial20StSlider" value="16"/>
                 <Control type="ScriptTable" id="LeakageC0Partial20VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial21FreqSlider" value="0.23"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial21AmpSlider" value="-58.9701"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial21AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial21DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial21StSlider" value="16"/>
                 <Control type="ScriptTable" id="LeakageC0Partial21VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial22FreqSlider" value="-0.37"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial22AmpSlider" value="-62.4444"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial22AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial22DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial22StSlider" value="17"/>
                 <Control type="ScriptTable" id="LeakageC0Partial22VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial23FreqSlider" value="0.02"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial23AmpSlider" value="-53.7886"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial23AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial23DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial23StSlider" value="18"/>
                 <Control type="ScriptTable" id="LeakageC0Partial23VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial24FreqSlider" value="-0.42"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial24AmpSlider" value="-57.6063"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial24AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial24DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial24StSlider" value="19"/>
                 <Control type="ScriptTable" id="LeakageC0Partial24VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial25FreqSlider" value="-0.2"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial25AmpSlider" value="-54.4082"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial25AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial25DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial25StSlider" value="19"/>
                 <Control type="ScriptTable" id="LeakageC0Partial25VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial26FreqSlider" value="0.2"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial26AmpSlider" value="-65.6047"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial26AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial26DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial26StSlider" value="19"/>
                 <Control type="ScriptTable" id="LeakageC0Partial26VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial27FreqSlider" value="0"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial27AmpSlider" value="-61.0118"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial27AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial27DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial27StSlider" value="20"/>
                 <Control type="ScriptTable" id="LeakageC0Partial27VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial28FreqSlider" value="0.02"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial28AmpSlider" value="-67.1527"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial28AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial28DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial28StSlider" value="21"/>
                 <Control type="ScriptTable" id="LeakageC0Partial28VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial29FreqSlider" value="0.01"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial29AmpSlider" value="-65.1355"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial29AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial29DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial29StSlider" value="23"/>
                 <Control type="ScriptTable" id="LeakageC0Partial29VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial30FreqSlider" value="-0.32"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial30AmpSlider" value="-67.7213"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial30AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial30DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial30StSlider" value="24"/>
                 <Control type="ScriptTable" id="LeakageC0Partial30VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial31FreqSlider" value="-0.15"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial31AmpSlider" value="-62.2722"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial31AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial31DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial31StSlider" value="24"/>
                 <Control type="ScriptTable" id="LeakageC0Partial31VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial32FreqSlider" value="0.1"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial32AmpSlider" value="-57.5319"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial32AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial32DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial32StSlider" value="24"/>
                 <Control type="ScriptTable" id="LeakageC0Partial32VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial33FreqSlider" value="0.14"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial33AmpSlider" value="-61.1671"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial33AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial33DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial33StSlider" value="24"/>
                 <Control type="ScriptTable" id="LeakageC0Partial33VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial34FreqSlider" value="0.3"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial34AmpSlider" value="-63.5052"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial34AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial34DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial34StSlider" value="24"/>
                 <Control type="ScriptTable" id="LeakageC0Partial34VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial35FreqSlider" value="0.48"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial35AmpSlider" value="-69.0059"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial35AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial35DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial35StSlider" value="24"/>
                 <Control type="ScriptTable" id="LeakageC0Partial35VeloTable" value="0"
                          data=""/>
                 <Control type="ScriptSlider" id="LeakageC0Partial36FreqSlider" value="0.02"/>
-                <Control type="ScriptSlider" id="LeakageC0Partial36AmpSlider" value="-66.8809"/>
+                <Control type="ScriptSlider" id="LeakageC0Partial36AmpSlider" value="-100"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial36DecaySlider" value="20000"/>
                 <Control type="ScriptSlider" id="LeakageC0Partial36StSlider" value="27"/>
                 <Control type="ScriptTable" id="LeakageC0Partial36VeloTable" value="0"
@@ -1989,7 +1990,7 @@
                 <ContentProperties DeviceType="Desktop">
                   <Component type="ScriptedViewport" id="SV" x="10" y="10" width="720" height="450">
                     <Component type="ScriptPanel" id="Panel" x="0" y="6" parentComponent="SV"
-                               width="700" height="900">
+                               width="700" height="9000">
                       <Component type="ScriptLabel" x="30" y="33" id="LeakageC0ColumnLabel" text="C0"
                                  width="48" height="22" fontSize="16" fontStyle="Bold" parentComponent="Panel"/>
                       <Component type="ScriptLabel" x="91" y="33" id="LeakageC0FreqColumnLabel"
@@ -4743,6 +4744,25 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
+            <Processor Type="PolyphonicFilter" ID="Filter1" Bypassed="1" Gain="0" Frequency="753.75"
+                       Q="1" Mode="6" Quality="5.40593e+07" BipolarIntensity="0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
             <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="-11.7"
                        Delay="0" Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
@@ -5178,7 +5198,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage5" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......r+58qC...vO...P9r+58qC...vO...J+r+58qC...vO...V+r+58qC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+r+58qC...vO...V+r+58qC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -5269,7 +5289,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage6" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......jfhQnC...vO...P9jfhQnC...vO...J+jfhQnC...vO...V+jfhQnC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+jfhQnC...vO...V+jfhQnC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -5360,7 +5380,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage7" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......PqOQqC...vO...P9PqOQqC...vO...J+PqOQqC...vO...V+PqOQqC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+PqOQqC...vO...V+PqOQqC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -5451,7 +5471,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage8" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......Hi2NnC...vO...P9Hi2NnC...vO...J+Hi2NnC...vO...V+Hi2NnC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+Hi2NnC...vO...V+Hi2NnC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -5542,7 +5562,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage9" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......zAK2nC...vO...P9zAK2nC...vO...J+zAK2nC...vO...V+zAK2nC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+zAK2nC...vO...V+zAK2nC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -5633,7 +5653,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage10" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......zHBBrC...vO...P9zHBBrC...vO...J+zHBBrC...vO...V+zHBBrC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+zHBBrC...vO...V+zHBBrC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -5724,7 +5744,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage11" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......Tx5knC...vO...P9Tx5knC...vO...J+Tx5knC...vO...V+Tx5knC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+Tx5knC...vO...V+Tx5knC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -5815,7 +5835,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage12" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......fRkVnC...vO...P9fRkVnC...vO...J+fRkVnC...vO...V+fRkVnC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+fRkVnC...vO...V+fRkVnC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -5906,7 +5926,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage13" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......zT7wpC...vO...P9zT7wpC...vO...J+zT7wpC...vO...V+zT7wpC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+zT7wpC...vO...V+zT7wpC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -5997,7 +6017,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage14" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......fj4SqC...vO...P9fj4SqC...vO...J+fj4SqC...vO...V+fj4SqC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+fj4SqC...vO...V+fj4SqC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -6088,7 +6108,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage15" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......7RMlqC...vO...P97RMlqC...vO...J+7RMlqC...vO...V+7RMlqC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+7RMlqC...vO...V+7RMlqC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -6179,7 +6199,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage16" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......v.KXtC...vO...P9v.KXtC...vO...J+v.KXtC...vO...V+v.KXtC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+v.KXtC...vO...V+v.KXtC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -6270,7 +6290,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage17" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......3KKLpC...vO...P93KKLpC...vO...J+3KKLpC...vO...V+3KKLpC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+3KKLpC...vO...V+3KKLpC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -6361,7 +6381,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage18" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......bHqgnC...vO...P9bHqgnC...vO...J+bHqgnC...vO...V+bHqgnC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+bHqgnC...vO...V+bHqgnC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -6452,7 +6472,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage19" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......PHMZqC...vO...P9PHMZqC...vO...J+PHMZqC...vO...V+PHMZqC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+PHMZqC...vO...V+PHMZqC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -6543,7 +6563,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage20" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......ffemrC...vO...P9ffemrC...vO...J+ffemrC...vO...V+ffemrC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+ffemrC...vO...V+ffemrC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -6634,7 +6654,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage21" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......PnjSpC...vO...P9PnjSpC...vO...J+PnjSpC...vO...V+PnjSpC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+PnjSpC...vO...V+PnjSpC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -6725,7 +6745,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage22" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......b60EoC...vO...P9b60EoC...vO...J+b60EoC...vO...V+b60EoC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+b60EoC...vO...V+b60EoC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -6816,7 +6836,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage23" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......n59ErC...vO...P9n59ErC...vO...J+n59ErC...vO...V+n59ErC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+n59ErC...vO...V+n59ErC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -6907,7 +6927,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage24" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......fTprpC...vO...P9fTprpC...vO...J+fTprpC...vO...V+fTprpC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+fTprpC...vO...V+fTprpC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -6998,7 +7018,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage25" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......LEg4qC...vO...P9LEg4qC...vO...J+LEg4qC...vO...V+LEg4qC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+LEg4qC...vO...V+LEg4qC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -7089,7 +7109,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage26" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60.......CfInC...vO...P9.CfInC...vO...J+.CfInC...vO...V+.CfInC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+.CfInC...vO...V+.CfInC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -7180,7 +7200,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage27" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......TZTooC...vO...P9TZTooC...vO...J+TZTooC...vO...V+TZTooC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+TZTooC...vO...V+TZTooC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -7271,7 +7291,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage28" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......DAGlmC...vO...P9DAGlmC...vO...J+DAGlmC...vO...V+DAGlmC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+DAGlmC...vO...V+DAGlmC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -7362,7 +7382,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage29" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......LeHQnC...vO...P9LeHQnC...vO...J+LeHQnC...vO...V+LeHQnC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+LeHQnC...vO...V+LeHQnC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -7453,7 +7473,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage30" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......X0gWmC...vO...P9X0gWmC...vO...J+X0gWmC...vO...V+X0gWmC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+X0gWmC...vO...V+X0gWmC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -7544,7 +7564,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage31" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......TcyIoC...vO...P9TcyIoC...vO...J+TcyIoC...vO...V+TcyIoC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+TcyIoC...vO...V+TcyIoC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -7635,7 +7655,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage32" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......fXItpC...vO...P9fXItpC...vO...J+fXItpC...vO...V+fXItpC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+fXItpC...vO...V+fXItpC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -7726,7 +7746,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage33" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......HyKkoC...vO...P9HyKkoC...vO...J+HyKkoC...vO...V+HyKkoC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+HyKkoC...vO...V+HyKkoC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -7817,7 +7837,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage34" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......XOFunC...vO...P9XOFunC...vO...J+XOFunC...vO...V+XOFunC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+XOFunC...vO...V+XOFunC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -7908,7 +7928,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage35" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......vd44lC...vO...P9vd44lC...vO...J+vd44lC...vO...V+vd44lC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+vd44lC...vO...V+vd44lC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -7999,7 +8019,7 @@
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="KeyNumber" ID="NotenumberGainLeakage36" Bypassed="0" Intensity="1"
-                           Mode="1" MidiTableData="60......nIasmC...vO...P9nIasmC...vO...J+nIasmC...vO...V+nIasmC...vO...f+....9C...vO"
+                           Mode="1" MidiTableData="60...............vO...P9.........vO...J+nIasmC...vO...V+nIasmC...vO...f+....9C...vO"
                            KeyTableData="512....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C">
                   <ChildProcessors/>
                 </Processor>
@@ -10888,7 +10908,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="Noise" ID="release-noise1" Bypassed="0" Gain="0.0402717"
+    <Processor Type="Noise" ID="release-noise1" Bypassed="0" Gain="0.060256"
                Balance="0.15" VoiceLimit="256" KillFadeTime="20" IconColour="0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -10898,7 +10918,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="22" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="127" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
@@ -10968,7 +10988,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.0204174"
+    <Processor Type="Noise" ID="click-noise1" Bypassed="0" Gain="0.0416869"
                Balance="0.2" VoiceLimit="256" KillFadeTime="20" IconColour="0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -11009,7 +11029,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyphonicFilter" ID="Filter2" Bypassed="0" Gain="0" Frequency="5859"
+            <Processor Type="PolyphonicFilter" ID="Filter2" Bypassed="0" Gain="0" Frequency="4109.26"
                        Q="0.73" Mode="6" Quality="1" BipolarIntensity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
@@ -11039,7 +11059,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="perc2nd" Bypassed="0" Gain="1" Balance="-0.33"
+    <Processor Type="SineSynth" ID="perc2nd" Bypassed="0" Gain="0.402717" Balance="-0.33"
                VoiceLimit="256" KillFadeTime="20" IconColour="0" OctaveTranspose="1"
                SemiTones="0" UseFreqRatio="0" CoarseFreqRatio="1" FineFreqRatio="0"
                SaturationAmount="0">
