@@ -2,17 +2,17 @@
 
 <Preset Version="1.0.0">
   <Content Processor="Interface">
-    <Control type="ScriptSlider" id="MainGainKnob" value="-5.6"/>
+    <Control type="ScriptSlider" id="MainGainKnob" value="-3.5"/>
     <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
     <Control type="ScriptButton" id="percHarmBtn" value="0"/>
-    <Control type="ScriptSlider" id="leakageGain" value="-12.9"/>
-    <Control type="ScriptSlider" id="leslieSpeed" value="1"/>
-    <Control type="ScriptSlider" id="reverbKnob" value="0.02"/>
-    <Control type="ScriptButton" id="chorusBtn" value="0"/>
+    <Control type="ScriptSlider" id="leakageGain" value="-18"/>
+    <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
+    <Control type="ScriptSlider" id="reverbKnob" value="0"/>
+    <Control type="ScriptButton" id="chorusBtn" value="1"/>
     <Control type="ScriptSlider" id="KnobDrawbar1" value="0"/>
     <Control type="ScriptSlider" id="KnobDrawbar2" value="0"/>
     <Control type="ScriptSlider" id="KnobDrawbar3" value="0"/>
-    <Control type="ScriptSlider" id="KnobDrawbar4" value="8"/>
+    <Control type="ScriptSlider" id="KnobDrawbar4" value="6"/>
     <Control type="ScriptSlider" id="KnobDrawbar5" value="8"/>
     <Control type="ScriptSlider" id="KnobDrawbar6" value="8"/>
     <Control type="ScriptSlider" id="KnobDrawbar7" value="8"/>
