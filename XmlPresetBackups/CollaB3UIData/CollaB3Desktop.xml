@@ -99,17 +99,19 @@
              numStrips="128" scaleFactor="0.5" width="104" height="89" isPluginParameter="1"
              pluginParameterName="Volume"/>
   <Component type="ScriptButton" id="percOnOffBtn" x="742" y="594" filmstripImage="{PROJECT_FOLDER}percSwitch.png"
-             scaleFactor="0.5" width="63" height="113" pluginParameterName="Perc On/Off"/>
+             scaleFactor="0.5" width="63" height="113" pluginParameterName="Perc On/Off"
+             isPluginParameter="1"/>
   <Component type="ScriptButton" id="percHarmBtn" x="799" y="594" filmstripImage="{PROJECT_FOLDER}harmSwitch.png"
-             width="65" height="119" scaleFactor="0.5" pluginParameterName="Perc 2/3"/>
+             width="65" height="119" scaleFactor="0.5" pluginParameterName="Perc 2/3"
+             isPluginParameter="1"/>
   <Component type="ScriptSlider" id="leakageGain" x="148" y="605" processorId="Simple Gain1"
              parameterId="Gain" mode="Decibel" min="-34" max="6" stepSize="0.1"
              suffix=" dB" middlePosition="-4" filmstripImage="{PROJECT_FOLDER}mainKnob.png"
-             numStrips="128" scaleFactor="0.5" width="104" height="89"/>
+             numStrips="128" scaleFactor="0.5" width="104" height="89" isPluginParameter="1"/>
   <Component type="ScriptSlider" id="leslieSpeed" x="105" y="710" stepSize="1"
              max="2" numStrips="3" scaleFactor="0.5" width="171" height="56"
              mouseSensitivity="0.3" dragDirection="Horizontal" filmstripImage="{PROJECT_FOLDER}rotarySwitch2PS.png"
-             pluginParameterName="Rotary"/>
+             pluginParameterName="Rotary" isPluginParameter="1"/>
   <Component type="ScriptImage" id="reverbKnobShadow" x="939" y="712" width="31.5"
              height="41.5" fileName="{PROJECT_FOLDER}smallKnobShadow.png"
              enabled="0"/>
@@ -119,7 +121,8 @@
              numStrips="128" scaleFactor="0.5" width="33" height="41" pluginParameterName="Reverb"/>
   <Component type="ScriptButton" id="chorusBtn" x="890" y="719" processorId="Chorus"
              parameterId="Bypass" scaleFactor="0.5" width="36" height="56"
-             filmstripImage="{PROJECT_FOLDER}chorusSwitchFIX 2.png" pluginParameterName="Chorus"/>
+             filmstripImage="{PROJECT_FOLDER}chorusSwitchFIX 2.png" pluginParameterName="Chorus"
+             isPluginParameter="1"/>
   <Component type="ScriptPanel" id="presetsPanel" x="0" y="47" width="1024"
              height="443" itemColour="4028242458" itemColour2="4028242458"
              borderSize="1" borderRadius="2" visible="0">
@@ -252,39 +255,48 @@
   <Component type="ScriptSlider" id="KnobDrawbar1" x="285" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarMaroonFinal.png"
-             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 16"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 16"
+             isPluginParameter="1"/>
   <Component type="ScriptSlider" id="KnobDrawbar2" x="379" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png"
-             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 8"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 8"
+             isPluginParameter="1"/>
   <Component type="ScriptSlider" id="KnobDrawbar3" x="332" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarMaroonFinal.png"
-             scaleFactor="0.5" numStrips="9" pluginParameterName="Drawbar 5 1/3"/>
+             scaleFactor="0.5" numStrips="9" pluginParameterName="Drawbar 5 1/3"
+             isPluginParameter="1"/>
   <Component type="ScriptSlider" id="KnobDrawbar4" x="426" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png"
-             scaleFactor="0.5" numStrips="9" pluginParameterName="Drawbar 4"/>
+             scaleFactor="0.5" numStrips="9" pluginParameterName="Drawbar 4"
+             isPluginParameter="1"/>
   <Component type="ScriptSlider" id="KnobDrawbar5" x="473" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarBlackFinal.png"
-             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 2 2/3"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 2 2/3"
+             isPluginParameter="1"/>
   <Component type="ScriptSlider" id="KnobDrawbar6" x="520" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png"
-             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 2"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 2"
+             isPluginParameter="1"/>
   <Component type="ScriptSlider" id="KnobDrawbar7" x="567" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarBlackFinal.png"
-             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 1 3/6"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 1 3/6"
+             isPluginParameter="1"/>
   <Component type="ScriptSlider" id="KnobDrawbar8" x="614" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" filmstripImage="{PROJECT_FOLDER}drawBarBlackFinal.png"
-             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 1 1/3"/>
+             numStrips="9" scaleFactor="0.5" pluginParameterName="Drawbar 1 1/3"
+             isPluginParameter="1"/>
   <Component type="ScriptSlider" id="KnobDrawbar9" x="662" y="528" width="48"
              height="236" bgColour="4283770635" itemColour="4280098077" textColour="16777215"
              middlePosition="4" max="8" stepSize="1" numStrips="9" scaleFactor="0.5"
-             filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png" pluginParameterName="Drawbar 1"/>
+             filmstripImage="{PROJECT_FOLDER}drawBarCreamFinal.png" pluginParameterName="Drawbar 1"
+             isPluginParameter="1"/>
   <Component type="ScriptImage" id="lowerWoodShadow" x="183" y="524" width="670"
              height="22.5" fileName="{PROJECT_FOLDER}topFrameShadow.png" enabled="0"/>
   <Component type="ScriptImage" id="lowerWoodFrame" x="0" y="499" width="1024"

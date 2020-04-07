@@ -6,7 +6,7 @@
     <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
     <Control type="ScriptButton" id="percHarmBtn" value="0"/>
     <Control type="ScriptSlider" id="leakageGain" value="-2.9"/>
-    <Control type="ScriptSlider" id="leslieSpeed" value="1"/>
+    <Control type="ScriptSlider" id="leslieSpeed" value="2"/>
     <Control type="ScriptSlider" id="reverbKnob" value="0.02"/>
     <Control type="ScriptButton" id="chorusBtn" value="0"/>
     <Control type="ScriptSlider" id="KnobDrawbar1" value="0"/>
