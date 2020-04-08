@@ -6,13 +6,13 @@
     <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
     <Control type="ScriptButton" id="percHarmBtn" value="0"/>
     <Control type="ScriptSlider" id="leakageGain" value="-11.7"/>
-    <Control type="ScriptSlider" id="leslieSpeed" value="1"/>
+    <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
     <Control type="ScriptSlider" id="reverbKnob" value="0"/>
     <Control type="ScriptButton" id="chorusBtn" value="1"/>
     <Control type="ScriptSlider" id="KnobDrawbar1" value="0"/>
     <Control type="ScriptSlider" id="KnobDrawbar2" value="0"/>
     <Control type="ScriptSlider" id="KnobDrawbar3" value="0"/>
-    <Control type="ScriptSlider" id="KnobDrawbar4" value="6"/>
+    <Control type="ScriptSlider" id="KnobDrawbar4" value="4"/>
     <Control type="ScriptSlider" id="KnobDrawbar5" value="8"/>
     <Control type="ScriptSlider" id="KnobDrawbar6" value="8"/>
     <Control type="ScriptSlider" id="KnobDrawbar7" value="8"/>
