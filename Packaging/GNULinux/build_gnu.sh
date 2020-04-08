@@ -1,20 +1,21 @@
 # GNU BUILD SCRIPT
 
 project=CollaB3
-version=1.1.0
-xmlFile=mCollaB3
-workspace=Y:/hammondb3
+version=1.0.0
+xmlFile=CollaB3
+workspace=/mnt/samba/projects/hammondb3
 
-build_standalone=1
-build_plugin=1
+build_standalone=0
+build_plugin=0
 build_installer=1
 
-hise_path=Z:/HISE
-projucer_path="Z:/HISE/projects/standalone/Builds/VisualStudio2017/x64/Release/App/HISE.exe"
-makeself="$workspace"Y:/makeself
+hise_source=/mnt/samba/hise_builds/HISE
+hise_path=/mnt/samba/hise_builds/HISE/projects/standalone/Builds/LinuxMakefile/build/HISE\ Standalone
+projucer_path=/mnt/samba/hise_builds/HISE/media/john/SHARED/HISE/tools/projucer/Projucer
+makeself=/mnt/samba/projects/makeself
 
 #Create temp directory for packaging
-package="$workspace"/Packaging/GNU/temp
+package="$workspace"/Packaging/GNULinux/temp
 mkdir -p "$package"
 
 mkdir -p "$workspace"/Binaries
@@ -25,6 +26,7 @@ cd "$workspace"/Binaries
 if (($build_standalone == 1 || $build_plugin == 1))
 then
 
+  "$hise_path" set_hise_folder -p:"$hise_source"
   "$hise_path" set_project_folder -p:"$workspace"
   "$hise_path" set_version -v:$version
 
@@ -55,11 +57,11 @@ then
   echo "Build Installer"
 
   mkdir -p "$workspace"/Installer
-  cp "$workspace"/License.txt "$package"
-  cp "$workspace"/Packaging/GNU/GNUInstaller.sh "$package"
+  cp "$workspace"/COPYING "$package"
+  cp "$workspace"/Packaging/GNULinux/GNUInstaller.sh "$package"
 
   #Run makeself
-  sh "$makeself"/makeself.sh --license "$workspace"/License.txt "$workspace"/Packaging/GNU/temp "$workspace"/Installer/"$project"\ $version.sh "$project" ./GNUInstaller.sh
+  sh "$makeself"/makeself.sh --license "$workspace"/COPYING "$workspace"/Packaging/GNULinux/temp "$workspace"/Installer/"$project"\ $version.sh "$project" ./GNUInstaller.sh
 
 else
   echo "Skip Building Installer"
