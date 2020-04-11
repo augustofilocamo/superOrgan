@@ -2,6 +2,8 @@ Binaries/
 build/
 Presets/
 Samples/
+Packaging/GNULinux/Installer
+Packaging/GNULinux/temp
 PooledResources/
 **/audio.hise.filosian
 .DS_Store
