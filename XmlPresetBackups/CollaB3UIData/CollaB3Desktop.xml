@@ -242,7 +242,7 @@
                fileName="{PROJECT_FOLDER}fabricationDate.png" width="101" height="24"/>
     <Component type="ScriptImage" id="ScriptImage1" x="35" y="320" width="177"
                height="43" parentComponent="morePanel" fileName="{PROJECT_FOLDER}logo-sampleson.png"/>
-    <Component type="ScriptImage" id="Image3" x="250" y="321" width="174" fileName="{PROJECT_FOLDER}Studio427audio-logo.png"
+    <Component type="ScriptImage" id="Image3" x="239" y="324" width="184" fileName="{PROJECT_FOLDER}SFTS-logo-small.png"
                height="32" parentComponent="morePanel"/>
     <Component type="ScriptLabel" id="Label15" x="856" y="366" parentComponent="morePanel"
                editable="0" fontName="Abel" textColour="4289109909" fontSize="18"
