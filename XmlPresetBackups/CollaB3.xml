@@ -822,7 +822,7 @@
                                                 Bypassed="0">
                                             <ModulationTargets>
                                               <ModulationTarget NodeId="delay_l3" ParameterId="Delay" OpType="SetValue" Enabled="1"
-                                                                Inverted="1" MinValue="15" MaxValue="1" LowerLimit="0" UpperLimit="10"
+                                                                Inverted="0" MinValue="1" MaxValue="15" LowerLimit="0" UpperLimit="10"
                                                                 StepSize="0.0001" SkewFactor="1" Expression=""/>
                                             </ModulationTargets>
                                             <Parameters/>
@@ -1078,9 +1078,8 @@
                                                 Bypassed="0">
                                             <ModulationTargets/>
                                             <Parameters>
-                                              <Parameter Inverted="1" MinValue="6.00106" MaxValue="7.19648" LowerLimit="0"
-                                                         UpperLimit="10" StepSize="0" SkewFactor="1" ID="Delay" Value="0"
-                                                         ModulationTarget="1"/>
+                                              <Parameter Inverted="1" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
+                                                         StepSize="0" SkewFactor="1" ID="Delay" Value="0" ModulationTarget="1"/>
                                             </Parameters>
                                             <Properties/>
                                           </Node>
@@ -10904,7 +10903,7 @@
               <Content>
                 <Control type="ScriptButton" id="TimeAttenuate" value="1"/>
                 <Control type="ScriptSlider" id="Time" value="2.8"/>
-                <Control type="ScriptTable" id="TimeTable" value="29" data="24..........9C...vO...f+.........vO"/>
+                <Control type="ScriptTable" id="TimeTable" value="127" data="24..........9C...vO...f+.........vO"/>
               </Content>
             </Processor>
           </ChildProcessors>
