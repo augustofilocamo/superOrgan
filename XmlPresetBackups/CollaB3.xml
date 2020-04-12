@@ -931,7 +931,7 @@
                                     <Nodes>
                                       <Node ID="delay_l" FactoryPath="stk.delay_l" NumChannels="1" LockNumChannels="0"
                                             NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                            Bypassed="0">
+                                            Bypassed="1">
                                         <ModulationTargets/>
                                         <Parameters>
                                           <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
@@ -941,7 +941,7 @@
                                       </Node>
                                       <Node ID="delay_l1" FactoryPath="stk.delay_l" NumChannels="1" LockNumChannels="0"
                                             NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                            Bypassed="0">
+                                            Bypassed="1">
                                         <ModulationTargets/>
                                         <Parameters>
                                           <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
@@ -1075,7 +1075,7 @@
                                         <Nodes>
                                           <Node ID="delay_l2" FactoryPath="stk.delay_l" NumChannels="2" LockNumChannels="0"
                                                 NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                                Bypassed="0">
+                                                Bypassed="1">
                                             <ModulationTargets/>
                                             <Parameters>
                                               <Parameter Inverted="1" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
@@ -1109,7 +1109,7 @@
                                         <Nodes>
                                           <Node ID="delay_l3" FactoryPath="stk.delay_l" NumChannels="2" LockNumChannels="0"
                                                 NodeColour="0" Comment="" CommentWidth="300" BypassRampTimeMs="20"
-                                                Bypassed="0">
+                                                Bypassed="1">
                                             <ModulationTargets/>
                                             <Parameters>
                                               <Parameter Inverted="0" MinValue="0" MaxValue="10" LowerLimit="0" UpperLimit="10"
