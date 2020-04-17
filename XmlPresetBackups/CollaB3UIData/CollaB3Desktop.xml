@@ -308,4 +308,6 @@
              textColour="4280031770" borderRadius="0" borderSize="0"/>
   <Component type="ScriptImage" id="logo" x="13" y="624" fileName="{PROJECT_FOLDER}COLLAB3-LOGO.png"
              width="107" height="58"/>
+  <Component type="ScriptPanel" id="Panel1" x="966" y="631" width="4" height="4"
+             borderSize="0" borderRadius="2" itemColour="3238002687" itemColour2="3238002687"/>
 </ContentProperties>

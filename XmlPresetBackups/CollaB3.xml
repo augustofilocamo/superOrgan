@@ -9,10 +9,10 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSlider" id="MainGainKnob" value="-3.5"/>
+            <Control type="ScriptSlider" id="MainGainKnob" value="1.49012e-06"/>
             <Control type="ScriptButton" id="percOnOffBtn" value="0"/>
             <Control type="ScriptButton" id="percHarmBtn" value="0"/>
-            <Control type="ScriptSlider" id="leakageGain" value="-2.8"/>
+            <Control type="ScriptSlider" id="leakageGain" value="5.06639e-07"/>
             <Control type="ScriptSlider" id="leslieSpeed" value="0"/>
             <Control type="ScriptSlider" id="reverbKnob" value="0"/>
             <Control type="ScriptButton" id="chorusBtn" value="0"/>
@@ -1294,8 +1294,8 @@
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SimpleGain" ID="mainGain" Bypassed="0" Gain="-3.5" Delay="0"
-                   Width="120" Balance="0" InvertPolarity="0">
+        <Processor Type="SimpleGain" ID="mainGain" Bypassed="0" Gain="1.03544e-06"
+                   Delay="0" Width="120" Balance="0" InvertPolarity="0">
           <ChildProcessors>
             <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
               <ChildProcessors/>
@@ -4749,8 +4749,8 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="-2.8"
-                       Delay="0" Width="100" Balance="0" InvertPolarity="0">
+            <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="0" Delay="0"
+                       Width="100" Balance="0" InvertPolarity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1">
                   <ChildProcessors/>
