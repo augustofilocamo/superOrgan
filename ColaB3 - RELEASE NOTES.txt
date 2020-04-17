@@ -4,10 +4,11 @@ Versioning scheme MAJOR/MINOR/PATCH
 
 
 
-1.x.x
+1.0.1
 ############################################################################
 
-- 
+- Reverb goes up to 100% instead of 40%
+- Add 0dB mark on Level knob
 
 
 
