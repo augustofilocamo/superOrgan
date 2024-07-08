@@ -18,7 +18,7 @@
 */
 
 //! Leslie
-const var Leslie = Synth.getEffect("Leslie");
+const var Rotary = Synth.getEffect("Rotary");
 
 
 inline function onleslieSpeedControl(component, value)
@@ -26,18 +26,18 @@ inline function onleslieSpeedControl(component, value)
     switch (value){
         
         case 0:
-            Leslie.setAttribute(Leslie.Speed, 0);
-            Leslie.setAttribute(Leslie.Stop, 1);
+            Rotary.setAttribute(Rotary.Speed, 0);
+            Rotary.setBypassed(true);
             break;
             
         case 1:
-            Leslie.setAttribute(Leslie.Speed, 0);
-            Leslie.setAttribute(Leslie.Stop, 0);
+            Rotary.setAttribute(Rotary.Speed, 0);
+			Rotary.setBypassed(false);
             break;
             
         case 2:
-            Leslie.setAttribute(Leslie.Speed, 1);
-            Leslie.setAttribute(Leslie.Stop, 0);
+            Rotary.setAttribute(Rotary.Speed, 1);
+            Rotary.setBypassed(false);
             break;
     }
 };
